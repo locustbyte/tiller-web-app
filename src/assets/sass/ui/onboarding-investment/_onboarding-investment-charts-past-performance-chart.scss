@@ -1,0 +1,19 @@
+.onboarding-investment-charts-past-performance-chart {
+
+  @include ui-animate(scale-down);
+  @include ui('hide');
+  @include ui-layout('chart-inner');
+  top: 40px;
+
+  .ui-onboarding-investment-charts-pastPerformance & {
+    @include ui-animate(scale-up);
+    @include ui('show');
+  }
+
+  .ui-onboarding-investment-charts-assetAllocation-region-expanded &,
+  .ui-onboarding-investment-charts-assetAllocation-list-expanded &,
+  .ui-onboarding-investment-charts-futurePerformance-expanded & {
+    display: none;
+  }
+
+}

@@ -1,0 +1,30 @@
+﻿<div onboarding-step step-scope="stepScope"
+     class="step-explanations"
+     title="Your Portfolio"  
+     strapline="You can set up your portfolio as a general investment or as a tax-free stocks and shares ISA"
+     show-next-back="true"
+     next-disabled="stepScope.portfolio.wrapperId == null"
+     back="onboarding-portfolio.name"
+     next="onboarding-portfolio.investment-goal"
+     show-save-exit="true"
+     on-next="updatePortfolio()">
+
+        <div class="row">
+            <div class="step margin margin-right-md">
+                <div ng-class="{'shape-orange shape-orange-outline': stepScope.portfolio.wrapperId == 1}" class="step-image shape dummy-low-orange-opacity border border-s border-radius-full selectable fill-on-hover" ng-click="stepScope.portfolio.wrapperId = 1">
+                    <satellite class="forty-five-degrees-right shape dummy-low-orange-opacity fill-on-hover" ui-sref="onboarding-portfolio.wrapper-general-investment">
+                        <i class="icon icon-xs icon-09-medium text-colour text-colour-dummy-low-orange-opacity"></i>
+                    </satellite>
+                    <p>General<br /> Investment</p>
+                </div>
+            </div>
+            <div class="step">
+                <div ng-class="{'shape-orange shape-orange-outline': stepScope.portfolio.wrapperId == 2}" class="step-image shape dummy-low-orange-opacity border border-s border-radius-full selectable fill-on-hover" ng-click="stepScope.portfolio.wrapperId = 2">
+                    <satellite class="forty-five-degrees-right shape dummy-low-orange-opacity fill-on-hover" ui-sref="onboarding-portfolio.wrapper-isa">
+                        <i class="icon icon-xs icon-09-medium text-colour text-colour-dummy-low-orange-opacity"></i>
+                    </satellite>
+                    <p>ISA</p>
+                </div>
+            </div>
+        </div>
+</div>

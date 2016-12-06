@@ -1,0 +1,110 @@
+<div>
+
+    <div class="onboarding-investment-profiling-sliders">
+
+        <div class="text-center onboarding-investment-profiling-slider-title">
+
+            <p class="lead">
+                <span ng-bind="getInvestmentWrapperTypeHeading()"></span> 
+                <br/>for <span ng-bind="getPortfolioTypeHeading()"></span>
+            </p>
+
+        </div>
+
+        <tiller-discovery-slider 
+            ng-if="sliders.portfolioLumpSum.data"
+            slider-change="updatePortfolio" 
+            class="slider slider-lump-sum slider-compact"
+            slider-data="sliders.portfolioLumpSum.data" 
+            slider-model="sliders.portfolioLumpSum.model" 
+            slider-key="portfolioLumpSum" 
+            value-formatter="currency" 
+            label="Lump sum">
+        </tiller-discovery-slider>
+
+        <tiller-discovery-slider 
+            ng-if="sliders.portfolioTopUp.data"
+            slider-change="updatePortfolio"
+            class="slider slider-top-up slider-compact"
+            slider-data="sliders.portfolioTopUp.data"
+            slider-model="sliders.portfolioTopUp.model"
+            slider-key="portfolioTopUp"
+            value-formatter="currency"
+            label="per month">
+        </tiller-discovery-slider>
+
+        <tiller-discovery-slider
+            ng-if="stepScope.portfolio.portfolioTypeId === 1 && sliders.portfolioGrowthTarget.data"
+            slider-change="updatePortfolio"
+            class="slider slider-target slider-compact"
+            slider-data="sliders.portfolioGrowthTarget.data"
+            slider-model="sliders.portfolioGrowthTarget.model"
+            slider-key="portfolioGrowthTarget"
+            value-formatter="currency"
+            label="Target">
+        </tiller-discovery-slider>
+
+        <tiller-discovery-slider 
+            ng-if="stepScope.portfolio.portfolioTypeId === 2 && sliders.portfolioIncomeTarget.data"
+            slider-change="updatePortfolio"
+            class="slider slider-target slider-compact"
+            slider-data="sliders.portfolioIncomeTarget.data"
+            slider-model="sliders.portfolioIncomeTarget.model"
+            slider-key="portfolioIncomeTarget"
+            value-formatter="currency"
+            label="each month">
+        </tiller-discovery-slider>
+
+    </div>
+
+    <div class="onboarding-investment-profiling-time-sliders">
+        
+        <tiller-discovery-slider
+            ng-if="stepScope.portfolio.portfolioTypeId === 1 && sliders.portfolioGrowthDuration.data"
+            slider-change="updatePortfolio"
+            class="slider slider-total-years slider-chart"
+            ng-class="getSliderClass('total-years')"
+            slider-data="sliders.portfolioGrowthDuration.data"
+            slider-model="sliders.portfolioGrowthDuration.model"
+            slider-key="portfolioGrowthDuration"
+            value-formatter="none"
+            label="Years">
+        </tiller-discovery-slider>
+
+        <tl-double-round-slider
+            ng-if="stepScope.portfolio.portfolioTypeId === 2 && sliders.drawdownTimeline.data.value"
+            slider-change="drawdownTimelineSliderChanged" 
+            class="slider slider-chart slider-total-years slider-double"
+            ng-class="getSliderClass('total-years')" 
+            slider-data="sliders.drawdownTimeline.data.value" 
+            slider-model="sliders.drawdownTimeline.model" 
+            slider-key="drawdownTimeline">
+        </tl-double-round-slider>
+
+        <tiller-discovery-slider
+                ng-if="sliders.history.data"
+                slider-change="sliderHistoryValueChanged"
+                class="slider slider-history"
+                ng-class="getSliderClass('history')"
+                slider-data="sliders.history.data"
+                slider-model="sliders.history.model"
+                slider-key="history"
+                validation-model="sliders.history.validationModel"
+                value-formatter="none"
+                label="Years">
+
+        </tiller-discovery-slider>
+
+
+    </div>
+
+
+    <div class="onboarding-investment-profiling-navigation">
+
+        <button class="btn btn-orange-outline btn-half-loz btn-half-loz-left position position-absolute pull-left discovery-profiling-back" title="Back" ng-click="navigateBack()">Back</button>
+
+        <button class="btn btn-orange-outline btn-half-loz btn-half-loz-right position position-absolute pull-right discovery-profiling-forward" title="Next" ng-click="navigateForwards()">Next</button>
+
+    </div>
+
+</div>

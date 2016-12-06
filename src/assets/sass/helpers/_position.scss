@@ -1,0 +1,315 @@
+.position {
+
+  &.position-relative {
+    position: relative;
+  }
+
+  &.position-fixed {
+    position: fixed;
+  }
+
+  &.position-absolute {
+    position: absolute;
+  }
+
+  &.position-absolute, &.position-fixed {
+
+    &.position-bottom {
+      bottom: 0;
+      margin-bottom: 0;
+    }
+
+    &.position-bottom-right {
+      bottom: 0;
+      right: 0;
+      left: auto;
+      margin-bottom: 0;
+    }
+
+    &.position-bottom-left {
+      bottom: 0;
+      left: 0;
+      margin-bottom: 0;
+    }
+
+    &.position-bottom-right-outside-right {
+      bottom: 10px;
+      right: -35px;
+      margin-bottom: 0;
+    }
+
+    &.position-bottom-outside {
+      bottom: -50;
+    }
+
+    &.position-inside-form-control {
+      top: 12px;
+      right: 12px;
+      left: auto;
+    }
+    &.position-outside-form-control {
+      top: 0px;
+      right: -25px;
+      left: auto;
+    }
+
+    &.position-bottom-right-padded {
+      bottom: 15px;
+      right: 15px;
+      margin-bottom: 0;
+    }
+
+    &.position-top {
+      top: 0;
+    }
+
+    &.position-top-right {
+      top: 0;
+      right: 0;
+    }
+
+    &.position-top-right-padding {
+      top: 10px;
+      right: 10px;
+    }
+
+    &.position-top-left {
+      top: 0;
+      left: 0;
+    }
+
+    &.position-left {
+      left: 0;
+    }
+
+    &.position-right {
+      right: 0;
+    }
+
+    &.position-canvas {
+      top: 60;
+      left: auto;
+      margin-left: 60;
+    }
+
+    &.position-center-shape-xl {
+      left: 400;
+    }
+
+    &.position-off-piste {
+      top: -30000;
+      left: -30000;
+    }
+
+  }
+
+  &.position-5 {
+    left: 5px;
+    top: 5px;
+  }
+
+  &.position-5-0 {
+    left: 5px;
+    top: 0;
+  }
+
+  &.position-10 {
+    left: 10px;
+    top: 10px;
+  }
+
+  &.position-10-0 {
+    left: 10px;
+    top: 0;
+  }
+
+  &.position-15 {
+    left: 15px;
+    top: 15px;
+  }
+
+  &.position-15-0 {
+    left: 15px;
+    top: 0;
+  }
+
+  &.position-20 {
+    left: 20px;
+    top: 20px;
+  }
+
+  &.position-20-0 {
+    left: 20px;
+    top: 0px;
+  }
+
+  &.position-25 {
+    left: 25px;
+    top: 25px;
+  }
+
+  &.position-25-0 {
+    left: 25px;
+    top: 0;
+  }
+
+  &.position-30 {
+    left: 30px;
+    top: -30px;
+  }
+
+  &.position-30-0 {
+    left: 30px;
+    top: 0;
+  }
+
+  &.position-35 {
+    left: 35px;
+    top: 35px;
+  }
+
+  &.position-35-0 {
+    left: 35px;
+    top: 0;
+  }
+
+  &.position-40-0 {
+    left: 40px;
+    top: 0;
+  }
+
+  &.position-45-0 {
+    left: 45px;
+    top: 0;
+  }
+
+  &.position-50 {
+    left: 50px;
+    top: 50px;
+  }
+
+  &.position-50-0 {
+    left: 50px;
+    top: 0;
+  }
+
+  &.position-55-0 {
+    left: 55px;
+    top: 0;
+  }
+
+  &.position-60-0 {
+    left: 60px;
+    top: 0;
+  }
+
+  &.position-65-0 {
+    left: 65px;
+    top: 0;
+  }
+
+  &.position-250-0 {
+    left: -250px;
+    top: 0;
+  }
+
+  &.position-250-150 {
+    left: -250px;
+    top: 150px;
+  }
+
+  &.position-250-300 {
+    left: -250px;
+    top: 300px;
+  }
+
+  &.position-40-300 {
+    left: 40px;
+    top: 300px;
+  }
+
+  &.position-0-160 {
+    left: 0;
+    top: 160px;
+  }
+
+  &.position-140-140 {
+    left: 140px;
+    top: 140px;
+  }
+
+  &.position-minus {
+
+    &.position-5 {
+      left: -5px;
+      top: -5px;
+    }
+
+    &.position-5-0 {
+      left: -5px;
+      top: 0;
+    }
+
+    &.position-10 {
+      left: -10px;
+      top: 10px;
+    }
+
+    &.position-10-0 {
+      left: -10px;
+      top: 0;
+    }
+
+    &.position-15 {
+      left: -15px;
+      top: -15px;
+    }
+
+    &.position-15-0 {
+      left: -15px;
+      top: 0;
+    }
+
+    &.position-20 {
+      left: -20px;
+      top: -20px;
+    }
+
+    &.position-20-0 {
+      left: -20px;
+      top: 0;
+    }
+
+    &.position-25 {
+      left: -25px;
+      top: -25px;
+    }
+
+    &.position-25-0 {
+      left: -25px;
+      top: 0;
+    }
+
+    &.position-30 {
+      left: -30px;
+      top: -30px;
+    }
+
+    &.position-30-0 {
+      left: -30px;
+      top: 0;
+    }
+
+    &.position-35 {
+      left: -35px;
+      top: -35px;
+    }
+
+    &.position-35-0 {
+      left: -35px;
+      top: 0;
+    }
+
+  }
+
+}

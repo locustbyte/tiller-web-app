@@ -1,0 +1,45 @@
+<div class="container text-center margin margin-top-md">
+
+    <div class="row text-center margin margin-bottom-xs">
+
+        <div class="col-sm-6 col-sm-offset-3 col-md-4 col-md-offset-4">
+
+            <h3 class="text-colour text-colour-orange">Sorry, something went wrong</h3>
+
+        </div>
+
+    </div>
+
+    <div class="row text-center margin margin-bottom-xs" ng-if="error !== false">
+
+        <div class="col-sm-8 col-sm-offset-8 col-md-6 col-md-offset-3">
+
+            <p class="lead" ng-if="error.status"><strong>{{error.status}}</strong> <span class="small" ng-if="error.data.statusMessage">{{error.data.statusMessage}}</span></p>
+
+            <h6>Source: <span class="text-colour text-colour-orange">{{error.source}}</span></h6>
+
+        </div>
+
+    </div>
+
+    <div class="row">
+
+        <div class="col-sm-6 col-sm-offset-3 col-md-4 col-md-offset-4">
+
+            <p class="margin margin-bottom-sm">Try refreshing your browser or try again in a few minutes.</p>
+
+            <div class="row">
+
+                <div class="col-md-8 col-md-offset-2">
+
+                    <button class="btn btn-danger btn-lg btn-block" ng-click="goBack()">Try again</button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>

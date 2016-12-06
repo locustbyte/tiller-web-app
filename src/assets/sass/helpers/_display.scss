@@ -1,0 +1,35 @@
+.display {
+
+  &.display-block {
+    display: block;
+  }
+
+  &.display-none {
+    display: none;
+  }
+
+  &.display-table {
+    display: table;
+  }
+
+  &.display-inline {
+    display: inline;
+  }
+
+  &.display-table-cell {
+    display: table-cell;
+  }
+
+  &.display-inline-block {
+    display: inline-block;
+  }
+
+  &.display-vertical-middle {
+    vertical-align: middle;
+  }
+
+  &.display-vertical-bottom {
+    vertical-align: bottom;
+  }
+
+}

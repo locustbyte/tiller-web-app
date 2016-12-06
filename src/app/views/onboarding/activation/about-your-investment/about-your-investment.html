@@ -1,0 +1,56 @@
+<div class="container" onboarding-step step-scope="stepScope"
+     title="Funding your investment"
+     strapline=""
+     show-next-back="true"
+     next-disabled="!screenIsValid()"
+     next="onboarding-activation.bank-details"
+     back="onboarding-activation.employment-status"
+     show-save-exit="true"
+     on-next="updateProfile()">
+
+
+    <div class="activation-funding-your-investment">
+        <form name="fundinginvestment">
+            <div class="row">
+                <div class="col-sm-6 col-sm-offset-3">
+                    <p>Where is the money for your Tiller investment coming from?</p>
+                </div>
+            </div>
+            <div class="row margin margin-top-xs">
+                <div class="col-sm-4 col-sm-offset-4">
+                    <div class="form-group position position-relative">
+                        <tiller-select class="financial-source-dropdown" placeholder="Please choose" options="financialSourceOptions" selected-item="stepScope.selectedFinancialSource" on-option-selected="selectFinancialSource"></tiller-select>
+                    </div>
+                </div>
+            </div>
+            <div class="row margin margin-top-sm">
+                <div class="col-sm-6 col-sm-offset-3">
+                    <p>What proportion of the money you have available for investing are you using for your Tiller investment?</p>
+                </div>
+            </div>
+            <div class="row margin margin-top-xs">
+                <div class="col-sm-4 col-sm-offset-4">
+                    <div class="form-group position position-relative">
+                        <tiller-select class="financial-source-proportion-dropdown" placeholder="Please choose" options="financialSourceProportionOptions" selected-item="stepScope.selectedFinancialSourceProportion" on-option-selected="selectFinancialSourceProportion"></tiller-select>
+                    </div>
+                </div>
+            </div>
+            <div class="row margin margin-top-sm">
+                <div class="col-sm-6 col-sm-offset-3">
+                    <p>Will this portfolio form part of your pension or retirement planning?</p>
+                </div>
+            </div>
+            <div class="row margin margin-top-xs">
+                <div class="col-sm-4 col-sm-offset-4">
+                    <div class="form-group position position-relative text-center">
+                  
+                        <tiller-radio-option class="two-radios-first" name="partOfRetirementPlanning" id="yesRetirement" label="Yes" checked="{{profile.isPartPensionPlanning === true}}" on-selected="setPartOfRetirementPlanning(true)"></tiller-radio-option>
+              
+                        <tiller-radio-option name="partOfRetirementPlanning" id="noRetirement" label="No" checked="{{profile.isPartPensionPlanning === false}}" on-selected="setPartOfRetirementPlanning(false)" ></tiller-radio-option>
+                    
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>

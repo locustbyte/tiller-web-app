@@ -1,0 +1,8 @@
+.text-weight {
+  &.text-weight-light {
+    font-weight: $weight-light;
+  }
+  &.text-weight-bold {
+    font-weight: $weight-bold;
+  }
+}

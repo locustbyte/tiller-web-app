@@ -1,0 +1,13 @@
+﻿<div class="tiller-select">
+    <div class="form-control full-loz">
+        <input type="text" value="{{selectedItem.value}}" placeholder="{{placeholder}}" class="just-value text-colour text-colour-grey" name="lastName" required readonly />
+        <i class="h4 text-colour text-colour-grey fa fa-angle-down"></i>
+    </div>
+    <div class="tiller-drop-down border border-solid border-xs border-orange">
+        <div class="list-container scrollbar-inner">
+            <ul class="">
+                <li ng-repeat="option in options" ng-click="selectOption(option)" data-item="{{option}}">{{option.value}}</li>
+            </ul>
+        </div>
+    </div>
+</div>

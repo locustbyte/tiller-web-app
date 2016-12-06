@@ -1,0 +1,121 @@
+<!--
+<floating-circles-background></floating-circles-background>
+-->
+<div class="view-content">
+
+    <section class="container">
+
+		<div class="row margin margin-top-sm">
+
+			<div class="col-sm-10 col-sm-offset-1 text-center">
+
+				<h1 class="h2 margin margin-bottom-xs text-colour text-colour-orange">Start building your Tiller portfolio</h1>
+
+				<p class="lead text-colour text-colour-grey-dark">There are three different types of Tiller portfolio to choose from, each giving you a different level of control over how your money’s invested. </p>
+
+			</div>
+
+		</div>
+
+    </section>
+
+	<section class="container margin margin-top-sm margin-bottom-md">
+
+		<div class="row">
+
+			<div class="col-sm-4">
+
+				<div class="text-center">
+
+					<div class="shape shape-round shape-md shape-orange">
+
+						<span><h3>1</h3></span>
+
+					</div>
+
+					<h2 class="margin margin-top-xs margin-bottom-xs text-colour text-colour-orange">Tracker</h2>
+
+					<h4 class="text-colour text-colour-white">Invest in Exchange Traded Funds (ETFs) that match the performance of a selected ‘index’	such as the FTSE 100.</h4>
+
+				</div>
+
+			</div>
+
+			<div class="col-sm-4">
+
+				<div class="text-center">
+
+					<div class="shape shape-round shape-md shape-orange">
+
+						<span><h3>2</h3></span>
+
+					</div>
+
+					<h2 class="margin margin-top-xs margin-bottom-xs text-colour text-colour-orange">Active</h2>
+
+					<h4 class="text-colour text-colour-white">Invest in a portfolio of ETFs with a selection of hand-picked ‘active’ funds which aim to outperform an ‘index’ such as the FTSE 100.</h4>
+
+				</div>
+
+			</div>
+
+			<div class="col-sm-4">
+
+				<div class="text-center">
+
+					<div class="shape shape-round shape-md shape-orange">
+
+						<span><h3>3</h3></span>
+
+					</div>
+
+					<h2 class="margin margin-top-xs margin-bottom-xs text-colour text-colour-orange">Active Plus</h2>
+
+					<h4 class="text-colour text-colour-white">For even greater control of your investment you can add one or more of five investment fund ‘themes’ into the asset mix.</h4>
+
+				</div>
+
+			</div>
+
+		</div>
+
+	</section>
+
+	<section class="container" ng-if="session">
+
+		<div class="row">
+
+			<div class="col-sm-10 col-sm-offset-1 text-center">
+
+				<h3 class="margin margin-bottom-sm">To get started, simply enter your email below:</h3>
+
+				<div class="row">
+
+					<div class="col-sm-6 col-sm-offset-3">
+
+						<form name="myForm">
+
+							<div class="form-group position position-relative" ng-class="{'validation-error': userHasInput && !isValidEmail()}">
+
+								<input type="email" class="form-control" name="email" ng-model="session.emailAddress" ng-change="userInput()" required="email">
+
+								<button type="submit" class="btn btn-orange-outline btn-half-loz btn-half-loz-right btn-outline-validation position position-absolute position-outside-form-control" ng-click="submit()">Next</button>
+
+								<p class="validation-error-message margin margin-top-xxs text-left" ng-if="userHasInput && !isValidEmail()">{{emailValidationModel.rule.validationExceptionMessage}}</p>
+
+							</div>
+
+						</form>
+
+					</div>
+
+				</div>
+
+			</div>
+
+		</div>
+
+	</section>
+
+</div>
+

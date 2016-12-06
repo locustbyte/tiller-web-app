@@ -1,0 +1,119 @@
+.onboarding-investment-charts-controls {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  margin-left: -400px;
+  z-index: $z-index-high;
+
+  @media (max-width: $screen-mdlg-max) {
+    left: 60%;
+    margin-left: -320px;
+  }
+
+  @media (max-width: $screen-sm-max) {
+    left: 50%;
+    margin-left: -280px;
+  }
+
+  .onboarding-investment-charts-investment-type {
+    position: absolute;
+    top: 330px;
+    left: -130px;
+    @include ui('show-front');
+
+    @media (max-width: $screen-mdlg-max) {
+      top: 325px;
+      left: -120px;
+
+    }
+
+    @media (max-width: $screen-sm-max) {
+      top: 220px;
+      left: -90px;
+    }
+
+    .nav-group {
+      position:relative;
+
+      .sub-nav {
+        position: absolute;
+        top: -10px;
+        left: 70px;
+
+        @media (max-width: $screen-sm-max) {
+          left: 60px;
+        }
+      }
+
+      &.nav-group-1 {
+
+        left: 65px;
+
+        @media (max-width: $screen-mdlg-max) {
+          left:55px;
+        }
+
+        @media (max-width: $screen-sm-max) {
+          left: 60px;
+        }
+      }
+
+      &.nav-group-2 {
+        left: 50px;
+
+        @media (max-width: $screen-mdlg-max) {
+          left:45px;
+        }
+
+        @media (max-width: $screen-sm-max) {
+          left: 40px;
+        }
+
+      }
+
+      &.nav-group-3 {
+        left: 50px;
+
+        @media (max-width: $screen-mdlg-max) {
+          left:60px;
+        }
+
+        @media (max-width: $screen-sm-max) {
+          left: 30px;
+        }
+      }
+    }
+
+
+  }
+
+  .onboarding-investment-charts-investment-theme-carousel {
+
+    @include ui-animate(scale-up);
+
+    position: absolute;
+    top: -25px;
+    left: -40px;
+
+    @media (max-width: $screen-mdlg-max) {
+      left: -50px;
+    }
+
+    @media (max-width: $screen-md-max) {
+      top: 110px;
+      left: 60px
+    }
+
+    @media (max-width: $screen-sm-max) {
+      top: 160px;
+      left: 40px;
+    }
+  }
+
+  .ui-onboarding-investment-charts-assetAllocation-list-expanded &,
+  .ui-onboarding-investment-charts-futurePerformance-expanded &,
+  .ui-onboarding-investment-charts-pastPerformance-expanded & {
+    display: none;
+  }
+
+}

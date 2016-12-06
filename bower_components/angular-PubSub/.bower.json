@@ -1,0 +1,33 @@
+{
+  "name": "angular-PubSub",
+  "version": "1.0.0",
+  "homepage": "https://github.com/georapbox/angular-PubSub",
+  "authors": [
+    "George Raptis <georapbox@gmail.com>"
+  ],
+  "description": "AngularJS implementation of the Publish–Subscribe pattern.",
+  "main": "src/angular-pubsub.js",
+  "license": "MIT",
+  "keywords": [
+    "Angular",
+    "pubsub",
+    "publish",
+    "subscribe",
+    "pattern",
+    "service"
+  ],
+  "ignore": [
+    "**/.*",
+    ".*",
+    "node_modules"
+  ],
+  "_release": "1.0.0",
+  "_resolution": {
+    "type": "version",
+    "tag": "v1.0.0",
+    "commit": "932e55d5d571d87459a3684d1fa3668774d7b85c"
+  },
+  "_source": "https://github.com/georapbox/angular-PubSub.git",
+  "_target": "^1.0.0",
+  "_originalSource": "angular.pubsub"
+}

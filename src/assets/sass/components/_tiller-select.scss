@@ -1,0 +1,120 @@
+.tiller-select {
+    position: relative;
+
+    .form-control {
+        right: 0;
+    }
+
+    &.float-left{
+        float:left;
+    }
+
+    &.date-day, &.date-month{
+        margin-right: 25px;
+    }
+
+    &.date-day, &.date-month, &.date-year{
+        float:left;
+        margin: 0;
+
+        .form-control {
+            right: 25px;
+        }
+
+        input, ul li {
+            text-align: center;
+        }
+
+        .tiller-drop-down {
+            left: -10px;
+        }
+    }
+
+    &.date-month {
+        left: 25px;
+    }
+
+    &.date-year {
+        left: 50px;
+    }
+
+    &:hover {
+        cursor: pointer;
+    }
+
+    input {
+        position: absolute;
+        left: 5px;
+        text-align: left;
+
+        &:hover {
+            cursor: pointer;
+        }
+    }
+
+    i.fa-angle-down {
+        position: absolute;
+        right: 18px;
+        top: 15px;
+        color: $white;
+    }
+
+    .just-value {
+        border: none;
+        height: 50px;
+        padding: 0 45px 0 20px;
+        background: transparent;
+
+        &:focus {
+            outline: none;
+            box-shadow: none;
+        }
+    }
+
+    .tiller-drop-down {
+        padding: 10px;
+        position: absolute;
+        top: 10px;
+        left: 15px;
+        border-radius: 10px;
+        background-color: $brown-darkest;
+    }
+    .scrollbar-inner>.scroll-element .scroll-element_track{
+        background-color: transparent;
+    }
+    .scrollbar-inner>.scroll-element .scroll-bar,
+    .scrollbar-inner>.scroll-element:hover .scroll-bar{
+        background-color: $grey-dark;
+    }
+    .list-container {
+        /*position: absolute;*/
+        display: block;
+        max-height: 142px;
+        overflow-y: scroll;
+        background-color: $brown-darkest;
+    }
+
+    ul {
+        margin: 0;
+        padding: 0;
+        background-color: $brown-darkest;
+
+        li {
+            list-style: none;
+            margin: 0;
+            padding: 2px 10px 2px 2px;
+            color: $grey;
+            text-align: left;
+            padding-right: 13px;
+            background-color: $brown-darkest;
+
+            &:hover {
+                color: $orange;
+            }
+        }
+
+        li:first-child{
+            padding-top: 0px;
+        }
+    }
+}

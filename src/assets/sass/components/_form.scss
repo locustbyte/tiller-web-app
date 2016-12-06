@@ -1,0 +1,178 @@
+.form-group {
+
+    font-weight: 300;
+
+    .form-control {
+        position: relative;
+        border: 2px solid $orange;
+        margin-right: 91px;
+        border-top-left-radius: 25px;
+        border-bottom-left-radius: 25px;
+        border-top-right-radius: 0px;
+        border-bottom-right-radius: 0px;
+        border-right-color: transparent;
+        height: 50px;
+        padding: 0 45px 0 20px;
+        background: transparent;
+        color: $grey-lightest;
+        font-size: $h4-size;
+        right: 25px;
+
+        &.inline {
+            margin-right: 0;
+        }
+
+        &.two-thirds-loz {
+            width: 265px;
+            margin-right: -52px;
+            margin-left: 20px;
+        }
+
+        &.full-loz {
+            border-right-color: $orange;
+            border-top-right-radius: 25px;
+            border-bottom-right-radius: 25px;
+            padding-right: 50px;
+        }
+
+        &.no-ficking-right {
+            right: auto;
+            padding: 12px;
+        }
+
+        &.no-nav {
+            padding: 0 0 0 20px;
+        }
+
+        &:focus {
+            outline: none;
+            box-shadow: none;
+        }
+
+        &:-webkit-autofill, &:-webkit-autofill:hover, &:-webkit-autofill:focus {
+            border-right: 0px;
+            -webkit-text-fill-color: $grey-lightest;
+            -webkit-box-shadow: 0 0 0px 1000px $grey-darkest inset;
+        }
+
+        &.field-sm{
+            right: 5px;
+            width: 65px;
+        }
+    }
+
+    .field-complete {
+        position: absolute;
+        border: solid 2px $orange;
+        border-left: none;
+        border-top-right-radius: 25px;
+        border-bottom-right-radius: 25px;
+        top: 0px;
+        right: -25px;
+        height: 50px;
+        width: 95px;
+        color: $green;
+        padding-top: 15px;
+
+        &.wrap-sm{
+            width: 55px;
+        }
+    }
+
+    .checkbox.checkbox-circle {
+        position: absolute;
+        left: -9999em;
+
+        & + .checkbox-label {
+            position: relative;
+            padding-left: 30px;
+            color: $white;
+            font-family: $font-markpro;
+            font-size: 15px;
+            font-weight: $weight-light;
+        }
+
+        & + .checkbox-label:before {
+            content: "";
+            display: inline-block;
+            position: absolute;
+            border: 2px solid $orange;
+            width: 22px;
+            height: 22px;
+            @include border-radius(22px);
+            left: 0;
+            top: 0;
+        }
+
+        & + .checkbox-label.with-tick:before {
+            width: 35px;
+            height: 35px;
+            @include border-radius(35px);
+        }
+
+        &:checked + .checkbox-label:before {
+            background-color: $orange;
+        }
+
+        &:checked + .checkbox-label.with-tick {
+            position: relative;
+            padding-left: 48px;
+            padding-top: 6px;
+        }
+
+        & + .checkbox-label.with-tick {
+            padding-left: 48px;
+            padding-top: 6px;
+        }
+
+        &:checked + .checkbox-label.with-tick:after {
+            content: "\6e";
+            font-family: tiller-iconfont;
+            position: absolute;
+            left: 9px;
+            top: 6px;
+            font-size: 18px;
+        }
+
+        &:checked + .checkbox-label.checkbox-change-label {
+            color: $white;
+        }
+    }
+}
+
+.validation-error {
+
+    .form-control {
+        border-color: $red;
+        border-right-color: transparent;
+    }
+
+    .validation-error-message {
+        color: $red;
+    }
+}
+
+@media (max-width: 1199px) {
+    .form-group {
+
+        .form-control {
+
+            &.inline {
+                margin-right: 0;
+            }
+
+            &.two-thirds-loz {
+                width: 210px;
+                margin-right: -55px;
+                margin-left: 13px;
+            }
+        }
+    }
+}
+
+/* disable spinners in number input controls */
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}

@@ -1,0 +1,93 @@
+<div class="container" onboarding-step step-scope="stepScope"
+     title="Your bank details"
+     strapline="Please give us the details of the bank account you’d like to link your Tiller account to. This will be used for paying in and withdrawing money."
+     show-next-back="true"
+     next-disabled="!screenIsValid()"
+     next="onboarding-activation.verify"
+     back="onboarding-activation.about-your-investment"
+     on-load=""
+     on-next="updateProfile()">
+
+    <form name="form">
+
+        <div class="row margin margin-top-sm">
+
+            <div class="col-sm-4 col-sm-offset-4">
+                <div class="form-group position position-relative">
+
+                    <input placeholder="Bank Name" class="form-control no-ficking-right full-loz" name="profile.paymentDetails[0].bankName" ng-model="profile.paymentDetails[0].bankName" type="text">
+
+                </div>
+            </div>
+
+        </div>
+
+        <div class="row margin margin-top-xs">
+
+            <div class="col-sm-4 col-sm-offset-4">
+
+                <div class="form-group position position-relative" ng-class="{'validation-error': form.accountNumber.$invalid}">
+
+                    <input placeholder="Account Number" autocomplete="off" class="form-control no-ficking-right full-loz" name="accountNumber" ng-model="profile.paymentDetails[0].accountNumber" type="text" ng-maxlength="8" ng-pattern="patterns.accountNumber" ng-required="required">
+
+                    <p class="validation-error-message margin margin-top-xxs position position-absolute" ng-if="form.accountNumber.$invalid">This must be a valid account number</p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="row ng-scope margin margin-top-sm">
+
+            <div class="col-sm-4 col-sm-offset-4">
+
+                <div class="row">
+
+                    <div class="col-sm-4 text-left">
+                        sort code
+                    </div>
+
+                    <div class="col-sm-8">
+
+                        <div class="row"  ng-class="{'validation-error': form.sortCode1.$invalid || form.sortCode2.$invalid || form.sortCode3.$invalid}">
+
+                            <div class="col-sm-4">
+
+                                <div class="form-group position position-relative">
+                                    <input placeholder="00" class="form-control no-ficking-right full-loz" autocomplete="off" name="sortCode1" ng-model="stepScope.sortCodes[0]" ng-change="updateSortCode()" type="text" maxlength="2" ng-maxlength="2" ng-pattern="patterns.sortCode" ng-required="required">
+                                </div>
+
+                            </div>
+
+                            <div class="col-sm-4">
+
+                                <div class="form-group field-sm position position-relative">
+                                    <input placeholder="00" class="form-control no-ficking-right full-loz" autocomplete="off" name="sortCode2" ng-model="stepScope.sortCodes[1]" ng-change="updateSortCode()" type="text" maxlength="2" ng-maxlength="2" ng-pattern="patterns.sortCode" ng-required="required">
+                                </div>
+
+                            </div>
+
+                            <div class="col-sm-4">
+
+                                <div class="form-group field-sm position position-relative">
+                                    <input placeholder="00" class="form-control no-ficking-right full-loz" autocomplete="off" name="sortCode3" ng-model="stepScope.sortCodes[2]" ng-change="updateSortCode()" type="text" maxlength="2" ng-maxlength="2" ng-pattern="patterns.sortCode" ng-required="required">
+                                </div>
+
+                            </div>
+
+                            <p class="validation-error-message margin margin-top-xxs" ng-if="form.sortCode1.$invalid || form.sortCode2.$invalid || form.sortCode3.$invalid">This must be a valid sort code</p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </form>
+
+</div>

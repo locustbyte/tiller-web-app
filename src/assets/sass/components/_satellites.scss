@@ -1,0 +1,51 @@
+.satellites {
+
+  position: relative;
+
+  .satellite {
+    position:absolute;
+    left: 0;
+    top: 0;
+
+    .shape-label-wrapped {
+      width: 250px;
+      text-align: left;
+    }
+
+    &.satellite-1 {
+      top: 20px;
+      left: 7px;
+    }
+
+    &.satellite-2 {
+      top: 40px;
+      left: 11px;
+    }
+
+    &.satellite-3 {
+      top: 60px;
+      left: 11px;
+    }
+
+    &.satellite-4 {
+      top: 80px;
+      left: 7px;
+    }
+
+    &.satellite-5 {
+      top: 100px;
+      left: 0px;
+    }
+
+    &.satellite-6 {
+      top: 120px;
+      left: 5px;
+    }
+
+    &.satellite-7 {
+      top: 140px;
+      left: 5px;
+    }
+  }
+
+}

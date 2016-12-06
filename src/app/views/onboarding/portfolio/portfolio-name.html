@@ -1,0 +1,20 @@
+﻿<div onboarding-step step-scope="stepScope"
+     title="Name your portfolio"
+     strapline="You could choose a name that reflects what you're saving for."
+     show-next-back="true"
+     next-disabled="modelLoaded === false || stepScope.portfolio.portfolioName.length == 0"
+     hide-back="true"
+     next="onboarding-portfolio.wrapper"
+     show-save-exit="true"
+     on-next="updatePortfolio()">
+
+    <div class="row col-sm-4 col-sm-offset-4">
+        <form name="myForm">
+            <div class="form-group position position-relative">
+                <input type="text" placeholder="E.g: Kids' tuition fees" class="form-control no-nav" name="portfolioName" ng-model="stepScope.portfolio.portfolioName" />
+                <div class="field-complete"></div>
+            </div>
+        </form>
+    </div>
+
+</div>

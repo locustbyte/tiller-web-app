@@ -1,0 +1,15 @@
+<div onboarding-step title="Your Account" 
+     strapline="First, we need to get some personal details from you, starting with your email address. (If you've had a play with our free trial, use the same email.)">
+
+    <div class="row">
+        <div class="col-sm-4 col-sm-offset-4">
+            <form name="myForm">
+                <div class="form-group position position-relative" ng-class="{'validation-error': !emailValidationModel.isEmailValid}">
+                    <input type="email" placeholder="Type your email address" class="form-control" name="email" ng-model="user.email" ng-change="validateEmail()" required="email">
+                    <button type="submit" class="btn btn-orange-outline btn-half-loz btn-half-loz-right btn-outline-validation position position-absolute position-outside-form-control" ng-click="submitEmail()">Next</button>
+                    <p class="validation-error-message margin margin-top-xxs text-left" ng-if="!emailValidationModel.isEmailValid">{{emailValidationModel.rule.validationExceptionMessage}}</p>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

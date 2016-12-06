@@ -1,0 +1,9 @@
+@keyframes drop {
+  from {
+    opacity: 1.0;
+  }
+  to {
+    transform: translateY(300%);
+    opacity: 0.3;
+  }
+}

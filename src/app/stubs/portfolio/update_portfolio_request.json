@@ -1,0 +1,16 @@
+﻿{
+  "_comment": "stub",
+  "portfolioId": 7,
+  "wrapperId": 1,
+  "portfolioTypeId": 1,
+  "allocationModelTypeId": null,
+  "targetRiskRatingId": null,
+  "portfolioName": "dsfsdfsdf sdf d hgt 512 h",
+  "initialAmount": 7000,
+  "initialTopUp": 1050,
+  "initialYearsToInvest": 17,
+  "initialTargetAmount": 0,
+  "initialYearsToIncomeGeneration": 13,
+  "initialIncomeDuration": 16,
+  "initialIncomeAmount": 14000
+}

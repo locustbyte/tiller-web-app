@@ -1,0 +1,18 @@
+.discovery-chart-asset-allocation-container {
+
+  @include border-radius(100%);
+  @include ui-layout('chart-pie-circumference');
+  @include ui('hide');
+  @include ui-animate(scale-down);
+
+  .ui-discovery-profiling & {
+    @include ui-animate(scale-down);
+    @include ui('hide');
+  }
+
+  .ui-discovery-charts-assetAllocation:not(.ui-discovery-charts-assetAllocation-list, .ui-discovery-charts-assetAllocation-region) & {
+    @include ui('show');
+    @include ui-animate(scale-up);
+  }
+
+}

@@ -1,0 +1,32 @@
+﻿<div onboarding-step step-scope="stepScope"
+     class="has-checkbox-row"
+     title="Investing for Income"
+     strapline="How much income would you like to get?"
+     show-next-back="true"
+     next-disabled=""
+     back="onboarding-portfolio.income-duration"
+     next="onboarding-portfolio.onboarding-risk.intro"
+     show-save-exit="true"
+     on-load="initialiseSliderData()"
+     on-next="updatePortfolio()">
+
+    <div class="row col-sm-4 width width-full form-group position position-absolute z-index z-index-low check-box-row">
+        <input type="checkbox" class="checkbox checkbox-circle" id="noIncomeTarget" ng-click="setNoIncomeTarget()" ng-checked="sliders.portfolioIncomeTarget.data.reset" />
+        <label class="checkbox-label" for="noIncomeTarget">I have no target</label>
+    </div>
+
+    <div class="row col-sm-4 col-sm-offset-4">
+        <div class="portfolio-sliders">
+            <tiller-discovery-slider 
+                slider-change="updatePortfolio"
+                class="slider slider-top-up show-slider-controls"
+                slider-data="sliders.portfolioIncomeTarget.data"
+                slider-model="sliders.portfolioIncomeTarget.model"
+                slider-key="portfolioIncomeTarget"
+                value-formatter="currency"
+                label="each month">
+            </tiller-discovery-slider>
+
+        </div>
+    </div>
+</div>

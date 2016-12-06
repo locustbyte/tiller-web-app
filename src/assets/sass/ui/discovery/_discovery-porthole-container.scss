@@ -1,0 +1,29 @@
+.discovery-porthole-container {
+
+  @include ui('hide');
+  @include ui-layout('porthole');
+  border: 2px solid $orange;
+  @include ui-animate(scale-up);
+
+  .ui-discovery-profiling & {
+    @include ui-animate(scale-down);
+    @include ui('hide');
+  }
+
+  .ui-discovery-charts-assetAllocation-list &,
+  .ui-discovery-charts-assetAllocation-region & {
+    @include ui('show');
+  }
+
+  .ui-discovery-charts-futurePerformance-expanded &,
+  .ui-discovery-charts-pastPerformance-expanded & {
+    @include ui('hide');
+  }
+
+  .ui-discovery-charts-assetAllocation-list-expanded & {
+    border: none;
+    @include ui-layout('chart-expanded-full');
+    @include ui('show-front');
+  }
+
+}

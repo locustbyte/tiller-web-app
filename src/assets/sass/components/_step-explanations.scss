@@ -1,0 +1,176 @@
+.step-explanations {
+    .ready {
+        h2 {
+            color: $orange;
+        }
+    }
+
+    .strap-line {
+        margin-bottom: 30px;
+    }
+
+    .step {
+        display: inline-block;
+        position: relative;
+
+        .step-image {
+            position: relative;
+            width: 196px;
+            height: 196px;
+
+            &.selectable {
+                cursor: pointer;
+            }
+
+            &.fill-on-hover:hover {
+                background-color: $orange;
+                border-color: $orange;
+            }
+
+            satellite {
+                display: block;
+                position: absolute;
+                height: 24px;
+                width: 24px;
+                border-radius: 24px;
+
+                &.bullet-label {
+                    height: 20px;
+                    width: 20px;
+                    border-radius: 20px;
+                }
+
+                p {
+                    width: 120px;
+                    padding-left: 31px;
+                    display: inline-block;
+                    text-align: left;
+                }
+
+                &.forty-five-degrees-right {
+                    right: 0px;
+                }
+
+                &.seventy-five-degrees-right {
+                    right: -30px;
+                    top: 37px;
+                }
+
+                &.eighty-five-degrees-right {
+                    right: -41px;
+                    top: 74px;
+                }
+
+                &.ninety-five-degrees-right {
+                    right: -34px;
+                    top: 110px;
+                }
+
+                &.fill-on-hover:hover {
+                    background-color: $orange;
+                    border-color: $orange;
+                }
+
+                .icon {
+                    position: absolute;
+                    right: -18px;
+                    top: 0px;
+
+                    &:hover {
+                        color: $white;
+                    }
+                }
+            }
+        }
+
+        .step-description {
+            position: absolute;
+            left: -28px;
+            margin-top: 20px;
+            width: 250px;
+
+            h4 {
+                margin-top: 10px !important;
+            }
+        }
+
+        .icon {
+            position: absolute;
+            top: calc(50% - 29px);
+            left: calc(50% - 29px);
+        }
+
+        p, span {
+            position: static;
+            display: table-cell;
+            vertical-align: middle;
+            word-break: break-all;
+            white-space: normal;
+
+            &.selectable {
+                cursor: pointer;
+            }
+        }
+
+        &.step2 {
+            .icon {
+                left: calc(50% - 27px);
+            }
+        }
+    }
+
+    .step-arrow {
+        display: inline-block;
+        background-repeat: no-repeat;
+        height: 120px;
+
+        &.step-arrow-1 {
+            background-image: url("../../assets/img/arrow1.svg");
+            width: 128px;
+        }
+
+        &.step-arrow-2 {
+            background-image: url("../../assets/img/arrow2.svg");
+            width: 124px;
+        }
+    }
+}
+
+@media(max-width: $screen-sm-max) {
+
+    .step-explanations {
+
+        .step {
+            display: block;
+            margin-right: 0;
+
+            .step-description {
+                position: static;
+                margin-top: 10px;
+                margin: 0 auto;
+            }
+        }
+
+        .step-arrow {
+            -webkit-transform: rotate(90deg);
+            -moz-transform: rotate(90deg);
+            -o-transform: rotate(90deg);
+            -ms-transform: rotate(90deg);
+            transform: rotate(90deg);
+            display: block;
+            margin: 0 auto;
+            margin-top: 38px;
+            margin-bottom: 38px;
+
+            &.step-arrow-1 {
+                height: 61px;
+                width: 128px;
+            }
+
+            &.step-arrow-2 {
+                height: 61px;
+                width: 124px;
+            }
+        }
+    }
+}

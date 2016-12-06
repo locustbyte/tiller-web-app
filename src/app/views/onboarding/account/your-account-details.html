@@ -1,0 +1,60 @@
+<div onboarding-step title="Your Account" 
+     strapline="First we'll need a few personal details."
+     show-next-back="allValid === true"
+     next-disabled="stepScope.allValid"
+     next="onboarding.your-account-name"
+     back="onboarding.your-account">
+
+    <div>
+        <div class="row">
+            <div class="col-sm-4 col-sm-offset-4">
+                <form name="myForm">
+                    <div class="form-group position position-relative">
+                        <input type="text" class="form-control" name="email" value="{{userCreationModel.email}}" readonly />
+                        <div class="field-complete"></div>
+                    </div>
+                    <div class="form-group position position-relative margin margin-bottom-zero" ng-class="{'validation-error': !passwordValidationModel.isPasswordValid}">
+                        <input type="password" placeholder="Type your password" class="form-control" name="tillerPassword" ng-change="validatePassword()" ng-model="userCreationModel.password" required />
+                        <div class="field-complete"></div>
+                        <!--<p class="validation-error-message margin margin-top-xxs text-left" ng-if="!passwordValidationModel.isPasswordValid">{{passwordValidationModel.rule.validationExceptionMessage}}</p>-->
+                    </div>
+                    <div class="margin margin-top-zero">
+                        <span class="password-checklist colour color-white h6 {{passwordValidationModel.has10chars}}"><i class="icon icon-05 h6 margin margin-top-xs {{passwordValidationModel.has10chars}}"></i>10 Characters</span>
+                        <span class="password-checklist colour color-white h6 {{passwordValidationModel.has1number}}"><i class="icon icon-05 h6 margin margin-top-xs {{passwordValidationModel.has1number}}"></i> 1 Number</span>
+                        <span class="password-checklist colour color-white h6 {{passwordValidationModel.hasSpecialChar}}"><i class="icon icon-05 h6 margin margin-top-xs {{passwordValidationModel.hasSpecialChar}}"></i> 1 Special character such as @#!</span>
+                        <span class="password-checklist colour color-white h6 {{passwordValidationModel.lowerCase}}"><i class="icon icon-05 h6 margin margin-top-xs {{passwordValidationModel.lowerCase}}"></i> Lower Case</span>
+                        <span class="password-checklist colour color-white h6 {{passwordValidationModel.upperCase}}"><i class="icon icon-05 h6 margin margin-top-xs {{passwordValidationModel.upperCase}}"></i> Upper Case</span>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="row margin margin-top-xs col-sm-8 col-sm-offset-2">
+            <p>Are you an American citizen?</p>
+        </div>
+        <div class="row margin margin-top-xs col-sm-8 col-sm-offset-2">
+            <form name="americanCheck">
+                <div class="form-group position position-relative">
+                    <tiller-radio-option class="two-radios-first" name="usCitizenQuestion" id="yesUS" label="Yes" checked="{{userCreationModel.basicProfile.isUSCitizen === true}}" on-selected="setIsAmerican()"></tiller-radio-option>
+                    <tiller-radio-option name="usCitizenQuestion" id="noUS" label="No" checked="{{userCreationModel.basicProfile.isUSCitizen === false}}" on-selected="setNotAmerican()" ></tiller-radio-option>
+                </div>
+            </form>
+        </div>
+        <div class="row col-sm-4 col-sm-offset-4" ng-if="userCreationModel.basicProfile.isUSCitizen">
+            <h4 class="text-colour text-colour-grey-dark">Sorry, but US citizens aren't able to invest with Tiller at the moment.</h4>
+        </div>
+        <div class="row col-sm-6 col-sm-offset-3" ng-if="userCreationModel.basicProfile.isUSCitizen === false">
+            <p class="">Are you sure that you can afford to lose the money you're investing if you suffer heavy losses?</p>
+        </div>
+        <div class="row margin margin-top-xs col-sm-8 col-sm-offset-2" ng-if="userCreationModel.basicProfile.isUSCitizen === false">
+            <form name="lossesCheck">
+                <div class="form-group position position-relative">
+                    <tiller-radio-option class="two-radios-first" name="lossesQuestion" id="lossesOK" label="Yes" checked="{{userCreationModel.basicProfile.isLossSensitive === false}}" on-selected="setCanLose()" ></tiller-radio-option>
+                    <tiller-radio-option name="lossesQuestion" id="lossesNotOK" label="No" checked="{{userCreationModel.basicProfile.isLossSensitive === true}}" on-selected="setCannotLose()" ></tiller-radio-option>
+                </div>
+            </form>
+        </div>
+        <div class="row col-sm-6 col-sm-offset-3" ng-if="userCreationModel.basicProfile.isLossSensitive === true && userCreationModel.basicProfile.isUSCitizen === false">
+            <h4 class="text-colour text-colour-grey-dark">Sorry. In that case we won't be able to continue with your investment. <a href="#" class="text-colour text-colour-orange">Find our more.</a></h4>
+        </div>
+    </div>
+</div>

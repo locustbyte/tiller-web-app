@@ -1,0 +1,5 @@
+$screen-xxs-max: 480px;
+@media (max-width: $screen-xxs-max)
+{
+  @include make-grid(xxs);
+}

@@ -1,0 +1,26 @@
+.ng-leave {
+
+  animation: scale-down 0.3s both ease-out;
+  z-index: $z-index-medium;
+
+  .animate {
+
+    &.animate-leave-scale-down-drop {
+      animation: scale-down-drop 0.3s both ease-in-out;
+    }
+
+    &.animate-leave-rotate-fall {
+      animation: rotate-fall 0.3s both ease-in-out;
+    }
+
+    &.animate-leave-rotate-out-newspaper {
+      animation: rotate-out-newspaper 0.3s both ease-in-out;
+    }
+
+    &.animate-leave-slide-out-left {
+      animation: slide-out-left 0.3s both ease-in-out;
+    }
+
+  }
+
+}

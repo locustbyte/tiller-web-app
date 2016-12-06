@@ -1,0 +1,6 @@
+@mixin ui-animate($type, $speed: 0.25s, $easing: ease-in-out)
+{
+  transition: all $speed $easing;
+  animation: $type $speed $easing;
+
+}

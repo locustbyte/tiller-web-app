@@ -1,0 +1,85 @@
+.risk-levels {
+    h3 {
+        color: $orange;
+        font-size: 32px;
+    }
+
+    h4 {
+        color: $orange;
+        font-size: 18px;
+    }
+
+    p {
+        font-size: 12px;
+        line-height: 16px;
+        padding-top: 10px;
+    }
+
+    .risk-level-disabled {
+        h3, h4, p {
+            color: $grey-dark;
+        }
+    }
+}
+
+.risk-question {
+    position: absolute;
+    bottom: 150px;
+    min-height: 120px;
+
+    .tiller-radio {
+        margin-right: 100px;
+    }
+
+    .form-group:last-child {
+        margin-right: 0;
+    }
+
+    .checkbox-container {
+        display: block;
+        float: left;
+        width: 20%;
+        margin: 0;
+
+        .checkbox-label {
+            padding: 50px 0 0 0 !important;
+            cursor: pointer;
+            font-size: 12px !important;
+            line-height: 14px !important;
+
+            &:before {
+                left: 50% !important;
+                margin-left: -17.5px;
+            }
+
+            &.with-tick:after {
+                top: 9px !important;
+                left: 50% !important;
+                margin-left: -9px;
+            }
+        }
+    }
+
+    .form-group .checkbox.checkbox-circle+.checkbox-label.with-tick:before {
+        border-color: $orange-dark;
+    }
+    .form-group .checkbox.checkbox-circle:checked+.checkbox-label:before {
+        border-color: $orange;
+    }
+
+}
+
+.risk-rating {
+    p {
+        width: 400px;
+        margin: 0 auto;
+    }
+}
+
+.btn-retake-questionarie {
+    width: 200px;
+    height: 50px;
+    margin: 50px auto 0 auto;
+}
+
+

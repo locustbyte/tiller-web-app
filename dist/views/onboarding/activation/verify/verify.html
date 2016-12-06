@@ -1,0 +1,112 @@
+<div class="container" onboarding-step step-scope="stepScope"
+     title="Final step: verify your identity"
+     strapline=""
+     show-next-back="false"
+     next-disabled="false"
+     next="onboarding-activation.verify"
+     back="onboarding-activation.bank-details"
+     show-log-in-save-exit="true"
+     on-next="">
+
+     <div class="row text-center margin margin-top-md margin-bottom-md">
+
+          <div class="col-sm-8 col-sm-offset-2">
+
+               <p>The easiest way to verify your identity is to use the Tiller verification app. Log in with your email and password and then follow the on-screen prompts to take and upload two photos of the requested documents. In most case your Tiller account will be activated instantly and you can start adding money to your Tiller portoflio.</p>
+
+          </div>
+
+     </div>
+
+     <div class="row margin margin-bottom-sm">
+
+          <div class="col-sm-6 border border-right-grey-dark">
+
+               <p class="margin margin-bottom-xs text-center">On your computer? Send a link to your phone</p>
+
+               <div class="row">
+
+                    <div class="col-sm-offset-1" ng-class="buttonWrapperClasses.email">
+
+                         <button class="btn btn-orange-outline btn-block" ng-class="button.email.class" ng-click="toggleButtonClass('email')"><i class="fa fa-envelope text-colour text-colour-grey"></i>&nbsp;<span class="text-colour text-colour-grey">Email it</span></button>
+
+                         <form name="emailForm" class="form-group hidden position position-relative" ng-class="button.email.formGroup" novalidate ng-submit="false">
+                            <div ng-class="{'validation-error': !emailValidationModel.isEmailValid}">
+                                <input type="email" placeholder="Type your email address" class="form-control" name="email" ng-model="userDetails.emailAddress" ng-change="validateEmail()" required="email">
+                                <button type="submit" class="btn btn-orange-outline btn-half-loz btn-half-loz-right btn-outline-validation position position-absolute position-outside-form-control" ng-disabled="!emailValidationModel.isEmailValid" ng-click="submitEmail()">Next</button>
+                                <p class="validation-error-message position position-absolute margin margin-top-xxs text-left" ng-if="!emailValidationModel.isEmailValid">{{emailValidationModel.rule.validationExceptionMessage}}</p>
+                            </div>
+                         </form>
+
+                    </div>
+
+                    <div ng-class="buttonWrapperClasses.phone">
+
+                         <button class="btn btn-orange-outline btn-block" ng-class="button.phone.class" ng-click="toggleButtonClass('phone')"><i class="fa fa-comment text-colour text-colour-grey"></i>&nbsp;<span class="text-colour text-colour-grey">Text it</span></button>
+
+                         <form name="phoneForm" class="form-group hidden position position-relative" ng-class="button.phone.formGroup" novalidate ng-submit="false">
+                            <div ng-class="{'validation-error': !phoneNumberValidationModel.isPhoneNumberValid}">
+                                <input type="text" placeholder="Your phone number" class="form-control" name="phoneNumber" ng-model="userDetails.phoneNumber" ng-change="validatePhoneNumber()" required="phone" >
+                                <button type="submit" class="btn btn-orange-outline btn-half-loz btn-half-loz-right btn-outline-validation position position-absolute position-outside-form-control" ng-disabled="!phoneNumberValidationModel.isPhoneNumberValid" ng-click="submitPhone()">Next</button>
+                                <p class="validation-error-message position position-absolute margin margin-top-xxs text-left" ng-if="!phoneNumberValidationModel.isPhoneNumberValid">{{phoneNumberValidationModel.rule.validationExceptionMessage}}</p>
+                            </div>
+                         </form>
+
+                    </div>
+               </div>
+
+          </div>
+
+          <div class="col-sm-6">
+
+               <p class="margin margin-bottom-xs text-center">On your phone? Download the app</p>
+
+               <div class="row">
+
+                    <div class="col-sm-5 col-sm-offset-1">
+
+                         <button class="btn btn-orange-outline btn-block btn-lg background background-app-store background-contain background-center">&nbsp;</button>
+
+                    </div>
+
+                    <div class="col-sm-5">
+
+                         <button class="btn btn-orange-outline btn-block btn-lg background background-android background-contain background-center">&nbsp;</button>
+
+                    </div>
+               </div>
+
+          </div>
+
+     </div>
+
+     <div class="row">
+
+          <div class="col-sm-12 text-center">
+
+               <h5 class="margin margin-bottom-xs text-colour text-colour-orange">Using your computer?</h5>
+
+               <p class="small">If you don't want to use the Tiller App you can upload scans or pictures of your documents using the web form. We'll email you when your account is activated - please note ths can sometimes take up to 24 hours.</p>
+
+
+          </div>
+
+     </div>
+
+     <div class="row margin margin-top-xs margin-bottom-md">
+
+          <div class="col-sm-4">
+          </div>
+
+          <div class="col-sm-4">
+
+               <a href="#" class="btn btn-orange-outline btn-sm btn-block">Use web form</a>
+
+          </div>
+
+          <div class="col-sm-4">
+          </div>
+
+     </div>
+
+</div>

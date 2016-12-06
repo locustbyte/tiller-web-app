@@ -1,0 +1,103 @@
+.onboarding-investment-charts-loss-scenarios {
+
+  @include ui('hide');
+  @include ui-animate(scale-down);
+  @include ui-layout('porthole-inner');
+  padding: 20px 0;
+
+  .lead {
+    padding: 0 60px;
+    margin-bottom: 30px;
+  }
+
+  .tiller-dropdown {
+    button {
+      padding: 6px;
+      color: $white !important;
+    }
+    &:hover {
+      color: $white !important;
+    }
+    .dropdown-menu {
+      background-color: $brown-darkest;
+    }
+  }
+
+  #dropdown-scrollable-container {
+    width: 200px;
+    margin: 0 auto;
+    position: absolute;
+    left: 150px;
+  }
+
+  .scenario-details {
+    margin-top: 100px;
+
+    p {
+      &.scenario-reason {
+        padding: 0 50px;
+      }
+
+      &.scenario-recovery1 {
+        margin-top: 20px;
+      }
+
+      &.scenario-recovery2 {
+        color: $orange;
+      }
+    }
+
+    h3 {
+      font-size: 32px;
+      line-height: 32px;
+      color: $orange;
+      padding: 20px 0;
+
+      &.scenario-recovery-time {
+        padding-bottom: 0;
+      }
+    }
+  }
+
+  @media (max-width: 991px) {
+    #dropdown-scrollable-container {
+      left: 75px;
+    }
+    .lead {
+      margin-bottom: 20px;
+    }
+    .scenario-details {
+      margin-top: 75px;
+      h3 {
+        padding: 15px 0;
+      }
+    }
+  }
+
+  @media (max-width: 1600px) {
+    #dropdown-scrollable-container {
+      left: 100px;
+    }
+    .lead {
+      font-size: 17px;
+    }
+    .scenario-details {
+      p {
+        font-size: 14px;
+        line-height: 20px;
+      }
+    }
+  }
+
+  .ui-onboarding-investment-charts-futurePerformance-lossscenarios & {
+    @include ui('show-front');
+    @include ui-animate(scale-up);
+  }
+
+  .ui-onboarding-investment-charts-assetAllocation-region-expanded &,
+  .ui-onboarding-investment-charts-futurePerformance-expanded &,
+  .ui-onboarding-investment-charts-pastPerformance-expanded & {
+    display: none;
+  }
+
+}

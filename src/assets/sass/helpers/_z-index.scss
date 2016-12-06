@@ -1,0 +1,23 @@
+.z-index {
+  &.z-index-highest {
+    z-index: $z-index-highest;
+  }
+  &.z-index-high {
+    z-index: $z-index-high;
+  }
+  &.z-index-medium {
+    z-index: $z-index-medium;
+  }
+  &.z-index-low {
+    z-index: $z-index-low;
+  }
+  &.z-index-lowest {
+    z-index: $z-index-lowest;
+  }
+  &.z-index-neutral, &.z-index-zero {
+    z-index: $z-index-zero;
+  }
+  &.z-index-negative {
+    z-index: $z-index-negative;
+  }
+}

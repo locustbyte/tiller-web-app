@@ -1,0 +1,37 @@
+.icon {
+    vertical-align: top;
+
+    &.icon-xxlg {
+        font-size: 60px;
+    }
+
+    &.icon-xlg {
+        font-size: 30px;
+    }
+
+    &.icon-lg {
+        font-size: 26px;
+    }
+
+    &.icon-md {
+        font-size: 20px;
+    }
+
+    &.icon-sm {
+        font-size: 18px;
+    }
+
+    &.icon-xs {
+        font-size: 8px;
+    }
+}
+
+/*styles repeated in step-explanations.scss component*/
+.shape {
+    position: relative;
+    .icon {
+        position: absolute;
+        top: calc(50% - 29px);
+        left: calc(50% - 29px);
+    }
+}

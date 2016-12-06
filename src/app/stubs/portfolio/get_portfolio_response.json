@@ -1,0 +1,16 @@
+﻿{
+  "_comment": "stub",
+  "portfolioId": 7,
+  "wrapperId": null,
+  "portfolioTypeId": null,
+  "allocationModelTypeId": null,
+  "targetRiskRatingId": null,
+  "portfolioName": "Saving for house deposit",
+  "initialAmount": 0,
+  "initialTopUp": 0,
+  "initialYearsToInvest": 0,
+  "initialTargetAmount": 0,
+  "initialYearsToIncomeGeneration": 0,
+  "initialIncomeDuration": 0,
+  "initialIncomeAmount": 0
+}

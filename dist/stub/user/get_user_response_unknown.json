@@ -1,0 +1,9 @@
+{
+  "_comment": "stub",
+  "id": null,
+  "userName": null,
+  "email": null,
+  "emailConfirmed": false,
+  "joinDate": "0001-01-01T00:00:00",
+  "lastLoggedOn": null
+}

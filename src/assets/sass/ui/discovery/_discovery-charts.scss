@@ -1,0 +1,29 @@
+.discovery-charts {
+
+    .ui-discovery-profiling & {
+        @include ui('hide');
+    }
+
+}
+
+@import "discovery-chart-titles";
+@import "discovery-chart-container";
+@import "discovery-porthole-container";
+@import "discovery-chart-page-overlay";
+@import "discovery-chart-asset-allocation-container";
+@import "discovery-chart-theme-container";
+@import "discovery-charts-fund-list";
+@import "discovery-charts-asset-chart";
+@import "discovery-charts-asset-region-chart";
+@import "discovery-charts-future-performance-chart";
+@import "discovery-charts-past-performance-chart";
+@import "discovery-charts-controls";
+@import "discovery-risk-control";
+@import "discovery-chart-overlays";
+@import "discovery-charts-call-to-action";
+@import "discovery-chart-legends";
+@import "discovery-charts-navigation";
+@import "discovery-chart-zoom-btns";
+@import "discovery-chart-close-btns";
+
+

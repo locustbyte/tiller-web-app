@@ -1,0 +1,21 @@
+{
+  "name": "angular-PubSub",
+  "version": "1.0.0",
+  "description": "AngularJS implementation of the Publish/Subscribe pattern.",
+  "homepage": "https://github.com/georapbox/angular-PubSub",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:georapbox/angular-PubSub.git"
+  },
+  "scripts": {
+    "minify": "grunt build"
+  },
+  "license": "(MIT)",
+  "main": "src/angular-pubsub.js",
+  "devDependencies": {
+    "grunt": "~1.0.1",
+    "grunt-cli": "~1.2.0",
+    "grunt-contrib-uglify": "~2.0.0",
+    "grunt-remove-logging": "~0.2.0"
+  }
+}

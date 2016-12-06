@@ -1,0 +1,53 @@
+<div class="container" onboarding-step step-scope="stepScope"
+     title="How much do you know about investing?"
+     strapline=""
+     show-next-back="true"
+     next-disabled="!allValid()"
+     hide-back="false"
+     next="onboarding-activation.employment-status"
+     back="onboarding-activation.about-you"
+     show-save-exit="true"
+     on-next="updateProfile()">
+
+    <div class="row text-center margin margin-top-md margin-bottom-xs">
+        <div class="col-sm-8 col-sm-offset-2 text-left">
+            <p>Are you certain you understand what ETF's and managed funds are and how they work?</p>
+        </div>
+    </div>
+    <div class="row margin margin-bottom-sm">
+        <div class="col-sm-2"></div>
+        <div class="col-sm-8">
+            <form name="americanCheck">
+                <div class="form-group position position-relative text-left">
+                    <tiller-radio-option class="two-radios-first" name="understandETFs_" id="yesETF" label="Yes" checked="{{profile.isMarketAware === true}}" on-selected="setUnderstandETFs(true)"></tiller-radio-option>
+                    <tiller-radio-option name="understandETFs_" id="noETF" label="No" checked="{{profile.isMarketAware === false}}" on-selected="setUnderstandETFs(false)"></tiller-radio-option>
+                </div>
+            </form>
+        </div>
+
+        <div class="col-sm-2"></div>
+    </div>
+    <div class="row text-center margin margin-top-md margin-bottom-xs">
+        <div class="col-sm-8 col-sm-offset-2 text-left">
+            <p>Are you sure you understand the differences between the various asset classes that Tiller uses, such as equities, bonds, property and commodities?</p>
+        </div>
+    </div>
+    <div class="row margin margin-bottom-sm">
+        <div class="col-sm-2"></div>
+        <div class="col-sm-8">
+            <form name="americanCheck">
+
+                <div class="form-group position position-relative text-left">
+
+                    <tiller-radio-option class="two-radios-first" name="understandDifference" id="yesDiff" label="Yes" checked="{{profile.isAssetClassAware === true}}" on-selected="setUnderstandDiff(true)"></tiller-radio-option>
+
+                    <tiller-radio-option name="understandDifference" id="noDiff" label="No" checked="{{profile.isAssetClassAware === false}}" on-selected="setUnderstandDiff(false)"></tiller-radio-option>
+
+                </div>
+
+            </form>
+        </div>
+
+        <div class="col-sm-2"></div>
+    </div>
+</div>

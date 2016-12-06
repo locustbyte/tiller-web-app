@@ -1,0 +1,19 @@
+<div class="container onboarding">
+    <div class="text-center width width-full">
+        <div class="row">
+            <h2 class="padding padding-top-sm padding-bottom-xs title">{{title}}</h2>
+        </div>
+        <div class="row margin margin-bottom-sm col-sm-8 col-sm-offset-2 strapline">
+            <p>{{strapline}}</p>
+        </div>
+        <div class="onboarding-content">
+            <ng-transclude></ng-transclude>
+        </div>
+        <div class="row margin margin-top-sm portfolio-navigation" ng-if="showNextBack">
+            <button class="btn btn-orange-outline btn-half-loz btn-half-loz-left position position-absolute pull-left" title="Back" ui-sref="{{back}}" ng-if="!hideBack">Back</button>
+            <button class="btn btn-orange-outline btn-half-loz btn-half-loz-right position position-absolute pull-right" title="Next" ng-disabled="nextDisabled" ui-sref="{{next}}" ng-click="onNext()">Next</button>
+        </div>
+    </div>
+</div>
+<save-exit ng-if="showSaveExit && !showLogInSaveExit" save-exit="saveProgress"></save-exit>
+<log-in-save-exit ng-if="showLogInSaveExit"></log-in-save-exit>

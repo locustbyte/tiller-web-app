@@ -1,0 +1,30 @@
+.onboarding-investment-porthole-container {
+
+  @include ui('hide');
+  @include ui-layout('porthole');
+  border: 2px solid $orange;
+  @include ui-animate(scale-up);
+
+  .ui-onboarding-investment-profiling & {
+    @include ui-animate(scale-down);
+    @include ui('hide');
+  }
+
+  .ui-onboarding-investment-charts-assetAllocation-list &,
+  .ui-onboarding-investment-charts-assetAllocation-region &,
+  .ui-onboarding-investment-charts-futurePerformance-lossscenarios & {
+    @include ui('show');
+  }
+
+  .ui-onboarding-investment-charts-futurePerformance-expanded &,
+  .ui-onboarding-investment-charts-pastPerformance-expanded & {
+    @include ui('hide');
+  }
+
+  .ui-onboarding-investment-charts-assetAllocation-list-expanded & {
+    border: none;
+    @include ui-layout('chart-expanded-full');
+    @include ui('show-front');
+  }
+
+}

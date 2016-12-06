@@ -1,0 +1,41 @@
+.discovery-risk-control {
+
+  position: absolute;
+  top: 0;
+  left: 50%;
+  margin-left: -400px;
+  z-index: $z-index-lowest;
+
+  @media (max-width: $screen-mdlg-max) {
+    left: 60%;
+    margin-left: -320px;
+  }
+
+  @media (max-width: $screen-sm-max) {
+    left: 50%;
+    margin-left: -280px;
+  }
+
+  .discovery-charts-risk-slider {
+    position: absolute;
+    top: -8px;
+    left: -230px;
+
+    @media (max-width: $screen-mdlg-max) {
+      top: -12px;
+      left: -256px;
+    }
+
+    @media (max-width: $screen-sm-max) {
+      top: -95px;
+      left: -200px;
+    }
+  }
+
+  .ui-discovery-charts-assetAllocation-list-expanded &,
+  .ui-discovery-charts-futurePerformance-expanded &,
+  .ui-discovery-charts-pastPerformance-expanded & {
+    display: none;
+  }
+
+}

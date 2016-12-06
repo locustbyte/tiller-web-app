@@ -1,0 +1,16 @@
+.discovery-chart-titles {
+  @include ui('hide');
+  @include ui-layout('chart-titles');
+  @include ui-animate(fade-out);
+
+  .ui-discovery-charts & {
+    @include ui('show-front');
+    @include ui-animate(fade-in, 0.5s);
+  }
+
+  .ui-discovery-charts-futurePerformance-expanded &,
+  .ui-discovery-charts-pastPerformance-expanded & {
+    left: 50%;
+  }
+
+}

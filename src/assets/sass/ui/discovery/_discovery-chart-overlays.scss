@@ -1,0 +1,15 @@
+.discovery-chart-overlays {
+
+  @include ui('hide');
+  @include ui-layout('porthole');
+  border: 2px solid $orange;
+
+  .discovery-chart-overview {
+
+    @include ui-layout('porthole-inner');
+  }
+
+  .ui-discovery-profiling & {
+    @include ui('hide');
+  }
+}

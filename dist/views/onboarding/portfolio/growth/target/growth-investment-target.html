@@ -1,0 +1,32 @@
+<div onboarding-step step-scope="stepScope"
+     class="has-checkbox-row"
+     title="Investing for Growth"
+     strapline="Have you got a target amount you'd like your investment to grow to?"
+     show-next-back="true"
+     next-disabled=""
+     back="onboarding-portfolio.growth-investment-monthly"
+     next="onboarding-portfolio.growth-duration"
+     show-save-exit="true"
+     on-load="initialiseSliderData()"
+     on-next="updatePortfolio()">
+
+    <div class="row col-sm-4 width width-full form-group position position-absolute z-index z-index-low check-box-row">
+        <input type="checkbox" class="checkbox checkbox-circle" id="noGrowthTarget" ng-click="setNoGrowthTarget()" ng-checked="sliders.portfolioGrowthTarget.data.reset" />
+        <label class="checkbox-label" for="noGrowthTarget">No</label>
+    </div>
+
+    <div class="row col-sm-4 col-sm-offset-4">
+        <div class="portfolio-sliders">
+            <tiller-discovery-slider 
+                slider-change="updatePortfolio"
+                class="slider slider-top-up show-slider-controls"
+                slider-data="sliders.portfolioGrowthTarget.data"
+                slider-model="sliders.portfolioGrowthTarget.model"
+                slider-key="portfolioGrowthTarget"
+                value-formatter="currency"
+                label="Target">
+            </tiller-discovery-slider>
+
+        </div>
+    </div>
+</div>

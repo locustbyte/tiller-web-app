@@ -1,0 +1,12 @@
+@mixin border($size, $style: solid, $color: transparent)
+{
+  border-top-width: $size;
+  border-right-width: $size;
+  border-bottom-width: $size;
+  border-left-width: $size;
+  border-top: $size $style $color;
+  border-right: $size $style $color;
+  border-bottom: $size $style $color;
+  border-left: $size $style $color;
+  border: $size solid $color;
+}

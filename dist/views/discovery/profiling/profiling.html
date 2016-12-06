@@ -1,0 +1,29 @@
+<div>
+
+    <div class="discovery-profiling-sliders">
+
+        <tiller-discovery-slider ng-if="sliders.lumpSum.data"  slider-change="sliderValueChanged" class="slider slider-lump-sum" ng-class="getSliderClass('lump-sum')" slider-data="sliders.lumpSum.data" slider-model="sliders.lumpSum.model" validation-model="sliders.lumpSum.validationModel" slider-key="lumpSum" value-formatter="currency" label="Lump sum" back-button-callback="goToLumpSumSlider" back-button-title="Back to lump sum"></tiller-discovery-slider>
+
+        <tiller-discovery-slider ng-if="sliders.topUp.data"  slider-change="sliderValueChanged" class="slider slider-top-up" ng-class="getSliderClass('top-up')" slider-data="sliders.topUp.data" slider-model="sliders.topUp.model" validation-model="sliders.topUp.validationModel" slider-key="topUp" value-formatter="currency" label="Monthy" back-button-callback="goToTopUpSlider" back-button-title="Back to monthly amount"></tiller-discovery-slider>
+
+        <tiller-discovery-slider ng-if="sliders.target.data"  slider-change="sliderValueChanged" class="slider slider-target" ng-class="getSliderClass('target')" slider-data="sliders.target.data" slider-model="sliders.target.model" validation-model="sliders.target.validationModel" slider-key="target" value-formatter="currency" label="Target" zero-value-label="(No target)" back-button-callback="goToTargetSlider" back-button-title="Back to target amount"></tiller-discovery-slider>
+
+    </div>
+
+    <div class="discovery-profiling-time-sliders">
+
+        <tiller-discovery-slider ng-if="sliders.totalYears.data"  slider-change="sliderValueChanged" class="slider slider-total-years" ng-class="getSliderClass('total-years')" slider-data="sliders.totalYears.data" slider-model="sliders.totalYears.model" slider-key="totalYears" validation-model="sliders.totalYears.validationModel" value-formatter="none" label="Years"></tiller-discovery-slider>
+
+        <tiller-discovery-slider ng-if="sliders.history.data"  slider-change="sliderHistoryValueChanged" class="slider slider-history" ng-class="getSliderClass('history')" slider-data="sliders.history.data" slider-model="sliders.history.model" slider-key="history" validation-model="sliders.history.validationModel" value-formatter="none" label="Years"></tiller-discovery-slider>
+
+    </div>
+
+    <div class="discovery-profiling-navigation">
+
+        <button class="btn btn-orange-outline btn-half-loz btn-half-loz-left position position-absolute pull-left discovery-profiling-back" title="Back" ng-click="navigateBack()">Back</button>
+
+        <button class="btn btn-orange-outline btn-half-loz btn-half-loz-right position position-absolute pull-right discovery-profiling-forward" title="Next" ng-click="navigateForwards()">Next</button>
+
+    </div>
+
+</div>

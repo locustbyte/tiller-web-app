@@ -1,0 +1,43 @@
+<div onboarding-step step-scope="stepScope" 
+     class="step-explanations"
+     title="Your risk rating is:"  
+     strapline=""
+     show-next-back="true"
+     next-disabled="!riskLevel"
+     back="onboarding-portfolio.onboarding-risk.question5"
+     next="onboarding-portfolio.understand-options"
+     show-save-exit="true"
+     on-next="updatePortfolio()">
+
+        <div class="row risk-levels" ng-init="getPortfolioRiskLevel()">
+            <div class="col-sm-2 col-sm-offset-1" ng-class="{'risk-level-disabled': riskLevel != 1}">
+                <h3 class="padding padding-top-xs">1</h3>
+                <h4 class="padding-bottom-xs text-colour text-colour-grey">Low Risk</h4>
+                <p>You’d prefer to keep the risk of losing money as low as possible.</p>
+            </div>
+            <div class="col-sm-2" ng-class="{'risk-level-disabled': riskLevel != 2}">
+                <h3 class="padding padding-top-xs">2</h3>
+                <h4 class="text-colour text-colour-grey">Low-Medium Risk</h4>
+                <p>You’re happy to take a small amount of risk in return for growth.</p>
+            </div>
+            <div class="col-sm-2" ng-class="{'risk-level-disabled': riskLevel != 3}">
+                <h3 class="padding padding-top-xs">3</h3>
+                <h4 class="text-colour text-colour-grey">Medium Risk</h4>
+                <p>You’re happy to take a reasonable amount of risk in return for good growth.</p>
+            </div>
+            <div class="col-sm-2" ng-class="{'risk-level-disabled': riskLevel != 4}">
+                <h3 class="padding padding-top-xs">4</h3>
+                <h4 class="text-colour text-colour-grey">Medium-High Risk</h4>
+                <p>You’re happy to run the risk of losing over half your capital in return for good growth.</p>
+            </div>
+            <div class="col-sm-2" ng-class="{'risk-level-disabled': riskLevel != 5}">
+                <h3 class="padding padding-top-xs">5</h3>
+                <h4 class="text-colour text-colour-grey">High Risk</h4>
+                <p>You’re happy to risk losing a very significant amount of capital in return for very high growth.</p>
+            </div>
+        </div>
+        <div class="row padding padding-top-md risk-rating">
+            <p>If you don’t agree with this risk rating please complete the questionnaire again.</p>
+            <button class="btn btn-retake-questionarie border border-solid border-xxs border-orange btn-link btn-block text-colour text-colour-white" ng-click="retakeQuestionaire()">Retake questionarie</button>
+        </div>
+</div>

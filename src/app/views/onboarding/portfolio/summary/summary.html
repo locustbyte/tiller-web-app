@@ -1,0 +1,228 @@
+<div class="container text-center margin margin-top-md margin-bottom-md">
+
+    <div class="row">
+
+        <div class="col-sm-8 col-sm-offset-2">
+
+            <h3 class="text-colour text-colour-orange margin margin-bottom-xs">OK {{user.profile.firstName}}, here's a summary of your new portfolio</h3>
+
+            <p class="margin margin-bottom-sm padding padding-left-lg padding-right-lg">Please review your choices to make sure you're happy before clicking Create Portfolio</p>
+
+            <div class="row">
+
+                <div class="col-sm-3 text-center">
+
+                    <p class="margin margin-bottom-xs">Wrapper</p>
+
+                    <div class="shape shape-round shape-orange-outline shape-mlg">
+
+                        <span>{{portfolio.wrapper.wrapperTypeName}}</span>
+
+                    </div>
+
+                </div>
+
+                <div class="col-sm-3 text-center">
+
+                    <p class="margin margin-bottom-xs">Goal</p>
+
+                    <div class="shape shape-round shape-orange-outline shape-mlg">
+
+                        <span>{{portfolio.portfolioTypeLabel}}</span>
+
+                    </div>
+
+                </div>
+
+                <div class="col-sm-3 text-center">
+
+                    <p class="margin margin-bottom-xs">Risk</p>
+
+                    <div class="shape shape-round shape-orange-outline shape-mlg">
+
+                        <span class="large">{{portfolio.targetRiskRatingId}}</span>
+
+                    </div>
+
+                </div>
+
+                <div class="col-sm-3 text-center">
+
+                    <p class="margin margin-bottom-xs">Type</p>
+
+                    <div class="shape shape-round shape-orange-outline shape-mlg">
+
+                        <span>{{portfolio.allocationModel.allocationModelName}}</span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="row margin margin-top-md margin-bottom-md">
+
+                <div class="col-sm-6 col-sm-offset-3">
+
+                    <hr class="padding padding-left-lg padding-right-lg">
+
+                </div>
+
+            </div>
+
+            <div class="row">
+
+                <h3 class="margin margin-bottom-md">Investment Details</h3>
+
+                <div class="col-sm-3 text-center">
+
+                    <p class="margin margin-bottom-xs">Lump sum</p>
+
+                    <div class="shape shape-round shape-orange-outline shape-mlg">
+
+                        <span>{{initialAmount}}</span>
+
+                    </div>
+
+                </div>
+
+                <div class="col-sm-3 text-center">
+
+                    <p class="margin margin-bottom-xs">Monthly top-up</p>
+
+                    <div class="shape shape-round shape-orange-outline shape-mlg">
+
+                        <span>{{initialTopUp}}</span>
+
+                    </div>
+
+                </div>
+
+                <div class="col-sm-3 text-center">
+
+                    <p class="margin margin-bottom-xs">Length</p>
+
+                    <div class="shape shape-round shape-orange-outline shape-mlg">
+
+                        <span><span class="large">{{portfolio.initialYearsToInvest}}</span><br><span class="small">years</span></span>
+
+                    </div>
+
+                </div>
+
+                <div class="col-sm-3 text-center">
+
+                    <p class="margin margin-bottom-xs">Target</p>
+
+                    <div class="shape shape-round shape-orange-outline shape-mlg">
+
+                        <span>{{initialTargetAmount}}</span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="row margin margin-top-md">
+
+                <div class="col-sm-6 col-sm-offset-3">
+
+                    <hr class="padding padding-left-lg padding-right-lg">
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <div class="row">
+
+        <div class="col-sm-10 col-sm-offset-1">
+
+            <h3 class="margin margin-bottom-md">Asset Allocation</h3>
+
+            <div class="row text-center">
+
+                <div class="col-sm-2 grid grid-center-col position position-relative" ng-repeat="asset in assetAllocations">
+
+                    <p class="margin margin-bottom-xs">{{asset.label}}</p>
+
+                    <div class="shape shape-round shape-orange-outline shape-slg" style="border-color: {{asset.colour}};">
+
+                        <span>{{asset.percentage}}%</span>
+
+                        <!--<div class="satellites" ng-if="asset.children">
+
+                            <div ng-repeat="(key, children) in asset.children" class="satellite satellite-{{key}} shape-labels shape-labels-xxs">
+
+                                <span class="shape shape-round shape-xxs shape-border-xs" style="border-color: {{asset.colour}};"></span>
+
+                                <span class="shape-label shape-label-wrapped">{{children.label}}</span>
+
+                            </div>
+
+                        </div>-->
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="row">
+
+        <div class="col-sm-8 col-sm-offset-2">
+
+            <div class="row margin margin-top-md margin-bottom-md">
+
+                <div class="col-sm-6 col-sm-offset-3">
+
+                    <hr class="padding padding-left-lg padding-right-lg">
+
+                </div>
+
+            </div>
+
+            <div class="row">
+
+                <div class="col-sm-8 col-sm-offset-2">
+
+                    <form name="termsAndConditions" class="padding padding-left-sm padding-right-sm margin margin-bottom-sm">
+
+                        <div class="form-group position position-relative text-left">
+
+                            <tiller-radio-option name="accept" id="termsOK" label="By ticking the box I confirm thast I have read and understood the Terms & Conditions" checked="" on-selected="toggleTerms()" on-unselected="toggleTerms()" allow-uncheck="true" ></tiller-radio-option>
+
+                        </div>
+
+                    </form>
+
+                    <div class="row text-center margin margin-bottom-xs">
+
+                        <div class="col-sm-8 col-sm-offset-2">
+
+                            <button class="btn btn-large btn-primary btn-block" ui-sref="onboarding-activation.start" ng-disabled="!terms" ng-click="createPortfolio">Create Portfolio</button>
+
+                        </div>
+
+                    </div>
+
+                    <a href="#" class="btn btn-link text-colour text-colour-grey-dark">Go back</a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>

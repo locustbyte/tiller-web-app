@@ -1,0 +1,75 @@
+﻿<div onboarding-step step-scope="stepScope"
+     class="step-explanations onboarding-allocations"
+     title="Understand Tiller's portfolios"  
+     strapline=""
+     show-next-back="true"
+     next-disabled="stepScope.portfolio.allocationModelTypeId == null"
+     back="onboarding-portfolio.onboarding-risk.rating"
+     next="onboarding-investment.charts.assetAllocation"
+     show-save-exit="true"
+     on-next="updatePortfolio()">
+
+        <div class="screen-cover position position-absolute col-md-12 z-index z-index-high" ng-if="stepScope.modalShown"></div>
+        <div class="row">
+            <div class="text-center step col-md-4" ng-class="{'z-index z-index-highest': stepScope.portfolio.allocationModelTypeId === 1 }">
+                <div ng-class="{'shape-orange shape-orange-outline': stepScope.portfolio.allocationModelTypeId == 1}" class="step-image shape dummy-low-orange-opacity border border-s border-radius-full selectable fill-on-hover" ng-click="stepScope.portfolio.allocationModelTypeId = 1;showModal();">
+                    <satellite class="bullet-label seventy-five-degrees-right shape shape-orange"><p>ETF</p></satellite>
+                    <p>Tracker</p>
+                </div>
+                <div class="step-text margin margin-top-xs" ng-if="stepScope.portfolio.allocationModelTypeId !== 1 || stepScope.modalShown === false">
+                    <p>This invests your money in Exchange Traded Funds that match the performance of a selected 'index' such as the FTSE 100.</p>
+                </div>
+                <div class="step-text position position-relative text-center margin margin-top-xs confirmation-modal" ng-if="stepScope.portfolio.allocationModelTypeId === 1 && stepScope.modalShown === true">
+                    <h3 class="text-colour text-colour-orange ">You had previously selected {{stepScope.selectedAllocationModelType}}</h3>
+                    <p class="margin margin-top-xs confirm-message">Hit confirm below to keep ths selection.</p>
+                    <div class="width width-120 display display-inline-block conf-btn margin margin-top-xs">
+                        <button class="btn btn-save border border-solid border-xxs border-orange btn-link btn-block text-colour text-colour-white" ng-click="review()">Review</button>
+                    </div>
+                    <div class="width width-120 display display-inline-block conf-btn margin margin-top-xs">
+                        <button class="btn btn-save border border-solid border-xxs border-orange btn-link btn-block text-colour text-colour-white" ng-click="confirm()">Confirm</button>
+                    </div>
+                </div>
+            </div>
+            <div class="step margin col-md-4" ng-class="{'z-index z-index-highest': stepScope.portfolio.allocationModelTypeId === 2 }">
+                <div ng-class="{'shape-orange shape-orange-outline': stepScope.portfolio.allocationModelTypeId == 2}" class="step-image shape dummy-low-orange-opacity border border-s border-radius-full selectable fill-on-hover" ng-click="stepScope.portfolio.allocationModelTypeId = 2;showModal();">
+                    <satellite class="bullet-label seventy-five-degrees-right shape shape-orange"><p>ETF</p></satellite>
+                    <satellite class="bullet-label eighty-five-degrees-right shape shape-orange"><p>Managed</p></satellite>
+                    <p>Active</p>
+                </div>
+                <div class="step-text margin margin-top-xs" ng-if="stepScope.portfolio.allocationModelTypeId !== 2 || stepScope.modalShown === false">
+                    <p>This offers more control over your investment by combining ETFs with higher performing managed funds hand-picked by our investment team.</p>
+                </div>
+                <div class="step-text position position-relative text-center margin margin-top-xs confirmation-modal" ng-if="stepScope.portfolio.allocationModelTypeId === 2 && stepScope.modalShown === true">
+                    <h3 class="text-colour text-colour-orange ">You had previously selected {{stepScope.selectedAllocationModelType}}</h3>
+                    <p class="margin margin-top-xs confirm-message">Hit confirm below to keep ths selection.</p>
+                    <div class="width width-120 display display-inline-block conf-btn margin margin-top-xs">
+                        <button class="btn btn-save border border-solid border-xxs border-orange btn-link btn-block text-colour text-colour-white" ng-click="review()">Review</button>
+                    </div>
+                    <div class="width width-120 display display-inline-block conf-btn margin margin-top-xs">
+                        <button class="btn btn-save border border-solid border-xxs border-orange btn-link btn-block text-colour text-colour-white" ng-click="confirm()">Confirm</button>
+                    </div>
+                </div>
+            </div>
+            <div class="step col-md-4" ng-class="{'z-index z-index-highest': stepScope.portfolio.allocationModelTypeId === 3 }">
+                <div ng-class="{'shape-orange shape-orange-outline': stepScope.portfolio.allocationModelTypeId == 3}" class="step-image shape dummy-low-orange-opacity border border-s border-radius-full selectable fill-on-hover" ng-click="stepScope.portfolio.allocationModelTypeId = 3;showModal();">
+                    <satellite class="bullet-label seventy-five-degrees-right shape shape-orange"><p>ETF</p></satellite>
+                    <satellite class="bullet-label eighty-five-degrees-right shape shape-orange"><p>Managed</p></satellite>
+                    <satellite class="bullet-label ninety-five-degrees-right shape shape-orange"><p>Themes</p></satellite>
+                    <p>Active+</p>
+                </div>
+                <div class="step-text margin margin-top-xs" ng-if="stepScope.portfolio.allocationModelTypeId !== 3 || stepScope.modalShown === false">
+                    <p>This lets you fine-tune your investment choices, by adding up to five specialised investment fund 'themes' to the ETFs and managed funds. These can account for up to 10% of your portfolio.</p>
+                </div>
+                <div class="step-text position position-relative text-center margin margin-top-xs confirmation-modal" ng-if="stepScope.portfolio.allocationModelTypeId === 3 && stepScope.modalShown === true">
+                    <h3 class="text-colour text-colour-orange ">You had previously selected {{stepScope.selectedAllocationModelType}}</h3>
+                    <p class="margin margin-top-xs confirm-message">Hit confirm below to keep ths selection.</p>
+                    <div class="width width-120 display display-inline-block conf-btn margin margin-top-xs">
+                        <button class="btn btn-save border border-solid border-xxs border-orange btn-link btn-block text-colour text-colour-white" ng-click="review()">Review</button>
+                    </div>
+                    <div class="width width-120 display display-inline-block conf-btn margin margin-top-xs">
+                        <button class="btn btn-save border border-solid border-xxs border-orange btn-link btn-block text-colour text-colour-white" ng-click="confirm()">Confirm</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+</div>

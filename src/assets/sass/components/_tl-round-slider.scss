@@ -1,0 +1,276 @@
+tiller-discovery-slider {
+
+    position: absolute;
+    top: 170px;
+    left: 170px;
+    display: block;
+    width: 340px;
+    height: 340px;
+    margin-left: -170px;
+    margin-top: -170px;
+    border-radius: 50%;
+    opacity: 1;
+    transition: all .5s ease-in-out;
+
+    svg.round-slider {
+
+        .slider-track {
+            fill: transparent;
+            stroke: $orange;
+            opacity: .3;
+        }
+
+        .slider-range-track {
+            fill: #df6e16;
+        }
+
+        .handle circle:hover, .handle text:hover {
+            cursor: move;
+        }
+
+        .handle circle.handle-circle {
+            fill: #df6e16;
+            stroke: none;
+        }
+
+        .handle circle.handle-dot {
+            fill: #2a2627;
+            stroke: none;
+            cursor: move;
+        }
+
+        .handle text.handle-label {
+            opacity: 0;
+        }
+
+        .handle circle.handle-pulse {
+            fill: none;
+            stroke: #ffffff;
+        }
+
+        .slider-label {
+            display: none;
+            fill: #df6e16;
+            font-size: 20px;
+            width: 300px;
+            text-align: center;
+        }
+    }
+
+
+    &.slider-chart {
+
+        width: 916px;  // Equates to 740px slider width
+        margin-left: -458px;
+        margin-top: -458px;
+
+        @media (max-width: $screen-mdlg-max)
+        {
+            width: 698px; // Equates to 564px slider width
+            margin-left: -349px;
+            margin-top: -349px;
+        }
+
+    }
+
+
+    &.show-slider-controls {
+        .slider-value-controls {
+        position: absolute;
+        top: 55px;
+        right: 20px;
+        display: block;
+        }
+    }
+
+    .slider-readonly-mask {
+        display: none;
+    }
+
+    &.slider-readonly, &.slider-disabled {
+        .slider-readonly-mask {
+        display: block;
+        }
+        svg .handle {
+            opacity: 0;
+        }
+    }
+
+    &.slider-disabled {
+        opacity: 0.33;
+    }
+
+    .slider-value {
+        position: absolute;
+        top: 50%;
+        left: 15%;
+        display: block;
+        margin-top: -50px;
+        width: 70%;
+        color: $orange;
+        background-color: transparent;
+        font-family: $font-markpro;
+        font-weight: 300;
+        font-size: 34px;
+        text-align: center;
+        border-top: none;
+        border-left: none;
+        border-right: none;
+        border-bottom: 1px solid darken($orange, 30%);
+        border-radius: none;
+        z-index: 3;
+        outline: none;
+
+        &:focus {
+        border-bottom: 1px solid $orange;
+        }
+
+        &.slider-value-display-only {
+        background-color: transparent;
+        border-bottom: none;
+        }
+        
+    }
+
+    &.validation-error .slider-value {
+        color: $red;
+        border-bottom-color: darken($red, 30%);
+        &:focus {
+        border-bottom-color: $red;
+        }
+    }
+
+    .slider-value-controls {
+        display: none;
+    }
+
+    .slider-label {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        display: block;
+        margin-left: -90px;
+        margin-top: 10px;
+        width: 180px;
+        color: $white;
+        font-family: $font-markpro;
+        font-weight: 300;
+        font-size: 28px;
+        text-align: center;
+        z-index: 10;
+        cursor: default;
+        pointer-events: none;
+    }
+
+    .slider-zero-value-label {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        display: block;
+        margin-left: -90px;
+        margin-top: 40px;
+        width: 180px;
+        color: $grey-dark;
+        font-family: $font-markpro;
+        font-weight: 300;
+        font-size: 14px;
+        text-align: center;
+        z-index: 10;
+        cursor: default;
+        pointer-events: none;
+    }
+
+    .slider-value,
+    .slider-label {
+        transition: opacity .3s;
+    }
+
+    .slider-validation-message {
+        margin-top: 10px;
+    }
+
+    .slider-back-button {
+        display: none;
+    }
+
+    &.slider-historic {
+        svg.round-slider {
+            opacity: 0;
+        }
+        .slider-back-button {
+            display: block;
+        }
+    }
+
+    /* prevent text selection when dragging slider */
+    .tiller-discovery-slider.dragging {
+        .slider-value, .slider-label, .slider-zero-value-label {
+            -webkit-touch-callout: none; /* iOS Safari */
+            -webkit-user-select: none;   /* Chrome/Safari/Opera */
+            -moz-user-select: none;      /* Firefox */
+            -ms-user-select: none;       /* Internet Explorer/Edge */
+            user-select: none; 
+        }
+    }
+
+    &.slider-compact {
+        width: 150px;
+        height: 150px;
+        margin: 0; /* remove negative margins on compact sliders */
+
+        .slider-label {
+            margin-top: 0;
+            font-size: 12px;
+        }
+
+        .slider-value {
+            font-size: 15px;
+            margin-top: -26px;
+            border-bottom-color: transparent;
+        }
+
+        .slider-validation-message {
+            display: none;
+        }
+
+        .slider-zero-value-label {
+            top: 34%;
+            font-size: 9px;
+        }
+
+        /* this doesn't work in some browsers so need to handle in JavaScript instead */
+        /*svg.round-slider {
+            .handle-circle, .handle-dot {
+                transition: r .25s ease-in-out;
+                r: 0;
+            }
+        }
+        &:hover, .dragging {
+            svg.round-slider {
+                .handle-circle {
+                    r: 20;
+                }
+                .handle-dot {
+                    r: 15;
+                }
+            }
+        }*/
+
+    }
+
+    &.slider-minimised {
+        width: 20px;
+        height: 20px;
+        margin-left: -10px;
+        margin-top: -10px;
+        opacity: 0;
+        transition: all .5s ease-in;
+    }
+
+
+
+
+
+}
+
+

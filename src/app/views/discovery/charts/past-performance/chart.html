@@ -1,0 +1,50 @@
+<div class="row margin margin-bottom-sm margin-top-xxs">
+
+    <div class="col-sm-4 text-right">
+
+        <button class="btn btn-link"><i class="fa fa-circle text-colour text-colour-green"></i>&nbsp;<span class="text-colour text-colour-white">My plan</span></button>
+
+    </div>
+
+    <div class="col-sm-7" ng-if="chartData && expanded === false">
+
+        <!-- Single button -->
+        <div class="btn-group">
+
+            <button type="button" class="btn btn-block btn-yellow-outline dropdown-toggle text-ellipsis" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <i class="fa fa-circle"></i>&nbsp;<span class="text-colour text-colour-white">{{currentIndice.indice}}</span>&nbsp;<i class="h4 text-colour text-colour-white fa fa-angle-down"></i>
+            </button>
+
+            <ul class="dropdown-menu dropdown-menu-yellow-outline">
+                <li><button class="btn btn-link" ng-repeat="indice in chartData.indices" ng-click="updateChartIndice(indice)">{{indice.indice}}</button></li>
+            </ul>
+
+        </div>
+
+    </div>
+
+    <div class="col-sm-3" ng-if="chartData && expanded === true">
+
+        <!-- Single button -->
+        <div class="btn-group">
+
+            <button type="button" class="btn btn-block btn-yellow-outline dropdown-toggle text-ellipsis" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <i class="fa fa-circle"></i>&nbsp;<span class="text-colour text-colour-white">{{currentIndice.indice}}</span>&nbsp;<i class="h4 text-colour text-colour-white fa fa-angle-down"></i>
+            </button>
+
+            <ul class="dropdown-menu dropdown-menu-yellow-outline">
+                <li><button class="btn btn-link" ng-repeat="indice in chartData.indices" ng-click="updateChartIndice(indice)">{{indice.indice}}</button></li>
+            </ul>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<div class="padding padding-top-xs padding-bottom-sm padding-bottom-zero-mdlg">
+
+    <div id="pastPerformanceChart"></div>
+
+</div>

@@ -1,0 +1,38 @@
+.discovery-chart-zoom-btns {
+  position: absolute;
+  top: 570px;
+  width: 50%;
+  margin-left: 25%;
+  z-index: $z-index-highest;
+
+  @media (max-width: $screen-mdlg-max){
+    top: 440px;
+  }
+
+
+  @media (max-width: $screen-sm-max){
+    top: 400px;
+  }
+
+  .zoom-btn {
+    display: none;
+  }
+
+  .ui-discovery-charts-assetAllocation-list & {
+    bottom: 40px;
+    top: initial;
+  }
+
+  .ui-discovery-charts-assetAllocation-list-expanded &,
+  .ui-discovery-charts-futurePerformance-expanded &,
+  .ui-discovery-charts-pastPerformance-expanded & {
+    display: none;
+  }
+
+  .ui-discovery-charts-assetAllocation-list & .zoom-btn-fund-list,
+  .ui-discovery-charts-futurePerformance & .zoom-btn-future-performance,
+  .ui-discovery-charts-pastPerformance & .zoom-btn-past-performance {
+    display: block;
+  }
+
+}

@@ -1,0 +1,80 @@
+
+.tiller-dropdown{
+	button{
+		padding: 15px;
+	}
+	ul{
+		width: 100%;
+	    text-align: left;
+	    border: 1px solid orange;
+	    min-width: inherit;
+	    background-color: initial;
+	    margin: 0px;
+	    padding: 10px;
+
+	    li{
+	    	a{
+	    		color: white;
+	    		&:hover{
+	    			background-color: transparent;
+	    			color: white;
+	    		}		
+	    	}
+
+	    	&:first-child{
+	    		margin-top: 8px;
+	    	}
+	    }
+	    
+	}
+	.tiller-caret{
+		position: absolute;
+		right: 20px;
+		margin-top: 3px;
+		color: white;
+	}
+}
+
+.password-checklist{
+	.valid {
+	    color: #71B112;
+	}
+}
+
+.fund-table-expanded{
+	td{
+		color: #e5e5e5;
+	}
+}
+
+.ui-discovery-charts-assetAllocation-list-expanded, .ui-discovery-charts-futurePerformance-expanded, .ui-discovery-charts-pastPerformance-expanded{
+	.discovery-charts-call-to-action{
+		display: none;
+	}
+}
+
+.ui-discovery-charts-futurePerformance-expanded #futurePerformanceChart{
+	width: 70%;
+	left: 0;
+	right: 0;
+	margin: 0 auto;
+}
+
+.discovery-profiling-time-sliders{
+	height: 0px! important;
+}
+
+.get-started{
+	.step-explanations{
+		h3{
+			font-size: 22px;
+		}
+		h4{
+			font-size: 18px;
+		}
+	}
+}
+
+.ui-discovery-charts-futurePerformance-expanded .discovery-chart-container{
+	margin: 0 100px 0 110px;
+}

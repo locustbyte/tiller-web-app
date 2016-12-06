@@ -1,0 +1,15 @@
+<div onboarding-step title="Welcome back {{knownUserModel.email}}"
+     strapline="Let's get you back to where you left off.">
+
+    <div class="row margin margin-bottom-xs">
+        <div class="col-sm-4 col-sm-offset-4">
+            <p>Last time you were just about to share:</p>
+        </div>
+    </div>
+    <div class="row margin margin-bottom-xs">
+        <a href="#" class="btn btn-start btn-primary btn-block" ui-sref="{{knownUserModel.nextStep.state}}" ng-bind="knownUserModel.nextStep.name"></a>
+    </div>
+    <div class="row">
+        <a href="#" class="start-again" ui-sref="onboarding-portfolio.name">Start set up again</a>
+    </div>
+</div>

@@ -1,0 +1,9 @@
+@mixin border-radius($rad) {
+  -webkit-border-radius: $rad;
+  -moz-border-radius: $rad;
+  border-radius: $rad;
+  border-top-left-radius: $rad;
+  border-top-right-radius: $rad;
+  border-bottom-right-radius: $rad;
+  border-bottom-left-radius: $rad;
+}

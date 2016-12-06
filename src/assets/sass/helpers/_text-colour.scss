@@ -1,0 +1,219 @@
+h3.text-colour-text-colour-orange{
+  color: $orange !important;
+}
+.text-colour {
+
+  &.text-colour-black {
+
+    color: $black;
+
+    a {
+      color: $black;
+
+      &:hover {
+        color: $black;
+      }
+
+    }
+
+  }
+
+  a.text-colour-black {
+
+    color: $black;
+
+    &:hover {
+      color: $black;
+    }
+
+  }
+
+  &.text-colour-white {
+
+    color: $white;
+
+    a {
+      color: $white;
+
+      &:hover {
+        color: $white;
+      }
+
+    }
+
+  }
+
+  a.text-colour-white {
+
+    color: $white;
+
+    &:hover {
+      color: $white;
+    }
+
+  }
+
+  &.text-colour-grey {
+
+    color: $grey;
+
+    a {
+      color: $grey;
+
+      &:hover {
+        color: $grey;
+      }
+
+    }
+
+  }
+
+  a.text-colour-grey {
+
+    color: $grey;
+
+    &:hover {
+      color: $grey;
+    }
+
+  }
+
+  &.text-colour-grey-dark {
+
+    color: $grey-dark;
+
+    a {
+      color: $grey-dark;
+
+      &:hover {
+        color: $grey-dark;
+      }
+
+    }
+
+  }
+
+  a.text-colour-grey-dark {
+
+    color: $grey-dark;
+
+    &:hover {
+      color: $grey-dark;
+    }
+
+  }
+
+  &.text-colour-green {
+
+    color: $green;
+
+    a {
+      color: $green;
+
+      &:hover {
+        color: $green;
+      }
+
+    }
+
+  }
+
+  a.text-colour-green {
+
+    color: $green;
+
+    &:hover {
+      color: $green;
+    }
+
+  }
+
+  &.text-colour-blue {
+
+    color: $blue;
+
+    a {
+      color: $blue;
+
+      &:hover {
+        color: $blue;
+      }
+
+    }
+
+  }
+
+  a.text-colour-blue {
+
+    color: $blue;
+
+    &:hover {
+      color: $blue;
+    }
+
+  }
+
+  &.text-colour-yellow {
+
+    color: $yellow;
+
+    a {
+      color: $yellow;
+
+      &:hover {
+        color: $yellow;
+      }
+
+    }
+
+  }
+
+  a.text-colour-yellow {
+
+    color: $yellow;
+
+    &:hover {
+      color: $yellow;
+    }
+
+  }
+
+  &.text-colour-orange {
+
+    color: $orange;
+
+    a {
+      color: $orange;
+
+      &:hover {
+        color: $orange;
+      }
+
+    }
+
+  }
+
+    &.text-colour-dummy-low-orange-opacity {
+
+    color: $dummy-low-orange-opacity;
+
+    a {
+      color: $dummy-low-orange-opacity;
+
+      &:hover {
+        color: $dummy-low-orange-opacity;
+      }
+    }
+  }
+
+  a.text-colour-orange {
+
+    color: $orange;
+
+    &:hover {
+      color: $orange;
+    }
+
+  }
+
+}

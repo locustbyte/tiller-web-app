@@ -1,0 +1,17 @@
+.discovery-charts-asset-region-chart {
+
+  @include ui('hide');
+  @include ui-animate(scale-down);
+
+  .ui-discovery-charts-assetAllocation-region & {
+    @include ui('show');
+    @include ui-animate(scale-up);
+  }
+
+  .ui-discovery-charts-assetAllocation-list-expanded &,
+  .ui-discovery-charts-futurePerformance-expanded &,
+  .ui-discovery-charts-pastPerformance-expanded & {
+    display: none;
+  }
+
+}

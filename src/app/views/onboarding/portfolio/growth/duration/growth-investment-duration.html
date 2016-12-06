@@ -1,0 +1,32 @@
+﻿<div onboarding-step step-scope="stepScope"
+     class="has-checkbox-row"
+     title="Investing for Growth"
+     strapline="How long do you want to invest for?"
+     show-next-back="true"
+     next-disabled=""
+     back="onboarding-portfolio.growth-target"
+     next="onboarding-portfolio.onboarding-risk.intro"
+     show-save-exit="true"
+     on-load="initialiseSliderData()"
+     on-next="updatePortfolio()">
+
+    <div class="row col-sm-4 width width-full form-group position position-absolute z-index z-index-low check-box-row">
+        <input type="checkbox" class="checkbox checkbox-circle" id="noGrowthDuration" ng-click="setNoGrowthDuration()" ng-checked="sliders.portfolioGrowthDuration.data.reset" />
+        <label class="checkbox-label" for="noGrowthDuration">I have no time frame</label>
+    </div>
+
+    <div class="row col-sm-4 col-sm-offset-4">
+        <div class="portfolio-sliders">
+            <tiller-discovery-slider 
+                slider-change="updatePortfolio"
+                class="slider slider-top-up show-slider-controls"
+                slider-data="sliders.portfolioGrowthDuration.data"
+                slider-model="sliders.portfolioGrowthDuration.model"
+                slider-key="portfolioGrowthDuration"
+                value-formatter="none"
+                label="Years">
+            </tiller-discovery-slider>
+
+        </div>
+    </div>
+</div>

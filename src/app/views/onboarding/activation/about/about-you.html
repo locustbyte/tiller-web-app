@@ -1,0 +1,57 @@
+﻿<div onboarding-step step-scope="stepScope"
+     class="onboarding-activation"
+     title="More about you"
+     show-next-back="true"
+     next-disabled="!allValid()"
+     back="onboarding-activation.start"
+     next="onboarding-activation.investment-knowledge"
+     show-save-exit="true"
+     on-load=""
+     on-next="updateProfile()">
+
+    <form name="myForm">
+        <div class="row">
+            <div class="col-sm-4 col-sm-offset-4">
+                <div class="form-group position position-relative address-look-up">
+                    <input type="text" placeholder="Address*" autocomplete="off" class="form-control" ng-model="stepScope.address.text" ng-change="getAddress()" name="firstName" required />
+                    <div class="field-complete"></div>
+                    <div ng-show="stepScope.foundAddresses !== null" class="outer-container border border-solid border-xs border-orange z-index z-index-lowest position position-absolute">
+                        <div class="address-look-up-results scrollbar-inner">
+                            <ul class="text-align text-align-left-sm margin margin-">
+                                <li ng-repeat="address in stepScope.foundAddresses" id="{{address.Id}}">{{address.Text}}</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-4 col-sm-offset-4">
+                <div class="form-group">
+                    <div class="">
+                        <input type="text" maxlength="5" placeholder="+44" class="form-control inline full-loz width width-120 display display-inline-block" ng-model="stepScope.areaCode" ng-change="setPhoneNumber()" ng-keypress="validateCountryCode($event)" name="middleName" />
+                        <input type="text" placeholder="Mobile number*" class="form-control inline two-thirds-loz full-loz display display-inline-block some-class" ng-model="stepScope.phoneNumber" ng-change="setPhoneNumber()" ng-keypress="validateTelephoneNumber($event)" name="lastName" required />
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="row">
+            <div class="col-sm-4 col-sm-offset-4">
+                <h4 class="margin margin-bottom-xs margin-top-xs">Date of birth</h4>
+                <div class="form-group position position-relative" style="width: 400px">
+                    <tiller-select class="date-day" width="120" options="daysOfMonth" selected-item="stepScope.day" on-option-selected="selectDayOfMonth"></tiller-select>
+                    <tiller-select class="date-month" width="120" options="monthsOfYear" selected-item="stepScope.month" on-option-selected="selectMonthOfYear"></tiller-select>
+                    <tiller-select class="date-year" width="120" options="years" selected-item="stepScope.year" on-option-selected="selectYear"></tiller-select>
+                </div>
+            </div>
+        </div>
+    </form>
+    <div class="row">
+        <div class="col-sm-4 col-sm-offset-4 margin margin-bottom-xs margin-top-xs">
+            <div class="text-left footnote">* mandatory field</div>
+        </div>
+    </div>
+
+</div>

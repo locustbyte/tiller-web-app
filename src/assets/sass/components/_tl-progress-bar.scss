@@ -1,0 +1,146 @@
+/*
+tl-progress-bar {
+    position: relative;
+    display: block;
+    background-color: #542908;
+    height: 2px;
+    margin: 0 auto;
+
+    &:after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+
+    .progress-track {
+        height: 2px;
+        font-size: 0;
+        background-color: #df6e16;
+        transition: width 1s ease;
+    }
+
+    .progress-step {
+        position: relative;
+        display: block;
+        float: left;
+        width: 20%;
+        height: 50px;
+        box-sizing: border-box;
+
+        &:after {
+            content: '';
+            position: absolute;
+            display: block;
+            top: -5px;
+            right: -4px;
+            width: 8px;
+            height: 8px;
+            background-color: #2a2627;
+            border: 2px solid #542908;
+            border-radius: 50%;
+            box-sizing: border-box;
+        }
+
+        label {
+            position: absolute;
+            left: 50%;
+            display: block;
+            opacity: 0;
+            padding-top: 10px;
+            width: 100%;
+            text-align: center;
+            font-size: 14px;
+            color: #ffffff;
+            -webkit-transform: scale(0.5);
+            transform: scale(0.5);
+            transition: all .5s ease .25s;
+        }
+
+        .highlighted:after {
+            background-color: #df6e16;
+            border-color: #df6e16;
+            transition: all .25s ease .75s;
+        }
+
+        .active label {
+            opacity: 1;
+            -webkit-transform: scale(1);
+            transform: scale(1);
+        }
+    }
+}
+*/
+
+
+tl-progress-bar {
+  position: relative;
+  display: block;
+  background-color: $orange-dark;
+  height: 2px;
+  margin: 0 auto;
+}
+
+tl-progress-bar:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+tl-progress-bar .tl-progress-track {
+  height: 2px;
+  font-size: 0;
+  background-color: $orange;
+  transition: width 1s ease;
+}
+
+tl-progress-bar .tl-progress-step {
+  position: relative;
+  display: block;
+  float: left;
+  width: 20%;
+  height: 50px;
+  box-sizing: border-box;
+}
+
+tl-progress-bar .tl-progress-step label {
+  position: absolute;
+  left: 50%;
+  display: block;
+  opacity: 0;
+  padding-top: 10px;
+  width: 100%;
+  text-align: center;
+  font-size: 15px;
+  line-height: 18px;
+  font-weight: 300;
+  color: $orange;
+  -webkit-transform: scale(0.5);
+  transform: scale(0.5);
+  transition: all .5s ease .25s;
+}
+
+tl-progress-bar .tl-progress-step:after {
+  content: '';
+  position: absolute;
+  display: block;
+  top: -5px;
+  right: -4px;
+  width: 8px;
+  height: 8px;
+  background-color: $brown-darkest;
+  border: 2px solid $orange-dark;
+  border-radius: 50%;
+  box-sizing: border-box;
+}
+
+tl-progress-bar .tl-progress-step.highlighted:after {
+  background-color: $orange;
+  border-color: $orange;
+  transition: all .25s ease .75s;
+}
+
+tl-progress-bar .tl-progress-step.active label {
+  opacity: 1;
+  -webkit-transform: scale(1);
+  transform: scale(1);
+}

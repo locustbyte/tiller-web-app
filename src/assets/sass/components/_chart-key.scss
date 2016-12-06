@@ -1,0 +1,49 @@
+.chart-key {
+  height: 30px;
+  cursor: pointer;
+
+  span {
+    font-size: 13px;
+    font-weight: $weight-light;
+  }
+
+  &.chart-key-0 {
+  }
+
+  &.chart-key-1 {
+    left: -3px;
+  }
+
+  &.chart-key-2 {
+    left: -9px;
+  }
+
+  &.chart-key-3 {
+    left: -18px;
+  }
+
+  &.chart-key-4 {
+    left: -28px;
+  }
+
+  &.chart-key-5 {
+    left: -40px;
+  }
+
+  &.chart-key-6 {
+    left: -69px;
+  }
+
+  &.chart-key-7 {
+    left: -88px;
+  }
+
+  &.chart-key-8 {
+    left: -100px;
+  }
+
+  &.chart-key-9 {
+    left: -130px;
+  }
+
+}

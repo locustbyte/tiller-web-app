@@ -1,0 +1,39 @@
+.onboarding-investment-chart-zoom-btns {
+  position: absolute;
+  top: 570px;
+  width: 100%;
+  z-index: $z-index-highest;
+
+  @media (max-width: $screen-mdlg-max){
+    top: 440px;
+    width: 50%;
+    margin-left: 25%;
+  }
+
+
+  @media (max-width: $screen-sm-max){
+    top: 400px;
+  }
+
+  .zoom-btn {
+    display: none;
+  }
+
+  .ui-onboarding-investment-charts-assetAllocation-list & {
+    bottom: 40px;
+    top: initial;
+  }
+
+  .ui-onboarding-investment-charts-assetAllocation-list-expanded &,
+  .ui-onboarding-investment-charts-futurePerformance-expanded &,
+  .ui-onboarding-investment-charts-pastPerformance-expanded & {
+    display: none;
+  }
+
+  .ui-onboarding-investment-charts-assetAllocation-list & .zoom-btn-fund-list,
+  .ui-onboarding-investment-charts-futurePerformance & .zoom-btn-future-performance,
+  .ui-onboarding-investment-charts-pastPerformance & .zoom-btn-past-performance {
+    display: block;
+  }
+
+}

@@ -1,0 +1,19 @@
+﻿<div onboarding-step title="Funding your monthly income"
+     strapline="If your portfolio isn't performing well, you may have to take money out of your initial capital investment."
+     show-next-back="true"
+     next-disabled="modelLoaded === false || stepScope.portfolio.portfolioName.length == 0"
+     back="onboarding.verify-email"
+     next="onboarding-portfolio.wrapper"
+     show-save-exit="true"
+     on-next="updatePortfolio()">
+
+    <div class="row col-sm-4 col-sm-offset-4">
+        <form name="myForm">
+            <div class="form-group position position-relative">
+                <input type="text" placeholder="E.g: Kids' tuition fees" class="form-control no-nav" name="portfolioName" ng-model="stepScope.portfolio.portfolioName" />
+                <div class="field-complete"></div>
+            </div>
+        </form>
+    </div>
+
+</div>

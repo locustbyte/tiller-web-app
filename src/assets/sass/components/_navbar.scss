@@ -1,0 +1,18 @@
+.navbar {
+
+  &.navbar-default {
+    background-color: transparent;
+    border: none;
+    padding: $padding-sm;
+
+    .navbar-header {
+      height: 70px;
+    }
+
+    .navbar-right {
+      .icon-lg {
+        font-size: 36px;
+      }
+    }
+  }
+}

@@ -1,0 +1,238 @@
+/**
+ * Set application typography defaults here
+ */
+
+body {
+  line-height: $line-height-md;
+  font-size: $std-size;
+  color: $white;
+  font-family: $font-markpro;
+  @media (max-width: $screen-xs-max)
+  {
+    font-size: $std-xs-size;
+  }
+}
+
+//Anchors/nav
+a, li, input[type=submit], button, .colour-hover {
+  opacity: 1;
+  text-decoration: none;
+  -o-transition: opacity .25s, color 0.5s, background-color 0.5s, border-color .5s, ease-in-out;
+  -ms-transition:  opacity .25s, color 0.5s, background-color 0.5s, border-color .5s, ease-in-out;
+  -moz-transition:  opacity .25s, color 0.5s, background-color 0.5s, border-color .5s, ease-in-out;
+  -webkit-transition:  opacity .25s, color 0.5s, background-color 0.5s, border-color .5s, ease-in-out;
+  transition:  opacity .25s, color 0.5s, background-color 0.5s, border-color .5s, ease-in-out;
+
+  &:hover,
+  &:active,
+  &:focus {
+    opacity: 0.75;
+    text-decoration: none;
+  }
+}
+
+h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6, p, li, blockquote {
+  margin: 0;
+  padding: 0;
+  a {
+  }
+}
+
+h1, .h1, h2, .h2, h3, .h3 {
+  font-family: $font-markpro;
+  line-height: $line-height-sm;
+}
+
+h1, .h1 {
+  font-weight: $weight-light;
+  font-size: $h1-size;
+
+  @media (max-width: $screen-mdlg-max)
+  {
+    font-size: $h1-mdlg-size;
+  }
+  @media (max-width: $screen-xs-max)
+  {
+    font-size: $h1-xs-size;
+  }
+  @media (max-width: $screen-sm-max)
+  {
+    font-size: $h1-sm-size;
+  }
+
+  color: $orange-light;
+}
+
+/* til-89 
+h1{
+  color: $header-orange !important;
+}
+*/
+
+
+h2, .h2 {
+  color: $white;
+  font-weight: $weight-light;
+  font-size: $h2-size;
+
+  @media (max-width: $screen-mdlg-max)
+  {
+    font-size: $h2-mdlg-size;
+  }
+  @media (max-width: $screen-xs-max)
+  {
+    font-size: $h2-xs-size;
+  }
+  @media (max-width: $screen-sm-max)
+  {
+    font-size: $h2-sm-size;
+  }
+}
+
+h3, .h3 {
+  font-size: $h3-size;
+  font-weight: $weight-light;
+
+  @media (max-width: $screen-mdlg-max)
+  {
+    font-size: $h3-mdlg-size;
+  }
+  @media (max-width: $screen-xs-max)
+  {
+    font-size: $h3-xs-size;
+  }
+  @media (max-width: $screen-sm-max)
+  {
+    font-size: $h3-sm-size;
+  }
+}
+
+h4, .h4 {
+  font-size: $h4-size;
+  font-weight: $weight-light;
+
+  @media (max-width: $screen-mdlg-max)
+  {
+    font-size: $h4-mdlg-size;
+  }
+  @media (max-width: $screen-xs-max)
+  {
+    font-size: $h4-xs-size;
+  }
+  @media (max-width: $screen-sm-max)
+  {
+    font-size: $h4-sm-size;
+  }
+}
+
+h5, .h5 {
+  font-size: $h5-size;
+
+  @media (max-width: $screen-mdlg-max)
+  {
+    font-size: $h5-mdlg-size;
+  }
+  @media (max-width: $screen-xs-max)
+  {
+    font-size: $h5-xs-size;
+  }
+  @media (max-width: $screen-sm-max)
+  {
+    font-size: $h5-sm-size;
+  }
+}
+
+h6, .h6 {
+  font-size: $h6-size;
+
+  @media (max-width: $screen-mdlg-max)
+  {
+    font-size: $h6-mdlg-size;
+  }
+  @media (max-width: $screen-xs-max)
+  {
+    font-size: $h6-xs-size;
+  }
+  @media (max-width: $screen-sm-max)
+  {
+    font-size: $h6-sm-size;
+  }
+}
+
+p {
+
+  font-size: $std-size;
+  font-weight: $weight-light;
+
+  @media (max-width: $screen-mdlg-max)
+  {
+    font-size: $std-mdlg-size;
+  }
+  @media (max-width: $screen-xs-max)
+  {
+    font-size: $std-xs-size;
+  }
+  @media (max-width: $screen-sm-max)
+  {
+    font-size: $std-sm-size;
+  }
+}
+
+a {
+  color: $black;
+}
+
+.lead {
+
+  font-size: $lead-size;
+
+  @media (max-width: $screen-mdlg-max)
+  {
+    font-size: $lead-mdlg-size;
+  }
+
+  @media (max-width:$screen-sm-max) {
+    font-size: $std-size;
+  }
+
+}
+
+.active-plus-icon {
+
+  font-size: $active-plus-icon;
+
+}
+
+.footnote {
+
+  font-size: $footnote-size;
+
+  @media (max-width: $screen-mdlg-max)
+  {
+    font-size: $footnote-mdlg-size;
+  }
+
+  @media (max-width:$screen-sm-max) {
+    font-size: $footnote-sm-size;
+  }
+
+}
+
+.large {
+  font-size: 150%;
+}
+
+strong, b {
+  font-weight: $weight-bold;
+}
+
+blockquote {
+}
+
+
+
+.desaturated {
+  h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6, p, li, blockquote {
+    color: $grey-desaturated !important;
+  }
+}

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="124px" height="51px" viewBox="0 0 124 51" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 40.2 (33826) - http://www.bohemiancoding.com/sketch -->
+    <title>arrow2</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="set-up" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+        <g id="00-tiller-setup-intro" transform="translate(-1064.000000, -432.000000)" stroke="#F06617">
+            <g id="arrow2" transform="translate(1065.000000, 433.000000)">
+                <path d="M0,30.9590362 C0,30.9590362 5.86545455,26.7365369 12.7084848,30.1145353 C12.7084848,30.1145353 29.910303,36.6908604 26,42.6023573 C26,42.6023573 26,52.6023573 12.7084846,46.6023573 C3.45130773,42.4235214 12.7084846,-13.8976428 45.3838628,4.13172629 C78.0592409,22.1610954 85,5.1317263 113,10.1023572" id="Path-7-Copy" stroke-width="1.5" stroke-dasharray="2.5,4" transform="translate(56.500000, 24.551179) scale(1, -1) translate(-56.500000, -24.551179) "></path>
+                <g transform="translate(119.748979, 39.364981) rotate(1.000000) translate(-119.748979, -39.364981) translate(116.748979, 34.364981)" stroke-width="2">
+                    <path d="M5,5 L0.320951893,0.320951893" id="Line"></path>
+                    <path d="M5,9.61538462 L0.320951893,4.93633651" id="Line-Copy" transform="translate(2.692308, 7.307692) scale(1, -1) translate(-2.692308, -7.307692) "></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

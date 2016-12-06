@@ -1,0 +1,23 @@
+<div onboarding-step step-scope="stepScope" 
+     class="step-explanations"
+     title="5 of 5 - Risk profile"  
+     strapline="{{questions[4].question}}"
+     show-next-back="true"
+     next-disabled="!questions[4].isValid"
+     back="onboarding-portfolio.onboarding-risk.question4"
+     next="onboarding-portfolio.onboarding-risk.rating"
+     show-save-exit="true"
+     on-next="">
+
+     <div class="risk-question row margin col-sm-8 col-sm-offset-2">
+        <form name="riskQuestion">
+            <div class="form-group position position-relative clearfix">
+                <tiller-radio-option name="question{{questions[4].order}}" id="response1" label="{{questions[4].responses[0].text}}" checked="{{questions[4].responses[0].isSelected}}" on-selected="selectAnswer(4,0)"></tiller-radio-option>
+                <tiller-radio-option name="question{{questions[4].order}}" id="response2" label="{{questions[4].responses[1].text}}" checked="{{questions[4].responses[1].isSelected}}" on-selected="selectAnswer(4,1)"></tiller-radio-option>
+                <tiller-radio-option name="question{{questions[4].order}}" id="response3" label="{{questions[4].responses[2].text}}" checked="{{questions[4].responses[2].isSelected}}" on-selected="selectAnswer(4,2)"></tiller-radio-option>
+                <tiller-radio-option name="question{{questions[4].order}}" id="response4" label="{{questions[4].responses[3].text}}" checked="{{questions[4].responses[3].isSelected}}" on-selected="selectAnswer(4,3)"></tiller-radio-option>
+                <tiller-radio-option name="question{{questions[4].order}}" id="response5" label="{{questions[4].responses[4].text}}" checked="{{questions[4].responses[4].isSelected}}" on-selected="selectAnswer(4,4)"></tiller-radio-option>
+            </div>
+        </form>
+    </div>
+</div>

@@ -1,0 +1,32 @@
+.onboarding-investment-chart-container {
+
+  @include ui-layout('chart');
+  @include ui('show');
+  @include ui-animate(scale-up);
+
+  .ui-onboarding-investment-profiling & {
+    @include ui-animate(scale-down);
+    @include ui('hide');
+  }
+
+  .ui-onboarding-investment-charts-assetAllocation & {
+    @include ui('hide');
+  }
+
+  .ui-onboarding-investment-charts-futurePerformance-expanded &,
+  .ui-onboarding-investment-charts-pastPerformance-expanded & {
+    border: none;
+    @include ui-layout('chart-expanded');
+    @include ui('show-high');
+  }
+
+  .ui-onboarding-investment-charts-assetAllocation-list-expanded & {
+    border: none;
+    @include ui-layout('hide');
+  }
+
+  .ui-onboarding-investment-charts-futurePerformance-lossscenarios & {
+    @include ui('hide');
+  }
+
+}

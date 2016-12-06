@@ -1,0 +1,11 @@
+@keyframes scale-down-drop {
+  from    {
+    opacity: 1.0;
+    @include transform-scale(1, 1);
+  }
+  to    {
+    opacity: 0.3;
+    @include transform-scale(0, 0);
+    top: 60%;
+  }
+}

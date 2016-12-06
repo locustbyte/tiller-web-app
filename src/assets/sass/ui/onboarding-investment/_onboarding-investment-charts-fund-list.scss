@@ -1,0 +1,43 @@
+.onboarding-investment-charts-fund-list {
+
+  @include ui('hide');
+  @include ui-animate(scale-down);
+  @include ui-layout('porthole-inner');
+  padding: 40px 0;
+
+  .fund-table-compact {
+
+    display: none;
+
+    .ui-onboarding-investment-charts-assetAllocation-list:not(.ui-onboarding-investment-charts-assetAllocation-list-expanded) & {
+      display: table;
+    }
+
+  }
+
+  .fund-table-expanded {
+
+    display: none;
+
+    .ui-onboarding-investment-charts-assetAllocation-list-expanded & {
+      display: table;
+    }
+
+  }
+
+  .ui-onboarding-investment-charts-assetAllocation-list & {
+    @include ui('show-front');
+    @include ui-animate(scale-up);
+  }
+
+  .ui-onboarding-investment-charts-assetAllocation-list-expanded & {
+    @include ui-layout('chart-expanded-inner');
+  }
+
+  .ui-onboarding-investment-charts-assetAllocation-region-expanded &,
+  .ui-onboarding-investment-charts-futurePerformance-expanded &,
+  .ui-onboarding-investment-charts-pastPerformance-expanded & {
+    display: none;
+  }
+
+}

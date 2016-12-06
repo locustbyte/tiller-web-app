@@ -1,0 +1,27 @@
+<div class="tiller-discovery-slider" ng-class="{'dragging': dragging, 'drag-start': dragstart, 'drag-end': dragend, 'active-step': active, 'validation-error': validationModel.rule && !validationModel.isValid}" ng-mouseenter="onMouseEnter()" ng-mouseleave="onMouseLeave()">
+
+    <svg class="round-slider"></svg>
+    
+    <input class="slider-value" ng-model="sliderData.formattedValue" ng-keydown="filterKeys($event)" ng-blur="setSliderValue()" ng-readonly="dragging" value="" maxlength="11" ng-if="options.input" />
+
+    <h2 class="slider-value slider-value-display-only" ng-if="!options.input">{{sliderData.formattedValue}}</h2>
+
+    <div class="slider-label" ng-bind="label"></div>
+
+    <div class="slider-zero-value-label" ng-show="sliderData.value == 0" ng-bind="zeroValueLabel"></div>
+
+    <div class="slider-value-controls" ng-if="options.buttons">
+
+        <button class="btn btn-orange-outline btn-circle btn-large position position-absolute position-bottom-right z-index z-index-highest" data-toggle="tooltip" title="Increase value" ng-click="incSliderValue($event)"><i class="fa fa-plus"></i></button>
+
+        <button class="btn btn-orange-outline btn-circle btn-small position position-absolute position-top-left z-index z-index-highest" data-toggle="tooltip" title="Reduce value" ng-click="decSliderValue($event)"><i class="fa fa-minus"></i></button>
+
+    </div>
+
+    <div class="slider-validation-message validation-error-message" ng-if="validationModel.rule && !validationModel.isValid">{{validationModel.rule.validationExceptionMessage}}</div>
+
+    <div class="slider-readonly-mask position position-absolute position-top-left width width-full height height-full background background-transparent z-index z-index-highest"></div>
+
+    <button class="slider-back-button position position-absolute position-top-left width width-full height height-full border border-zero border-radius-full background background-transparent" data-toggle="tooltip" title="{{backButtonTitle}}" ng-click="backButtonCallback()"></button>
+    
+</div>

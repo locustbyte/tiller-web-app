@@ -1,0 +1,16 @@
+{
+  "_comment": "stub",
+  "portfolioId": 1,
+  "wrapperId": null,
+  "portfolioTypeId": 2,
+  "allocationModelTypeId": null,
+  "targetRiskRatingId": null,
+  "portfolioName": "Test Portfolio A",
+  "initialAmount": 0,
+  "initialTopUp": 0,
+  "initialYearsToInvest": 0,
+  "initialTargetAmount": 0,
+  "initialYearsToIncomeGeneration": 0,
+  "initialIncomeDuration": 0,
+  "initialIncomeAmount": 0
+}

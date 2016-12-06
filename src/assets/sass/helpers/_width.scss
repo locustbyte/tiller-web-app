@@ -1,0 +1,43 @@
+.width {
+  &.width-full {
+    width: 100%;
+  }
+  &.width-30 {
+    width: 30px;
+  }
+  &.width-100 {
+    width: 100px;
+  }
+  &.width-120 {
+    width: 120px;
+  }
+  &.width-280 {
+    width: 280px;
+  }
+  &.width-190 {
+    width: 190px;
+  }
+  &.width-200 {
+    width: 200px;
+  }
+  &.width-292 {
+    width: 292px;
+  }
+  &.width-600 {
+    width: 600px;
+  }
+  &.width-740 {
+    width: 740px;
+  }
+
+  &.max-width-100 {
+    max-width: 100px;
+  }
+
+  @media (max-width: $screen-sm-max){
+
+    &.width-full-sm {
+      width: 100%;
+    }
+  }
+}

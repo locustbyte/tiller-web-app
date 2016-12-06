@@ -1,0 +1,30 @@
+.onboarding-investment-charts {
+
+    .ui-onboarding-investment-profiling & {
+        @include ui('hide');
+    }
+
+}
+
+@import "onboarding-investment-chart-titles";
+@import "onboarding-investment-chart-container";
+@import "onboarding-investment-porthole-container";
+@import "onboarding-investment-chart-page-overlay";
+@import "onboarding-investment-chart-asset-allocation-container";
+@import "onboarding-investment-chart-theme-container";
+@import "onboarding-investment-charts-fund-list";
+@import "onboarding-investment-charts-loss-scenarios";
+@import "onboarding-investment-charts-asset-chart";
+@import "onboarding-investment-charts-asset-region-chart";
+@import "onboarding-investment-charts-future-performance-chart";
+@import "onboarding-investment-charts-past-performance-chart";
+@import "onboarding-investment-charts-controls";
+@import "onboarding-investment-risk-control";
+@import "onboarding-investment-chart-overlays";
+@import "onboarding-investment-charts-call-to-action";
+@import "onboarding-investment-chart-legends";
+@import "onboarding-investment-charts-navigation";
+@import "onboarding-investment-chart-zoom-btns";
+@import "onboarding-investment-chart-close-btns";
+
+

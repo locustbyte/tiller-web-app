@@ -1,0 +1,29 @@
+
+<div onboarding-step title="Your Account"
+     strapline="First we'll need a few personal details."
+     show-next-back="true"
+     next-disabled="!nameValid"
+     back="onboarding.your-account-details"
+     next="onboarding.verify-email" 
+     on-next="createUser()">
+
+    <div class="row">
+        <div class="col-sm-4 col-sm-offset-4">
+            <form name="myForm">
+                <div class="form-group position position-relative">
+                    <input type="text" placeholder="First name*" class="form-control" ng-model="userCreationModel.basicProfile.firstName" name="firstName" ng-change="validateName()" required />
+                    <div class="field-complete"></div>
+                </div>
+                <div class="form-group position position-relative">
+                    <input type="text" placeholder="Middle name" class="form-control" ng-model="userCreationModel.basicProfile.middleName" name="middleName" ng-change="validateName()" />
+                    <div class="field-complete"></div>
+                </div>
+                <div class="form-group position position-relative">
+                    <input type="text" placeholder="Last name*" class="form-control" ng-model="userCreationModel.basicProfile.lastName" name="lastName" ng-change="validateName()" required />
+                    <div class="field-complete"></div>
+                </div>
+            </form>
+            <div class="text-left footnote">* mandatory field</div>
+        </div>
+    </div>
+</div>

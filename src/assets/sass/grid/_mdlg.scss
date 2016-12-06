@@ -1,0 +1,5 @@
+$screen-mdlg-max: 1600px;
+@media (max-width: $screen-mdlg-max)
+{
+  @include make-grid(mdlg);
+}

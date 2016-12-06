@@ -1,0 +1,7 @@
+.discovery-chart-theme-container {
+
+  @include border-radius(100%);
+  @include ui('hide');
+  @include ui-layout('chart-pie-circumference');
+
+}

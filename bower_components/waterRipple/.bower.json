@@ -1,0 +1,13 @@
+{
+  "name": "waterRipple",
+  "homepage": "https://github.com/andyvr/water-ripple",
+  "_release": "ec2cd5621f",
+  "_resolution": {
+    "type": "branch",
+    "branch": "master",
+    "commit": "ec2cd5621f855cd607dfabce5f9e763f111d9aa0"
+  },
+  "_source": "https://github.com/andyvr/water-ripple.git",
+  "_target": "*",
+  "_originalSource": "https://github.com/andyvr/water-ripple.git"
+}

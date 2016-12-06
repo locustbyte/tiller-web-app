@@ -1,0 +1,172 @@
+.shape {
+
+  transition: all $transition-fast ease-in-out;
+
+  display: table;
+  text-align: center;
+
+  &.dummy-low-orange-opacity{
+      border: solid 2px $dummy-low-orange-opacity;
+  }
+
+  > span {
+    display: table-cell;
+    vertical-align: middle;
+    color: inherit;
+  }
+
+  &.shape-round {
+    @include border-radius(100%);
+  }
+
+  &.shape-border-xs {
+    @extend .border;
+    @extend .border-xs;
+    border-style: solid;
+  }
+
+  &.shape-xxxs {
+    width: 10px;
+    height: 10px;
+  }
+
+  &.shape-xxs {
+    width: 15px;
+    height: 15px;
+  }
+
+  &.shape-xs {
+    width: 20px;
+    height: 20px;
+  }
+
+  &.shape-sm {
+    width: 32px;
+    height: 32px;
+  }
+
+  &.shape-md {
+    width: 56px;
+    height: 56px;
+  }
+
+  &.shape-lg {
+    width: 96px;
+    height: 96px;
+  }
+
+  &.shape-slg {
+    width: 110px;
+    height: 110px;
+  }
+
+  &.shape-mlg {
+    width: 132px;
+    height: 132px;
+  }
+
+  &.shape-ml{
+    width: 196px;
+    height: 196px;
+  }
+
+  &.shape-xl {
+    width: 285px;
+    height: 285px;
+  }
+
+  &.shape-xxl {
+    width: 740px;
+    height: 740px;
+  }
+
+  &.shape-orange {
+    background-color: $orange;
+
+    > span {
+      color: $white;
+    }
+  }
+
+  &.shape-orange-outline {
+    border: 2px solid $orange;
+  }
+
+}
+
+.text-center {
+  .shape {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+.text-left{
+    text-align: left;
+}
+
+.shape-labels {
+
+  position: relative;
+
+  .shape {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+  }
+
+  .shape-label {
+
+    top:3px;
+    position: absolute;
+    left: 30px;
+    &.shape-label-wrapped {
+      margin-top: 0px;
+      line-height: $line-height-none;
+    }
+  }
+
+  &.disabled {
+
+    .shape {
+      background-color: $grey !important;
+      width: 15px;
+      height: 15px;
+    }
+
+    .shape-label {
+      color: $grey;
+      &.shape-label-wrapped {
+        color: $grey;
+      }
+    }
+  }
+
+  &.shape-labels-xxs {
+
+    .shape-label {
+      position: absolute;
+      left: 23px;
+      top:1px;
+      font-weight: $weight-light;
+      &.shape-label-wrapped {
+        font-size: $h6-size;
+      }
+    }
+  }
+
+}
+
+.desaturated {
+  .shape {
+    background-color: $grey-desaturated !important;
+    width: 15px;
+    height: 15px;
+  }
+
+  .shape-label {
+    color: $grey-desaturated;
+    &.shape-label-wrapped {
+      color: $grey-desaturated;
+    }
+  }
+}

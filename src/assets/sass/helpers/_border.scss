@@ -1,0 +1,59 @@
+.border {
+
+  &.border-solid {
+    border-style: solid;
+  }
+
+  &.border-xxs{
+      border-width: 1px;
+  }
+
+  &.border-s {
+    border-width: 3px;
+  }
+
+  &.border-xs {
+    border-width: 2px;
+  }
+
+  &.border-sm {
+    border-width: 5px;
+  }
+
+  &.border-md {
+    border-width: 8px;
+  }
+
+  &.border-lg {
+    border-width: 10px;
+  }
+
+  &.border-white {
+    border-color: $white;
+  }
+
+  &.border-orange {
+    border-color: $orange;
+  }
+
+  &.border-zero {
+    border-style: solid;
+    @include border(0);
+  }
+
+  &.border-brown-darkest {
+    border-color: $brown-darkest;
+  }
+
+  &.border-transparent {
+    border-color: transparent;
+  }
+
+  &.border-radius-full {
+    border-radius: 100%;
+  }
+  &.border-right-grey-dark {
+    border-right: 1px solid $grey-dark;
+  }
+
+}

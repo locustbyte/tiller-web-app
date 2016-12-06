@@ -1,0 +1,33 @@
+@mixin ui($state)
+{
+  transition: transform 0.4s ease, opacity 0.4s ease, border 0.4s ease;
+
+  @if $state == 'hide' {
+    opacity: 0;
+    z-index: $z-index-negative;
+  }
+  @elseif $state == 'show'{
+    opacity: 1;
+    z-index: $z-index-zero;
+  }
+  @elseif $state == 'show-lowest'{
+    opacity: 1;
+    z-index: $z-index-lowest;
+  }
+  @elseif $state == 'show-low'{
+    opacity: 1;
+    z-index: $z-index-low;
+  }
+  @elseif $state == 'show-medium'{
+    opacity: 1;
+    z-index: $z-index-medium;
+  }
+  @elseif $state == 'show-high'{
+    opacity: 1;
+    z-index: $z-index-high;
+  }
+  @elseif $state == 'show-front' {
+    opacity: 1;
+    z-index: $z-index-highest;
+  }
+}

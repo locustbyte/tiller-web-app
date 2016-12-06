@@ -1,0 +1,213 @@
+﻿[
+  {
+    "_comment":  "stub",
+    "questionId": 1,
+    "order": 1,
+    "question": "Capital preservation is more important to me than making investment gains.",
+    "responses": [
+      {
+        "questionId": 1,
+        "responseId": 1,
+        "order": 1,
+        "text": "Strongly disagree",
+        "isSelected": false
+      },
+      {
+        "questionId": 1,
+        "responseId": 2,
+        "order": 2,
+        "text": "Disagree",
+        "isSelected": false
+      },
+      {
+        "questionId": 1,
+        "responseId": 3,
+        "order": 3,
+        "text": "Neutral",
+        "isSelected": false
+      },
+      {
+        "questionId": 1,
+        "responseId": 4,
+        "order": 4,
+        "text": "Agree",
+        "isSelected": false
+      },
+      {
+        "questionId": 1,
+        "responseId": 5,
+        "order": 5,
+        "text": "Strongly agree",
+        "isSelected": false
+      }
+    ]
+  },
+  {
+    "questionId": 2,
+    "order": 2,
+    "question": "I would prefer to make safer investments and limit my potential losses, even if that implies lower potential returns.",
+    "responses": [
+      {
+        "questionId": 2,
+        "responseId": 1,
+        "order": 1,
+        "text": "Strongly disagree",
+        "isSelected": false
+      },
+      {
+        "questionId": 2,
+        "responseId": 2,
+        "order": 2,
+        "text": "Disagree",
+        "isSelected": false
+      },
+      {
+        "questionId": 2,
+        "responseId": 3,
+        "order": 3,
+        "text": "Neutral",
+        "isSelected": false
+      },
+      {
+        "questionId": 2,
+        "responseId": 4,
+        "order": 4,
+        "text": "Agree",
+        "isSelected": false
+      },
+      {
+        "questionId": 2,
+        "responseId": 5,
+        "order": 5,
+        "text": "Strongly agree",
+        "isSelected": false
+      }
+    ]
+  },
+  {
+    "questionId": 3,
+    "order": 3,
+    "question": "When my investments start losing value, I tend to get anxious and concerned and would want to sell them immediately.",
+    "responses": [
+      {
+        "questionId": 3,
+        "responseId": 1,
+        "order": 1,
+        "text": "Strongly disagree",
+        "isSelected": false
+      },
+      {
+        "questionId": 3,
+        "responseId": 2,
+        "order": 2,
+        "text": "Disagree",
+        "isSelected": false
+      },
+      {
+        "questionId": 3,
+        "responseId": 3,
+        "order": 3,
+        "text": "Neutral",
+        "isSelected": false
+      },
+      {
+        "questionId": 3,
+        "responseId": 4,
+        "order": 4,
+        "text": "Agree",
+        "isSelected": false
+      },
+      {
+        "questionId": 3,
+        "responseId": 5,
+        "order": 5,
+        "text": "Strongly agree",
+        "isSelected": false
+      }
+    ]
+  },
+  {
+    "questionId": 4,
+    "order": 4,
+    "question": "If your investment with us was to lose 15% over a 12 month period, which of the following would best describe how you would be feeling?",
+    "responses": [
+      {
+        "questionId": 4,
+        "responseId": 1,
+        "order": 1,
+        "text": "Panicked",
+        "isSelected": false
+      },
+      {
+        "questionId": 4,
+        "responseId": 2,
+        "order": 2,
+        "text": "Concerned",
+        "isSelected": false
+      },
+      {
+        "questionId": 4,
+        "responseId": 3,
+        "order": 3,
+        "text": "Disappointed",
+        "isSelected": false
+      },
+      {
+        "questionId": 4,
+        "responseId": 4,
+        "order": 4,
+        "text": "Indifferent",
+        "isSelected": false
+      },
+      {
+        "questionId": 4,
+        "responseId": 5,
+        "order": 5,
+        "text": "Prepared to invest more",
+        "isSelected": false
+      }
+    ]
+  },
+  {
+    "questionId": 5,
+    "order": 5,
+    "question": "You are prepared to accept some short term losses in order to make long term gains.",
+    "responses": [
+      {
+        "questionId": 5,
+        "responseId": 1,
+        "order": 1,
+        "text": "Strongly disagree",
+        "isSelected": false
+      },
+      {
+        "questionId": 5,
+        "responseId": 2,
+        "order": 2,
+        "text": "Disagree",
+        "isSelected": false
+      },
+      {
+        "questionId": 5,
+        "responseId": 3,
+        "order": 3,
+        "text": "Neutral",
+        "isSelected": false
+      },
+      {
+        "questionId": 5,
+        "responseId": 4,
+        "order": 4,
+        "text": "Agree",
+        "isSelected": false
+      },
+      {
+        "questionId": 5,
+        "responseId": 5,
+        "order": 5,
+        "text": "Strongly agree",
+        "isSelected": false
+      }
+    ]
+  }
+]

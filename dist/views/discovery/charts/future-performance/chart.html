@@ -1,0 +1,70 @@
+<h3 class="display display-inline-block" ng-if="chartData">{{chartData.title}}</h3>
+
+<div class="row padding padding-top-sm padding-bottom-xs padding-top-xs-mdlg" ng-if="expanded === false">
+
+    <div class="col-xs-4 text-center">
+
+        <p class="small">Good</p>
+        <h4 class="text-colour text-colour-blue">{{chartData.medians.good.value}}</h4>
+
+    </div>
+
+    <div class="col-xs-4 text-center">
+
+        <p class="small">Likely</p>
+        <h4 class="text-colour text-colour-green">{{chartData.medians.likely.value}}</h4>
+
+    </div>
+
+    <div class="col-xs-4 text-center">
+
+        <p class="small">Poor</p>
+        <h4 class="text-colour text-colour-yellow">{{chartData.medians.poor.value}}</h4>
+
+    </div>
+
+
+</div>
+
+<div class="row padding padding-top-sm padding-bottom-xs" ng-if="expanded === true">
+
+    <div class="row">
+
+        <div class="col-sm-6 col-sm-offset-3">
+
+            <div class="row">
+
+                <div class="col-xs-4 text-center">
+
+                    <p>Good</p>
+                    <h3 class="text-colour text-colour-blue">{{chartData.medians.good.value}}</h3>
+
+                </div>
+
+                <div class="col-xs-4">
+
+                    <p>Likely</p>
+                    <h3 class="text-colour text-colour-green">{{chartData.medians.likely.value}}</h3>
+
+                </div>
+
+                <div class="col-xs-4 text-center">
+
+                    <p>Poor</p>
+                    <h3 class="text-colour text-colour-yellow">{{chartData.medians.poor.value}}</h3>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+<div class="padding padding-bottom-sm padding-bottom-zero-mdlg">
+
+    <div id="futurePerformanceChart"></div>
+
+</div>

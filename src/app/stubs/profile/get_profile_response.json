@@ -1,0 +1,34 @@
+﻿{
+  "_comment": "stub",
+  "profileId":  1,
+  "addresses": [
+    {
+      "address1": "10 Hanger Lane",
+      "address2": "",
+      "address3": "",
+      "address4": "",
+      "postOrZip": "HN1 PT5",
+      "countryCode": ""
+    }
+  ],
+  "paymentDetails": [
+    {
+      "paymentDetailId": 0,
+      "bankName": "",
+      "accountName": "",
+      "accountNumber": "",
+      "nameOnAccount": "",
+      "sortCode": "",
+      "bicAddress": ""
+    }
+  ],
+  "dateOfBirth": "1998-10-14T09:22:49.554Z",
+  "phoneNumber": "123456789",
+  "isMarketAware": true,
+  "isAssetClassAware": true,
+  "annualIncome": 0,
+  "monthlyDisposableIncome": 0,
+  "financialSourceId": 0,
+  "financialSourceProportion": 0,
+  "isPartPensionPlanning": true
+}

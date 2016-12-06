@@ -1,0 +1,15 @@
+.discovery-charts-asset-chart {
+
+  width: 100%;
+  height: 100%;
+
+  @include ui('hide');
+  @include ui-animate(scale-down);
+
+  .ui-discovery-charts-assetAllocation & {
+
+    @include ui('show');
+    @include ui-animate(scale-up);
+  }
+
+}

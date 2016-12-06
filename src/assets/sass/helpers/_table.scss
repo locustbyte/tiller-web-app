@@ -1,0 +1,90 @@
+.table-fixed {
+
+    thead {
+        width: 100%;
+    }
+
+    tbody {
+        overflow-y: auto;
+        width: 100%;
+    }
+
+    thead,
+    tbody,
+    tr,
+    td, 
+    th {
+        display: block;
+    }
+
+    tbody td,
+    thead > tr> th {
+        float: left;
+        border-bottom-width: 0;
+    }
+
+    &.table-fixed-small {
+
+        tbody {
+            height: 280px;
+        }
+        
+    }
+
+    &.table-fixed-large {
+
+        tbody {
+            height: 400px;
+        }
+        
+    }
+
+    .table-fixed-scroller {
+        position: relative;
+    }
+
+}
+
+.fund-table {
+
+    > thead > tr > th {
+        color: $orange;
+    }
+
+    &.fund-table-no-border {
+
+        > thead > tr > th,
+        > tbody > tr > td {
+            border: none;
+        }
+
+    }
+
+    &.fund-table-compact {
+        font-size: 12px;
+    }
+
+    &.fund-table-expanded {
+        font-size: 16px;
+
+        td {
+            border-bottom: 1px solid #333;
+            border-top: none;
+
+            tr:last-child & {
+                border-bottom: none;
+            }
+        }
+    }
+
+    .fund-table-cell {
+
+        &.fund-table-cell-overflow-ellipsis {
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+
+    }
+
+}

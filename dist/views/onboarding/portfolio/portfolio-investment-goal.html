@@ -1,0 +1,30 @@
+<div onboarding-step step-scope="stepScope" 
+     class="step-explanations"
+     title="Your Portfolio"  
+     strapline="What's your investment goal? To provide a regular monthly income or to grow your capital?"
+     show-next-back="true"
+     next-disabled="stepScope.portfolio.portfolioTypeId == null"
+     back="onboarding-portfolio.wrapper"
+     next="onboarding-portfolio.investment-goal"
+     show-save-exit="true"
+     on-next="navToPortfolioTypeEntryPoint()">
+
+        <div class="row">
+            <div class="step margin margin-right-md">
+                <div ng-class="{'shape-orange shape-orange-outline': stepScope.portfolio.portfolioTypeId == 2}" class="step-image shape dummy-low-orange-opacity border border-s border-radius-full selectable fill-on-hover" ng-click="stepScope.portfolio.portfolioTypeId = 2; stepScope.portfolioTypeDestination = 'onboarding-portfolio.income-investment-level';">
+                    <satellite class="forty-five-degrees-right shape dummy-low-orange-opacity fill-on-hover" ui-sref="onboarding-portfolio.type-income">
+                        <i class="icon icon-xs icon-09-small text-colour text-colour-dummy-low-orange-opacity"></i>
+                    </satellite>
+                    <p>Income</p>
+                </div>
+            </div>
+            <div class="step">
+                <div ng-class="{'shape-orange shape-orange-outline': stepScope.portfolio.portfolioTypeId == 1}" class="step-image shape dummy-low-orange-opacity border border-s border-radius-full selectable fill-on-hover" ng-click="stepScope.portfolio.portfolioTypeId = 1; stepScope.portfolioTypeDestination = 'onboarding-portfolio.growth-investment-level';">
+                    <satellite class="forty-five-degrees-right shape dummy-low-orange-opacity fill-on-hover" ui-sref="onboarding-portfolio.type-capital-growth">
+                        <i class="icon icon-xs icon-09-small text-colour text-colour-dummy-low-orange-opacity"></i>
+                    </satellite>
+                    <p>Capital Growth</p>
+                </div>
+            </div>
+        </div>
+</div>

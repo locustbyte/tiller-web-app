@@ -1,0 +1,94 @@
+{
+  "_comment":  "stub",
+  "portfolioModel": {
+    "portfolioId": 1,
+    "wrapperId": null,
+    "portfolioTypeId": null,
+    "allocationModelTypeId": null,
+    "targetRiskRatingId": null,
+    "portfolioName": "",
+    "initialAmount": 0,
+    "initialTopUp": 0,
+    "initialYearsToInvest": 0,
+    "initialTargetAmount": 0,
+    "initialYearsToIncomeGeneration": 0,
+    "initialIncomeDuration": 0,
+    "initialIncomeAmount": 0
+  },
+  "portfolioTypes": [
+    {
+      "portfolioTypeId": 1,
+      "portfolioType": "Capital"
+    },
+    {
+      "portfolioTypeId": 2,
+      "portfolioType": "Income"
+    }
+  ],
+  "allocationModelTypes": [
+    {
+      "allocationModelTypeId": 1,
+      "allocationModelName": "Tracker",
+      "allocationModelDescription": "Track the markets"
+    },
+    {
+      "allocationModelTypeId": 2,
+      "allocationModelName": "Active",
+      "allocationModelDescription": "Add active funds"
+    },
+    {
+      "allocationModelTypeId": 3,
+      "allocationModelName": "Active +",
+      "allocationModelDescription": "Add themes"
+    }
+  ],
+  "riskTargets": [
+    {
+      "riskValue": 1,
+      "riskWeight": 0.02,
+      "description": "Risk rating 1 means I don't take risks and I want reduce the chance of any losses over the course of investment.",
+      "label": "Conservative"
+    },
+    {
+      "riskValue": 2,
+      "riskWeight": 0.04,
+      "description": "Risk rating 2 means I take less risk....",
+      "label": "Moderate Conservative"
+    },
+    {
+      "riskValue": 3,
+      "riskWeight": 0.08,
+      "description": "Risk rating 3 means I am in the middle....",
+      "label": "Balanced"
+    },
+    {
+      "riskValue": 4,
+      "riskWeight": 0.16,
+      "description": "Risk rating 4 means I take risks but....",
+      "label": "Moderate Aggressive"
+    },
+    {
+      "riskValue": 5,
+      "riskWeight": 0.32,
+      "description": "Risk rating 5 means I take risks.....",
+      "label": "Aggressive"
+    }
+  ],
+  "wrappers": [
+    {
+      "wrapperId": 1,
+      "wrapperTypeName": "General Investment",
+      "wrapperTypeDescription": "General investment wrapper...."
+    },
+    {
+      "wrapperId": 2,
+      "wrapperTypeName": "ISA",
+      "wrapperTypeDescription": "UK ISA wrapper...."
+    },
+    {
+      "wrapperId": 3,
+      "wrapperTypeName": "SIPP",
+      "wrapperTypeDescription": "UK Self Invested Pension wrapper"
+    }
+  ]
+}

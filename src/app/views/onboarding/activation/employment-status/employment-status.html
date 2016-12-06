@@ -1,0 +1,42 @@
+<div class="container" onboarding-step step-scope="stepScope"
+     title="Employment status"
+     strapline=""
+     show-next-back="true"
+     next-disabled="!allValid()"
+     next="onboarding-activation.about-your-investment"
+     back="onboarding-activation.investment-knowledge"
+     show-save-exit="true"
+     on-next="updateProfile()">
+
+    <div class="activation-employment-status">
+        <form name="employmentstatus">
+            <div class="row">
+                <div class="col-sm-4 col-sm-offset-4">
+                    <div class="form-group position position-relative">
+                        <tiller-select class="employment-dropdown" placeholder="Please choose" options="employmentOptions" selected-item="stepScope.selectedEmploymentStatus" on-option-selected="selectEmploymentStatus"></tiller-select>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-4 col-sm-offset-4">
+                  <div class="form-group position position-relative">
+                      <p>What is your gross annual income before tax?</p>
+                    <input type="text" maxlength="13" placeholder="E.g: &pound;100,000.00" class="form-control full-loz display display-block text-field" ng-model="stepScope.annualIncome" ng-change="setIncome()" ng-keypress="validateMoney($event)" name="annualincome" required="">
+                  </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-sm-4 col-sm-offset-4">
+                    <div class="form-group position position-relative">
+                        <p>What is your monthly net disposable income?</p>
+                        <span class="small-message">(after all normal expenses)</span>
+                        <input type="text" maxlength="13" placeholder="E.g: &pound;5,000.00" class="form-control full-loz display display-block text-field" ng-model="stepScope.monthlyDisposableIncome" ng-change="setDisposableIncome()" ng-keypress="validateMoney($event)" name="disposableincome" required="">
+                    </div>
+                </div>
+            </div>
+
+        </form>
+    </div>
+     
+</div>

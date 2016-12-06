@@ -1,0 +1,15 @@
+.onboarding-investment-chart-overlays {
+
+  @include ui('hide');
+  @include ui-layout('porthole');
+  border: 2px solid $orange;
+
+  .onboarding-investment-chart-overview {
+
+    @include ui-layout('porthole-inner');
+  }
+
+  .ui-onboarding-investment-profiling & {
+    @include ui('hide');
+  }
+}

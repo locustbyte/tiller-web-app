@@ -1,0 +1,43 @@
+.discovery-charts-fund-list {
+
+  @include ui('hide');
+  @include ui-animate(scale-down);
+  @include ui-layout('porthole-inner');
+  padding: 40px 0;
+
+  .fund-table-compact {
+
+    display: none;
+
+    .ui-discovery-charts-assetAllocation-list:not(.ui-discovery-charts-assetAllocation-list-expanded) & {
+      display: table;
+    }
+
+  }
+
+  .fund-table-expanded {
+
+    display: none;
+
+    .ui-discovery-charts-assetAllocation-list-expanded & {
+      display: table;
+    }
+
+  }
+
+  .ui-discovery-charts-assetAllocation-list & {
+    @include ui('show-front');
+    @include ui-animate(scale-up);
+  }
+
+  .ui-discovery-charts-assetAllocation-list-expanded & {
+    @include ui-layout('chart-expanded-inner');
+  }
+
+  .ui-discovery-charts-assetAllocation-region-expanded &,
+  .ui-discovery-charts-futurePerformance-expanded &,
+  .ui-discovery-charts-pastPerformance-expanded & {
+    display: none;
+  }
+
+}

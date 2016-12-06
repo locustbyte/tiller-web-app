@@ -1,0 +1,63 @@
+.background {
+
+  &.background-fixed {
+    background-attachment: fixed;
+  }
+
+  &.background-cover {
+    background-size: cover;
+  }
+
+  &.background-transparent {
+    background-color: transparent;
+  }
+
+  &.background-white {
+    background-color: $white;
+  }
+
+  &.background-white-translucent {
+    background-color: rgba(255, 255, 255, 0.9);
+  }
+
+  &.background-black {
+    background-color: $white;
+  }
+
+  &.background-black-translucent {
+    background-color: rgba(0, 0, 0, 0.80);
+  }
+
+  &.background-grey-dark-translucent {
+    background-color: rgba(42, 38, 39, 0.80);
+  }
+
+  &.background-center {
+    background-position: center center;
+    background-repeat: no-repeat;
+  }
+
+  &.background-center-repeat {
+    background-position: center center;
+    background-repeat: repeat;
+  }
+
+  &.background-floating-circles {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: $grey-dark;
+    z-index: -1;
+  }
+
+  &.background-app-store {
+    background-image: url(../../assets/img/app-store.svg);
+  }
+
+  &.background-android {
+    background-image: url(../../assets/img/play-store.svg);
+  }
+
+}

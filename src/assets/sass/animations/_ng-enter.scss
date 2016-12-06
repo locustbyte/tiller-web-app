@@ -1,0 +1,17 @@
+.ng-enter {
+
+  animation: scale-up 0.5s both ease-in;
+  z-index: $z-index-high;
+
+  .animate {
+
+    &.animate-enter-slide-in-right {
+      animation: slide-in-right 0.5s both ease-in-out;
+    }
+
+    &.animate-enter-scale-up {
+      animation: scale-up 0.5s both ease-in-out;
+    }
+
+  }
+}

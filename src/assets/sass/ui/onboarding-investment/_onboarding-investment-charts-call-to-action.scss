@@ -1,0 +1,33 @@
+.onboarding-investment-charts-call-to-action {
+
+  @include ui('show');
+  position: fixed;
+  top: auto;
+  right: 0;
+  bottom: 0;
+  left: auto;
+  width: 280px;
+
+  .inner {
+    padding: $padding-sm;
+  }
+
+  @media (max-width: $screen-sm-max) {
+    position: absolute;
+    width: 100%;
+    top: 850px;
+    bottom: auto;
+    .inner {
+      margin: 0 auto;
+      width: 50%;
+    }
+  }
+
+  .ui-onboarding-investment-profiling & {
+    @include ui('hide');
+    top: 0px;
+    bottom: auto;
+    position: absolute;
+
+  }
+}

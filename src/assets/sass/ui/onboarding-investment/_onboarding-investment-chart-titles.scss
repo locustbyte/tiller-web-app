@@ -1,0 +1,15 @@
+.onboarding-investment-chart-titles {
+  @include ui('hide');
+  @include ui-layout('chart-titles');
+  @include ui-animate(fade-out);
+
+  .ui-onboarding-investment-charts & {
+    @include ui('show-front');
+    @include ui-animate(fade-in, 0.5s);
+  }
+
+  .ui-onboarding-investment-charts-futurePerformance-expanded &,
+  .ui-onboarding-investment-charts-pastPerformance-expanded & {
+    left: 50%;
+  }
+}

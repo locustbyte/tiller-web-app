@@ -1,0 +1,23 @@
+.tooltip {
+
+    &.top,
+    &.bottom {
+        margin: 0 0 0 10px;
+    }
+
+    &.top .tooltip-arrow {
+        border-top-color: $orange; 
+    }
+
+    &.bottom .tooltip-arrow {
+        border-bottom-color: $orange; 
+    }
+
+    .tooltip-inner {
+        background-color: $orange;
+        padding: 10px 20px;
+        border-radius: 25px;
+        max-width: initial;
+    }
+
+}

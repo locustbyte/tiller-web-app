@@ -1,0 +1,33 @@
+
+<div class="text-center">
+
+    <p class="lead">How would your portfolio perform in a financial crisis?</p>
+
+    <div id="dropdown-scrollable-container" style="height: 15em; overflow: auto;">
+        <div id="dropdown-long-content">
+            <div id="dropdown-hidden-container">
+                
+                <div class="btn-group tiller-dropdown" uib-dropdown>
+                    <button id="btn-append-to-single-button" type="button" class="btn btn-orange-outline btn-full" uib-dropdown-toggle>
+                        <span ng-bind="scenario.title"></span> <span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu" uib-dropdown-menu role="menu" aria-labelledby="btn-append-to-single-button">
+                        <li role="menuitem" ng-repeat="item in scenarios"><a href="" ng-click="selectScenario(item.id)" ng-bind="item.title"></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="scenario-details">
+
+        <p class="scenario-date">In <span ng-bind="scenario.date"></span> your portfolio <br/>would have dropped by</p>
+        <h3 class="scenario-amount" ng-bind="scenario.lossAmount"></h3>
+        <p class="scenario-reason" ng-bind="scenario.reason"></p>
+        <p class="scenario-recovery1">Its value would have recovered in</p>
+        <h3 class="scenario-recovery-time" ng-bind="scenario.recoveryTime"></h3>
+        <p class="scenario-recovery2">(estimated)</p>
+
+    </div>
+
+</div>

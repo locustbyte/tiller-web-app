@@ -1,0 +1,86 @@
+svg {
+
+  * {
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  path {
+    &.slice {
+      stroke-width: 2px;
+    }
+  }
+  circle {
+    color: $white;
+  }
+
+  text {
+    font-family: $font-markpro;
+    color: $white;
+    fill: $white;
+    font-weight: $weight-light;
+
+    &.hidden {
+      @extend .hidden;
+    }
+
+    &.time-line-text, &.target-line-text {
+      font-size: 11px;
+      font-weight: $weight-light;
+    }
+
+    tspan {
+      color: $white;
+      fill: $white;
+      font-weight: $weight-light;
+
+      &.inherit {
+        color: inherit;
+        fill: inherit;
+      }
+    }
+
+  }
+
+  g {
+    &.dots {
+      text {
+        tspan {
+          font-size: $h6-size;
+        }
+      }
+    }
+  }
+
+  .axis {
+    path, line {
+      display: none;
+      fill: none;
+      stroke: #000;
+      shape-rendering: crispEdges;
+    }
+
+    text {
+      fill:$grey-dark;
+      color: $grey-dark;
+    }
+
+  }
+
+  .x.axis {
+    path {
+      display: none;
+    }
+
+  }
+}
+
+.desaturated {
+  svg {
+    path, area, circle, line, text, tspan {
+      transition: all $transition-fast ease-in-out;
+      fill: $grey-desaturated !important;
+      color: $grey-desaturated !important;
+      stroke: $grey-desaturated !important;
+    }
+  }
+}

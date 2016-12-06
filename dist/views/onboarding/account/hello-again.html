@@ -1,0 +1,23 @@
+<div onboarding-step title="Hello again"
+     strapline="We've found your details so please enter your password to continue setting up your account.">
+    
+    <div class="row">
+        <div class="col-sm-4 col-sm-offset-4">
+            <form name="myForm">
+                <div class="form-group position position-relative">
+                    <input type="text" class="form-control" name="email" value="{{knownUserModel.email}}" readonly />
+                    <div class="field-complete"><i class="icon icon-05"></i></div>
+                </div>
+                <div class="form-group position position-relative">
+                    <input type="password" placeholder="Type your password" class="form-control" name="password" ng-model="knownUserModel.password" required="password">
+                    <button type="submit" class="btn btn-orange-outline btn-half-loz btn-half-loz-right btn-outline-validation position position-absolute position-outside-form-control" ng-click="knownUserSubmit()">Next</button>
+                    <p class="validation-error-message margin margin-top-xxs text-left" ng-if=""></p><!--todo: not need for investor release but this would be a log in failure-->
+                </div>
+                <div>
+                    <a href="#" class="colour colour-darkgrey h6" ui-sref="onboarding.check-email">Forgotten your password?</a>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+

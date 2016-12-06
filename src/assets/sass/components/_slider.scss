@@ -1,0 +1,145 @@
+.slider {
+  /*@extend .position;
+  @extend .position-absolute;
+  @extend .position-top-left;
+  display: block;
+  @extend .width;
+  @extend .width-280;
+  @extend .height;
+  @extend .height-280;*/
+  /*border-radius: 50%;*/
+  /*transition:
+  transform 0.4s ease,
+  opacity 0.4s ease,
+  border-width 0.4s ease,
+  top 0.4s ease,
+  right 0.4s ease,
+  bottom 0.4s ease,
+  left 0.4s ease,
+  width 0.4s ease,
+  height 0.4s ease,
+  margin 0.4s ease;*/
+
+
+  
+
+  width: 340px;
+  height: 340px;
+  border-color: transparent;
+  /*transform: scale(1);*/
+  /*transition: all .4s ease;*/
+
+  box-sizing: border-box;
+  z-index: $z-index-low;
+
+  .slider-back-button {
+    outline: none;
+  }
+
+  &.slider-complete {
+    opacity: 1;
+    z-index: $z-index-highest;
+
+    /*.tiller-discovery-slider {*/
+    tiller-discovery-slider {
+      opacity: 0;
+    }
+  }
+
+  &.slider-historic {
+
+    /*border: 9.333333px solid $orange;*/
+
+
+    /*transform: scale(.21428571);*/ /*scale to 60px square*/
+    
+    /*top: -105px;
+    left: -105px;
+    margin-left: -30px;
+    margin-top: -30px;
+    z-index: 101;*/
+
+    &.slider-md {
+      transform: scale(.17857143); //scale to 50px square
+      border: 11.2px solid $orange;
+      top: -45px;
+      left: -144px;
+      margin-left: -25px;
+      margin-top: -25px;
+    }
+
+    &.slider-sm {
+      transform: scale(.14285714); //scale to 40px square
+      border: 14px solid $orange;
+      top: 10px;
+      left: -158px;
+      margin-left: -20px;
+      margin-top: -20px;
+    }
+
+
+    .tiller-discovery-slider {
+      width: 100%;
+      height: 100%;
+
+      /*.slider-value, .slider-value-controls, .rs-control {
+        @extend .hidden;
+      }*/
+
+      .slider-value {
+        @extend .hidden;
+      }
+
+      .slider-label {
+        @extend .text-indent;
+        @extend .text-indent-off-canvas;
+        background: $orange;
+        border-radius: 50%;
+        /*margin-left: -20px;
+        margin-top: -20px;
+        width: 40px;
+        height: 40px;*/
+        margin-left: -4px;
+        margin-top: -4px;
+        width: 8px;
+        height: 8px;
+        z-index: 0;
+      }
+
+      .slider-zero-value-label {
+        display: none;
+      }
+
+      .slider-value-controls {
+        opacity: 0.5;
+      }
+
+    }
+
+  }
+
+
+  &.slider-chart {
+    transition:
+    transform 0.4s ease,
+    opacity 0.4s ease;
+    left: 500px;
+
+    .slider-value, .slider-label {
+      display: none;
+    }
+
+    svg.round-slider {
+      .handle text.handle-label {
+        opacity: 1;
+      }
+    }
+
+  }
+
+}
+
+/* temporary fix to nav */
+nav {
+  z-index: $z-index-low !important;
+}

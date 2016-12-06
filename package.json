@@ -1,0 +1,63 @@
+{
+  "name": "tiller-web-app",
+  "version": "0.0.1",
+  "description": "Front-end web interface for the Tiller data api",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git@bitbucket.org:tillerspace/tiller-web-app.git"
+  },
+  "keywords": [
+    "Front-end",
+    "AngularJS",
+    "HTML",
+    "SASS",
+    "CSS",
+    "user",
+    "interface"
+  ],
+  "author": "space01",
+  "homepage": "https://bitbucket.org/tillerspace/tiller-web-app",
+  "dependencies": {
+    "angular-local-storage": "^0.2.7"
+  },
+  "license": "UNLICENSED",
+  "devDependencies": {
+    "bower": "^1.7.9",
+    "bower-files": "^3.13.3",
+    "browser-sync": "^2.14.0",
+    "concurrently": "^2.2.0",
+    "gulp": "^3.9.1",
+    "gulp-clean": "^0.3.2",
+    "gulp-concat": "latest",
+    "gulp-jshint": "^2.0.1",
+    "gulp-minify": "latest",
+    "gulp-notify": "^2.2.0",
+    "gulp-imagemin": "~2.1.0",
+    "gulp-sass": "latest",
+    "gulp-sourcemaps": "^1.6.0",
+    "gulp-uglify": "latest",
+    "http-server": "^0.9.0",
+    "jasmine-core": "^2.4.1",
+    "jshint": "^2.9.2",
+    "karma": "^0.13.22",
+    "karma-chrome-launcher": "^0.2.3",
+    "karma-firefox-launcher": "^0.1.7",
+    "karma-jasmine": "^0.3.8",
+    "karma-junit-reporter": "^0.4.1",
+    "protractor": "^3.2.2"
+  },
+  "scripts": {
+    "postinstall": "bower install && gulp",
+    "prestart": "npm install",
+    "start": "gulp watch",
+    "pretest": "npm install",
+    "test": "karma start karma.conf.js",
+    "test-single-run": "karma start karma.conf.js --single-run",
+    "preupdate-webdriver": "npm install",
+    "update-webdriver": "webdriver-manager update",
+    "preprotractor": "npm run update-webdriver",
+    "protractor": "protractor e2e-tests/protractor.conf.js",
+    "update-index-async": "node -e \"var fs=require('fs'),indexFile='dist/app/index.html',loaderFile='dist/app/bower_components/angular-loader/angular-loader.min.js',loaderText=fs.readFileSync(loaderFile,'utf-8').split(/sourceMappingURL=angular-loader.min.js.map/).join('sourceMappingURL=bower_components/angular-loader/angular-loader.min.js.map'),indexText=fs.readFileSync(indexFile,'utf-8').split(/\\/\\/@@NG_LOADER_START@@[\\s\\S]*\\/\\/@@NG_LOADER_END@@/).join('//@@NG_LOADER_START@@\\n'+loaderText+'    //@@NG_LOADER_END@@');fs.writeFileSync(indexFile,indexText);\""
+  }
+}

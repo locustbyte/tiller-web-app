@@ -1,0 +1,65 @@
+.discovery-chart-legends {
+  @include ui('hide');
+  @include ui-animate(scale-down);
+  position: absolute;
+  left: 0;
+  top: 0;
+
+  .ui-discovery-charts-assetAllocation:not(.ui-discovery-charts-assetAllocation-list) & {
+    @include ui('show');
+    @include ui-animate(scale-up);
+  }
+
+  .ui-discovery-charts & {
+    top: 500px;
+    left: 50%;
+    margin-left: 370px;
+
+    @media (max-width: $screen-mdlg-max) {
+      left: 60%;
+      margin-left: 282px;
+    }
+
+    @media (max-width: $screen-sm-max) {
+      left: 50%;
+      margin-left: 250px;
+    }
+  }
+
+  .discovery-chart-legend {
+    @include ui('hide');
+    @include ui-animate(scale-down);
+    position: absolute;
+    top: 0;
+    left: 80px;
+    width: 150px;
+
+    @media (max-width: $screen-mdlg-max) {
+      top: -80px;
+      width: 140px;
+      left: 30px;
+    }
+
+    @media (max-width: $screen-sm-max) {
+      top: -100px;
+      width: 140px;
+      left: 35px;
+    }
+  }
+
+  .discovery-asset-allocation-chart-keys {
+
+    .ui-discovery-charts-assetAllocation:not(.ui-discovery-charts-assetAllocation-region, .ui-discovery-charts-assetAllocation-list) & {
+      @include ui('show');
+      @include ui-animate(scale-up);
+    }
+  }
+
+  .discovery-asset-region-chart-keys {
+
+    .ui-discovery-charts-assetAllocation-region & {
+      @include ui('show');
+      @include ui-animate(scale-up);
+    }
+  }
+}

@@ -1,0 +1,71 @@
+.relative-grid {
+
+  @extend .position;
+  @extend .position-relative;
+  @extend .center-block;
+
+  .relative-grid-tether {
+    position: absolute;
+    transition:top 0.25s ease-in-out, right 0.25s ease-in-out, bottom 0.25s ease-in-out, left 0.25s ease-in-out;
+
+    &.relative-grid-col-1 {
+      left: -75%;
+      top: 0;
+      width: 35%;
+    }
+
+    &.relative-grid-col-2 {
+      left: -30%;
+      top: 0;
+      width: 35%;
+    }
+
+    &.relative-grid-col-3 {
+      position: static;
+      @extend .center-block;
+    }
+
+    &.relative-grid-col-4 {
+      left: 95%;
+      top: 0;
+      width: 35%;
+    }
+
+    &.relative-grid-col-5 {
+      left: 140%;
+      top: 0;
+      width: 35%;
+    }
+
+    &.relative-grid-inside-col-2 {
+      left: 20%;
+      top: 20%;
+      width: 15%;
+    }
+
+    &.relative-grid-inside-col-1 {
+      left: 5%;
+      top: 5%;
+      width: 15%;
+    }
+
+    &.relative-grid-outside-chart-1 {
+      left: -90px;
+      top: 65px;
+      width: 110px;
+    }
+
+    &.relative-grid-outside-chart-2 {
+      left: 710px;
+      top: 100px;
+      width: 110px;
+    }
+
+  }
+
+  &.relative-grid-fixed {
+    position: fixed;
+    left: 0;
+  }
+
+}

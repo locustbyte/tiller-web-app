@@ -1,0 +1,27 @@
+.text-align {
+
+  @media (max-width: $screen-sm-max){
+
+    &.text-align-center-sm {
+      text-align: center;
+    }
+
+  }
+
+  @media (max-width: $screen-sm-max){
+
+    &.text-align-left-sm {
+      text-align: left;
+    }
+
+  }
+
+  @media (max-width: $screen-xs-max){
+
+    &.text-align-center-xs {
+      text-align: center;
+    }
+
+  }
+
+}

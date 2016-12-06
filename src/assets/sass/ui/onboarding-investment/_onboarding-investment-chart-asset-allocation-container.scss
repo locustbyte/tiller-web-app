@@ -1,0 +1,18 @@
+.onboarding-investment-chart-asset-allocation-container {
+
+  @include border-radius(100%);
+  @include ui-layout('chart-pie-circumference');
+  @include ui('hide');
+  @include ui-animate(scale-down);
+
+  .ui-onboarding-investment-profiling & {
+    @include ui-animate(scale-down);
+    @include ui('hide');
+  }
+
+  .ui-onboarding-investment-charts-assetAllocation:not(.ui-onboarding-investment-charts-assetAllocation-list, .ui-onboarding-investment-charts-assetAllocation-region, .ui-onboarding-investment-charts-futurePerformance-lossscenarios) & {
+    @include ui('show');
+    @include ui-animate(scale-up);
+  }
+
+}

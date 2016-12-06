@@ -1,0 +1,9 @@
+﻿{
+  "_comment": "stub",
+  "id": "67f585cb-f376-4a52-b235-673ff6aa5e50",
+  "userName": "knownUser@test.com",
+  "email": "knownUser@test.com",
+  "emailConfirmed": true,
+  "joinDate": "2016-09-28T00:00:00",
+  "lastLoggedOn": "2016-10-03T12:00:02.49"
+}

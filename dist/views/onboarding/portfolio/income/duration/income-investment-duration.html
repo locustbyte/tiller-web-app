@@ -1,0 +1,32 @@
+<div onboarding-step step-scope="stepScope"
+     class="has-checkbox-row"
+     title="Investing for Income"
+     strapline="How long would you like to receive income for?"
+     show-next-back="true"
+     next-disabled=""
+     back="onboarding-portfolio.income-timeframe"
+     next="onboarding-portfolio.income-target"
+     show-save-exit="true"
+     on-load="initialiseSliderData()"
+     on-next="updatePortfolio()">
+
+    <div class="row col-sm-4 width width-full form-group position position-absolute z-index z-index-low check-box-row">
+        <input type="checkbox" class="checkbox checkbox-circle" id="noIncomeDuration" ng-click="setNoIncomeDuration()"  ng-checked="sliders.portfolioIncomeDuration.data.reset" />
+        <label class="checkbox-label" for="noIncomeDuration" >I have no time frame</label>
+    </div>
+
+    <div class="row col-sm-4 col-sm-offset-4">
+        <div class="portfolio-sliders">
+            <tiller-discovery-slider 
+                slider-change="updatePortfolio"
+                class="slider slider-top-up show-slider-controls"
+                slider-data="sliders.portfolioIncomeDuration.data"
+                slider-model="sliders.portfolioIncomeDuration.model"
+                slider-key="portfolioIncomeDuration"
+                value-formatter="none"
+                label="Years after the start date">
+            </tiller-discovery-slider>
+
+        </div>
+    </div>
+</div>

@@ -1,0 +1,65 @@
+.onboarding-investment-chart-legends {
+  @include ui('hide');
+  @include ui-animate(scale-down);
+  position: absolute;
+  left: 0;
+  top: 0;
+
+  .ui-onboarding-investment-charts-assetAllocation:not(.ui-onboarding-investment-charts-assetAllocation-list) & {
+    @include ui('show');
+    @include ui-animate(scale-up);
+  }
+
+  .ui-onboarding-investment-charts & {
+    top: 500px;
+    left: 50%;
+    margin-left: 370px;
+
+    @media (max-width: $screen-mdlg-max) {
+      left: 60%;
+      margin-left: 282px;
+    }
+
+    @media (max-width: $screen-sm-max) {
+      left: 50%;
+      margin-left: 250px;
+    }
+  }
+
+  .onboarding-investment-chart-legend {
+    @include ui('hide');
+    @include ui-animate(scale-down);
+    position: absolute;
+    top: 0;
+    left: 80px;
+    width: 150px;
+
+    @media (max-width: $screen-mdlg-max) {
+      top: -80px;
+      width: 140px;
+      left: 30px;
+    }
+
+    @media (max-width: $screen-sm-max) {
+      top: -100px;
+      width: 140px;
+      left: 35px;
+    }
+  }
+
+  .onboarding-investment-asset-allocation-chart-keys {
+
+    .ui-onboarding-investment-charts-assetAllocation:not(.ui-onboarding-investment-charts-assetAllocation-region, .ui-onboarding-investment-charts-assetAllocation-list) & {
+      @include ui('show');
+      @include ui-animate(scale-up);
+    }
+  }
+
+  .onboarding-investment-asset-region-chart-keys {
+
+    .ui-onboarding-investment-charts-assetAllocation-region & {
+      @include ui('show');
+      @include ui-animate(scale-up);
+    }
+  }
+}

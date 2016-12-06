@@ -1,0 +1,53 @@
+<!-- fund list compact view -->
+<table class="table table-fixed table-fixed-small fund-table fund-table-compact fund-table-no-border">
+    <thead>
+        <tr>
+            <th class="col-xs-4 text-left">Fund Name</th>
+            <th class="col-xs-2 text-center">Allocation</th>
+            <th class="col-xs-1 text-center">Type</th>
+            <th class="col-xs-3 text-center">Asset Class</th>
+            <th class="col-xs-2 text-center">Region</th>
+        </tr>
+    </thead>
+    <tbody class="table-fixed-scroller">
+        <tr ng-repeat="item in data">
+            <td class="col-xs-4 text-left fund-table-cell fund-table-cell-overflow-ellipsis"><span data-toggle="tooltip" title="{{item.name}}">{{item.name}}</span></td>
+            <td class="col-xs-2 text-center">{{item.percentage}}%</td>
+            <td class="col-xs-1 text-center">{{item.assetType}}</td>
+            <td class="col-xs-3 text-center">{{item.assetClass}}</td>
+            <td class="col-xs-2 text-center">{{item.region}}</td>
+        </tr>
+    </tbody>
+</table>
+
+<!-- fund list expanded view -->
+<table class="table table-fixed table-fixed-large fund-table fund-table-expanded">
+    <thead>
+        <tr>
+            <th class="col-xs-2 text-left">Fund Name</th>
+            <th class="col-xs-1 text-center">Ticker / Sedol</th>
+            <th class="col-xs-1 text-center">Allocation</th>
+            <th class="col-xs-1 text-center">Type</th>
+            <th class="col-xs-1 text-center">YTD Return</th>
+            <th class="col-xs-1 text-center">3 Year Return</th>
+            <th class="col-xs-2 text-center">Asset Class</th>
+            <th class="col-xs-1 text-center">Region</th>
+            <th class="col-xs-1 text-center">Base Currency</th>
+            <th class="col-xs-1 text-center">1 Year Volatility</th>
+        </tr>
+    </thead>
+    <tbody class="table-fixed-scroller">
+        <tr ng-repeat="item in data">
+            <td class="col-xs-2 text-left fund-table-cell fund-table-cell-overflow-ellipsis"><span class="fund-table-tooltip" data-toggle="tooltip" title="{{item.name}}">{{item.name}}</span></td>
+            <td class="col-xs-1 text-center">{{item.ticker}}</td>
+            <td class="col-xs-1 text-center">{{item.percentage}}%</td>
+            <td class="col-xs-1 text-center">{{item.assetType}}</td>
+            <td class="col-xs-1 text-center">{{item.ytdReturn}}%</td>
+            <td class="col-xs-1 text-center">{{item.threeYrReturn}}%</td>
+            <td class="col-xs-2 text-center">{{item.assetClass}}</td>
+            <td class="col-xs-1 text-center">{{item.region}}</td>
+            <td class="col-xs-1 text-center">{{item.baseCurrency}}</td>
+            <td class="col-xs-1 text-center">{{item.volatility}}%</td>
+        </tr>
+    </tbody>
+</table>

@@ -1,0 +1,71 @@
+.btn-group {
+    display: block;
+
+    .btn {
+
+        &.btn-orange-outline {
+            &:hover, &:focus, &.btn-active {
+                transform: none;
+                background-color: transparent;
+                color: $orange;
+            }
+        }
+
+        &.btn-yellow-outline {
+            &:hover, &:focus, &.btn-active {
+                transform: none;
+                background-color: transparent;
+                color: $yellow;
+            }
+        }
+    }
+
+    &.open {
+        z-index: $z-index-highest;
+
+        .btn {
+            @include border-radius-variable(20px, 20px, 0, 0);
+        }
+
+        .dropdown-menu {
+            z-index: $z-index-highest;
+            top: 35px;
+            border-top-width: 0;
+            border-top-left-radius: 0;
+            border-top-right-radius: 0;
+            border-bottom-left-radius: 20px;
+            border-bottom-right-radius: 20px;
+            @include box-shadow(0);
+
+            &.dropdown-menu-yellow-outline {
+                z-index: $z-index-highest;
+                border: 2px solid $yellow;
+                background-color: transparent;
+                color: $yellow;
+
+                li {
+                    .btn-link {
+                        color: $yellow;
+                    }
+                }
+            }
+
+            &.dropdown-menu-orange-outline {
+                z-index: $z-index-highest;
+                border: 2px solid $orange;
+                background-color: transparent;
+                color: $orange;
+
+                li {
+                    .btn-link {
+                        color: $orange;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.btn-group-loz {
+    width: 190px;
+}

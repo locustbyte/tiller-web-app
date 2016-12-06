@@ -1,0 +1,267 @@
+<!-- left-hand navigation -->
+
+<div class="onboarding-investment-risk-control">
+
+    <!-- risk slider -->
+
+    <div class="onboarding-investment-charts-risk-slider" ng-if="sliders.portfolioRisk.model">
+
+        <tiller-discovery-slider ng-if="sliders.portfolioRisk.data" class="slider-compact" slider-data="sliders.portfolioRisk.data" slider-model="sliders.portfolioRisk.model"
+                                 custom-options="sliders.portfolioRisk.options" slider-change="updatePortfolio" label="Risk level" slider-key="portfolioRisk"></tiller-discovery-slider>
+
+    </div>
+
+</div>
+
+<div class="onboarding-investment-charts-controls">
+
+    <!-- / risk slider -->
+
+    <!-- investment type buttons -->
+
+    <div class="onboarding-investment-charts-investment-type">
+
+        <div class="nav-group nav-group-1">
+
+            <button ng-init="getThemeControlState(1)" ng-class="getThemeControlState(1)" class="btn btn-circle-text btn-circle btn-orange-outline margin margin-bottom-xs" ng-click="switchInvestorLevel(1)">
+                Tracker
+            </button>
+
+            <button class="btn btn-xsm btn-circle btn-orange-outline sub-nav" ng-class="getThemeControlInfoState(1)" ng-click="toggleThemeControlOverview('tracker')"><i class="fa fa-info"></i></button>
+
+        </div>
+
+        <div class="nav-group nav-group-2">
+
+            <button ng-init="getThemeControlState(2)" ng-class="getThemeControlState(2)" class="btn btn-circle-text btn-circle btn-orange-outline margin margin-bottom-xs" ng-click="switchInvestorLevel(2)">
+                Active
+            </button>
+
+            <button class="btn btn-xsm btn-circle btn-orange-outline sub-nav" ng-class="getThemeControlInfoState(2)" ng-click="toggleThemeControlOverview('active')"><i class="fa fa-info"></i></button>
+
+        </div>
+
+        <div class="nav-group nav-group-3">
+
+            <button ng-init="getThemeControlState(3)" ng-class="getThemeControlState(3)" class="btn btn-circle-text btn-circle btn-orange-outline margin margin-bottom-xs" ng-click="switchInvestorLevel(3)">
+                Active<span class="active-plus-icon">+</span>
+            </button>
+
+            <button class="btn btn-xsm btn-circle btn-orange-outline sub-nav" ng-class="getThemeControlInfoState(3)" ng-click="toggleThemeControlOverview('activePlus')"><i class="fa fa-info"></i></button>
+
+            <tl-theme-carousel ng-model="themesList" item-changed="themeChanged" theme-chart="themeChart" class="onboarding-investment-charts-investment-theme-carousel" max-visible-items="6" ng-class="getThemeControlInfoState(3)"></tl-theme-carousel>
+
+        </div>
+
+    </div>
+
+    <!-- / investment type buttons -->
+
+</div>
+
+<!-- / left-hand navigation -->
+
+<!-- right-hand navigation -->
+
+<div class="onboarding-investment-charts-navigation">
+
+
+        <!-- performance / asset allocation navigation buttons -->
+
+        <div class="onboarding-investment-charts-type">
+
+            <a href="/#/onboarding/investment/charts/future-performance"
+                    class="onboarding-investment-charts-type-performance-btn btn btn-circle btn-orange-outline"
+                    ng-class="getNavigationButtonState('Performance')"><i class="icon icon-18-big" ng-class="getNavigationButtonIconState('Performance')"></i></a>
+
+            <a href="/#/onboarding/investment/charts/asset-allocation"
+                    class="onboarding-investment-charts-type-asset-btn btn btn-circle btn-orange-outline"
+                    ng-class="getNavigationButtonState('assetAllocation')"><i class="icon icon-32-big" ng-class="getNavigationButtonIconState('assetAllocation')"></i></a>
+
+        </div>
+
+        <!-- / performance / asset allocation navigation buttons -->
+
+        <!-- asset allocation navigation buttons -->
+
+        <div class="onboarding-investment-charts-asset-allocation-navigation">
+
+            <a href="/#/onboarding/investment/charts/asset-allocation"
+                    class="onboarding-investment-charts-asset-allocation-btn btn btn-circle btn-orange-outline"
+                    ng-class="getSubNavigationButtonState('assetAllocation')">
+                <i class="icon icon-22-small icon-sm"></i></a>
+
+            <a href="/#/onboarding/investment/charts/asset-allocation/region"
+                    class="onboarding-investment-charts-asset-region-btn btn btn-circle btn-orange-outline"
+                    ng-class="getSubNavigationButtonState('assetAllocation.region')">
+                <i class="icon icon-23-small icon-sm"></i></a>
+
+            <a href="/#/onboarding/investment/charts/asset-allocation/list"
+                    class="onboarding-investment-charts-asset-list-btn btn btn-circle btn-orange-outline"
+                    ng-class="getSubNavigationButtonState('assetAllocation.list')">
+                <i class="icon icon-24-small icon-sm"></i></a>
+
+        </div>
+
+        <!-- / asset allocation navigation buttons -->
+
+        <!-- performance navigation buttons -->
+
+        <div class="onboarding-investment-charts-performance-navigation">
+
+            <a href="/#/onboarding/investment/charts/future-performance"
+               class="onboarding-investment-charts-future-performance-btn btn btn-circle btn-orange-outline"
+               ng-class="getSubNavigationButtonState('futurePerformance')">
+                <i class="icon icon-20-small icon-sm"></i></a>
+
+            <a href="/#/onboarding/investment/charts/past-performance"
+               class="onboarding-investment-charts-past-performance-btn btn btn-circle btn-orange-outline"
+               ng-class="getSubNavigationButtonState('pastPerformance')">
+                <i class="icon icon-19-small icon-sm"></i></a>
+
+            <a href="/#/onboarding/investment/charts/future-performance/loss-scenarios"
+               class="onboarding-investment-charts-loss-scenarios-btn btn btn-circle btn-orange-outline"
+               ng-class="getSubNavigationButtonState('futurePerformance.lossscenarios')">
+                <i class="icon icon-38-small icon-sm"></i></a>
+
+        </div>
+
+        <!-- / performance navigation buttons -->
+
+</div>
+
+<div class="onboarding-investment-chart-legends" ng-if="legends" ng-class="getChartContainerClass()">
+
+    <div class="onboarding-investment-chart-legend onboarding-investment-asset-allocation-chart-keys" ng-if="legends.assetAllocation">
+
+        <div ng-repeat="(key, legend) in legends.assetAllocation" class="chart-key chart-key-{{key}} shape-labels shape-labels-xs {{legend.class}}" ng-mouseover="showAssetGroup(legend)" ng-mouseleave="hideAssetGroup(legend)">
+
+            <span class="shape shape-round shape-xs" style="background-color: {{legend.colour}};"></span>
+
+            <span class="shape-label shape-label-wrapped">{{legend.percentage}} {{legend.name}}</span>
+
+        </div>
+
+    </div>
+
+    <!--<div class="discovery-chart-legend discovery-asset-region-chart-keys" ng-if="legends.assetAllocation">
+
+        <div ng-repeat="(key, legend) in legends.assetRegion" class="chart-key chart-key-{{key}} shape-labels shape-labels-xs">
+
+            <span class="shape shape-round shape-xs" style="background-color: {{legend.colour}};"></span>
+
+            <span class="shape-label shape-label-wrapped">{{legend.percentage}} {{legend.name}}</span>
+
+        </div>
+
+    </div>-->
+
+</div>
+
+<div class="onboarding-investment-chart-overlays" ng-class="getChartOverlaysClass()">
+
+    <div class="chart-modal" id="chart-modal-1" ng-include src="'views/onboarding/investment/charts/modals/tracker.html'" ng-class="getChartModalClass('tracker')"></div>
+
+    <div class="chart-modal" id="chart-modal-2" ng-include src="'views/onboarding/investment/charts/modals/active.html'" ng-class="getChartModalClass('active')" ></div>
+
+    <div class="chart-modal" id="chart-modal-3" ng-include src="'views/onboarding/investment/charts/modals/active-plus.html'" ng-class="getChartModalClass('activePlus')" ></div>
+    
+    <div class="chart-modal" id="chart-modal-4" ng-include src="'views/onboarding/investment/charts/modals/add-theme.html'" ng-class="getChartModalClass('addTheme')" ></div>
+
+    <div class="chart-modal" id="chart-modal-5" ng-include src="'views/onboarding/investment/charts/modals/theme-exception.html'" ng-class="getChartModalClass('themeException')" ></div>
+
+</div>
+
+<div class="onboarding-investment-porthole-container" ng-class="getChartContainerClass()">
+
+    <div id="assetRegionChart"
+         ng-controller="onboardingInvestment.charts.assetRegionCtrl"
+         class="onboarding-investment-charts-asset-region-chart animate" ></div>
+
+    <div id="fundList"
+         ng-controller="onboardingInvestment.charts.fundListCtrl"
+         class="onboarding-investment-charts-fund-list animate" ng-include src="'views/onboarding/investment/charts/asset-allocation/list/list.html'"></div>
+
+    <div id="lossScenarios"
+         ng-controller="onboardingInvestment.charts.lossScenariosCtrl"
+         class="onboarding-investment-charts-loss-scenarios animate" ng-include src="'views/onboarding/investment/charts/future-performance/loss-scenarios/loss-scenarios.html'"></div>
+
+    <div class="onboarding-investment-chart-zoom-btns">
+
+        <div class="zoom-btn zoom-btn-fund-list text-center"><a href="/#/onboarding/investment/charts/asset-allocation/list/expanded" class="btn btn-circle btn-orange-outline btn-medium"><i class="fa fa-search"></i></a></div>
+
+    </div>
+
+    <div class="onboarding-investment-chart-close-btns">
+
+        <div class="close-btn close-btn-fund-list text-right"><a href="/#/onboarding/investment/charts/asset-allocation/list" class="btn btn-circle btn-orange-outline btn-medium"><i class="icon icon-02-medium icon-sm"></i></a></div>
+
+    </div>
+    
+</div>
+
+<div class="onboarding-investment-chart-container" ng-class="getChartContainerClass()">
+
+    <div ng-controller="onboardingInvestment.charts.futurePerformanceCtrl"
+         class="onboarding-investment-charts-future-performance-chart animate text-center"
+         ng-include
+         src="'views/onboarding/investment/charts/future-performance/chart.html'"></div>
+
+    <div ng-controller="onboardingInvestment.charts.pastPerformanceCtrl"
+         class="onboarding-investment-charts-past-performance-chart animate text-center"
+         ng-include
+         src="'views/onboarding/investment/charts/past-performance/chart.html'"
+         onload="finishedLoading()">
+
+    </div>
+
+    <div class="onboarding-investment-chart-zoom-btns">
+
+        <div class="zoom-btn zoom-btn-future-performance text-center"><a href="/#/onboarding/investment/charts/future-performance/expanded" class="btn btn-circle btn-orange-outline btn-medium"><i class="fa fa-search"></i></a></div>
+        <div class="zoom-btn zoom-btn-past-performance text-center"><a href="/#/onboarding/investment/charts/past-performance/expanded" class="btn btn-circle btn-orange-outline btn-medium"><i class="fa fa-search"></i></a></div>
+
+    </div>
+
+    <div class="onboarding-investment-chart-close-btns">
+
+        <div class="close-btn close-btn-future-performance text-right"><a href="/#/onboarding/investment/charts/future-performance" class="btn btn-circle btn-orange-outline btn-medium"><i class="icon icon-02-medium icon-sm"></i></a></div>
+        <div class="close-btn close-btn-past-performance text-right"><a href="/#/onboarding/investment/charts/past-performance" class="btn btn-circle btn-orange-outline btn-medium"><i class="icon icon-02-medium icon-sm"></i></a></div>
+
+    </div>
+
+</div>
+
+<div class="onboarding-investment-chart-asset-allocation-container" ng-class="getChartContainerClass()">
+
+    <div id="assetAllocationChart"
+         ng-controller="onboardingInvestment.charts.assetAllocationCtrl"
+         class="onboarding-investment-charts-asset-chart animate" ></div>
+
+</div>
+
+<div class="onboarding-investment-chart-theme-container" id="themeChart" ng-class="getThemeChartClass()"></div>
+
+
+<nav class="position position-fixed position-bottom-left">
+
+    <div class="padding padding-sm">
+
+        <button class="btn btn-circle btn-large btn-orange-outline">?</button>
+
+    </div>
+
+</nav>
+
+<nav class="onboarding-investment-charts-call-to-action">
+
+    <div class="inner">
+
+        <a href="#" class="btn btn-primary btn-block margin margin-bottom-xs" ui-sref="onboarding-portfolio.summary">Continue</a>
+
+        <a href="#" class="btn btn-link btn-block btn-orange-outline text-colour text-colour-white" ui-sref="onboarding.your-account">Save & Exit</a>
+
+    </div>
+
+</nav>
+
+<tl-page-overlay pageOverlay="pageOverlay"></tl-page-overlay>

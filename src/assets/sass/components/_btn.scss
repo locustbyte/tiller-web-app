@@ -1,0 +1,338 @@
+.btn {
+
+    @include border-radius(30px);
+
+  &.btn-full{
+    width: 100%;
+  }
+
+  transition: all $transition-fast ease-in-out;
+
+  &:focus, &:active {
+    outline: none !important;
+  }
+
+  &.btn-orange {
+    border-color: $orange;
+    background-color: $orange;
+    color: $white;
+  }
+
+  &.btn-green {
+    border-color: $green;
+    background-color: $green;
+    color: $white;
+  }
+
+  &.btn-green-bright, &.btn-primary {
+    border-color: $green-bright;
+    background-color: $green-bright;
+    color: $white;
+  }
+
+  &.btn-tiller{
+    border: 2px solid $orange;
+    background-color: transparent;
+    color: $grey;
+    text-align: left;
+    &::after{
+      margin-left: 10px;  
+    }
+    
+  }
+
+    &.btn-orange-outline {
+        border: 2px solid $orange;
+        background-color: transparent;
+        color: $orange;
+
+        &:hover, &.btn-active {
+            transform: scale(1.05);
+            background-color: $orange;
+            color: $white;
+        }
+
+        &:focus, &:active {
+            opacity: 1;
+        }
+    }
+
+    &.btn-yellow-outline {
+        border: 2px solid $yellow;
+        background-color: transparent;
+        color: $yellow;
+
+        &:hover, &.btn-active {
+            transform: scale(1.05);
+            background-color: $yellow;
+            color: $white;
+        }
+
+        &:focus, &:active {
+            opacity: 1;
+        }
+    }
+
+    &.btn-outline-validation {
+
+        .validation-error & {
+            color: $red !important;
+            border-color: $red !important;
+
+            &:hover, &.btn-active {
+                color: $white !important;
+                background-color: $red !important;
+            }
+        }
+    }
+
+  &.btn-circle {
+    border-radius: 100%;
+    cursor: pointer;
+    font-size: $std-size;
+    padding: 6px;
+    height: 36px;
+    width: 36px;
+
+    &.btn-xlarge, &.btn-xlg {
+      width: 70px;
+      height: 70px;
+    }
+
+    &.btn-large, &.btn-lg {
+      width: 60px;
+      height: 60px;
+    }
+
+    &.btn-mdlg {
+      width: 52px;
+      height: 52px;
+    }
+
+    &.btn-medium, &.btn-md {
+      width: 45px;
+      height: 45px;
+    }
+
+    &.btn-small, &.btn-sm {
+      width: 36px;
+      height: 36px;
+    }
+
+    &.btn-extra-small, &.btn-xsm {
+      width: 25px;
+      height: 25px;
+    }
+  }
+
+  &.btn-xlarge, &.btn-xlg {
+    font-size: 120%;
+    padding: 18px;    
+    width: 63px;
+    height: 63px;
+  }
+      
+  &.btn-start {
+    width: 270px;
+    height: 54px;
+    padding: 12px;
+    font-size: $h4-size;
+    margin: 0 auto;
+}
+
+  &.btn-large, &.btn-lg {
+    padding: 15px;
+    font-size: 80%;
+  }
+
+  &.btn-medium, &.btn-md {
+    font-size: 80%;
+    padding: 11px;
+  }
+
+  &.btn-small, &.btn-sm {
+    font-size: 80%;
+  }
+
+  &.btn-extra-small, &.btn-xsm {
+    font-size: 70%;
+    padding: 4px;
+  }
+
+    &.btn-half-loz {
+        font-size: $std-size;
+        height: 50px;
+        width: 95px;
+        border-radius: 0;
+
+        &:hover:not(:disabled) {
+            opacity: 1;
+            background-color: $orange;
+            color: $white;
+            transform: scale(1);
+        }
+
+        &:disabled, &:disabled:hover {
+            color: $grey-dark;
+            border: 2px solid $orange;
+            background-color: transparent;
+            cursor: default;
+            transform: scale(1);
+            opacity: 1;
+        }
+
+        &:active,
+        &:focus {
+            outline: none;
+        }
+    }
+
+    &.btn-half-loz-left {
+        border-top-left-radius: 25px;
+        border-bottom-left-radius: 25px;
+        left: 6px;
+    }
+
+    &.btn-half-loz-right {
+        border-top-right-radius: 25px;
+        border-bottom-right-radius: 25px;
+        right: 6px;
+    }
+
+    &.circular-close{
+        position:relative;
+        .icon{
+            position: absolute;
+            font-size: 12px;
+            top: calc(50% - 6px);
+            left: calc(50% - 6px);
+        }
+    }
+
+    &.btn-ripple {
+        -webkit-transition: height .25s ease, width .25s ease;
+        transition: height .25s ease, width .25s ease;
+        -webkit-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+
+        &:hover {
+            height: 40px;
+            width: 40px;
+            background-color: $orange;
+
+            &.position-bottom-right-outside-right {
+                bottom: -45px;
+                right: -5px;
+            }
+
+            &:after {
+                -webkit-animation: buttonRipple .4s linear;
+                animation: buttonRipple .4s linear;
+            }
+        }
+
+        &:focus {
+            outline: none;
+        }
+
+    &:after {
+      content: '';
+      display: block;
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      border-radius: 50%;
+      border: 1px solid $white;
+      opacity: 0;
+      -webkit-animation: none;
+      animation: none;
+    }
+  }
+
+  &.btn-circle-text  {
+    font-size: 11px;
+    font-weight: $weight-light;
+    text-align: center;
+    padding: 0;
+    color: $white;
+  }
+
+  &.btn-text-hide-span {
+    span {
+      @extend .hidden;
+    }
+  }
+
+}
+
+
+
+.desaturated {
+  .btn {
+    &.btn-orange {
+      border-color: $grey-desaturated;
+      background-color: $grey-desaturated;
+      color: $grey-desaturated;
+    }
+
+    &.btn-green {
+      border-color: $grey-desaturated;
+      background-color: $grey-desaturated;
+    }
+
+    &.btn-green-bright, &.btn-primary {
+      border-color: $grey-desaturated;
+      background-color: $grey-desaturated;
+    }
+
+    &.btn-orange-outline {
+
+      border: 2px solid $grey-desaturated;
+      color: $grey-desaturated;
+
+      &:hover, &.btn-active {
+        background-color: $orange;
+        color: $white;
+      }
+
+    }
+
+    &.btn-yellow-outline {
+
+      border: 2px solid $grey-desaturated;
+      color: $grey-desaturated;
+
+      &:hover, &.btn-active {
+        background-color: $grey-desaturated;
+      }
+
+    }
+
+  }
+}
+
+@-webkit-keyframes buttonRipple {
+    0% {
+        -webkit-transform: scale(1);
+        opacity: 0.6;
+    }
+
+    100% {
+        -webkit-transform: scale(1.35);
+        opacity: 0;
+    }
+}
+
+@keyframes buttonRipple {
+    0% {
+        transform: scale(1);
+        opacity: 0.6;
+    }
+
+    100% {
+        transform: scale(1.35);
+        opacity: 0;
+    }
+}

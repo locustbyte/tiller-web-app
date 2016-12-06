@@ -1,0 +1,18 @@
+.onboarding-investment-chart-close-btns {
+  position: absolute;
+  top: 0px;
+  width: 100%;
+  z-index: $z-index-highest;
+
+  .close-btn {
+    display: none;
+  }
+
+  .ui-onboarding-investment-charts-assetAllocation-list-expanded & .close-btn-fund-list,
+  .ui-onboarding-investment-charts-futurePerformance-expanded & .close-btn-future-performance,
+  .ui-onboarding-investment-charts-pastPerformance-expanded & .close-btn-past-performance {
+    display: block;
+    @include ui('front');
+  }
+
+}

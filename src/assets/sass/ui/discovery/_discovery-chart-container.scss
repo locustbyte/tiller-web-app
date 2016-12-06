@@ -1,0 +1,28 @@
+.discovery-chart-container {
+
+  @include ui-layout('chart');
+  @include ui('show');
+  @include ui-animate(scale-up);
+
+  .ui-discovery-profiling & {
+    @include ui-animate(scale-down);
+    @include ui('hide');
+  }
+
+  .ui-discovery-charts-assetAllocation & {
+    @include ui('hide');
+  }
+
+  .ui-discovery-charts-futurePerformance-expanded &,
+  .ui-discovery-charts-pastPerformance-expanded & {
+    border: none;
+    @include ui-layout('chart-expanded');
+    @include ui('show-high');
+  }
+
+  .ui-discovery-charts-assetAllocation-list-expanded & {
+    border: none;
+    @include ui-layout('hide');
+  }
+
+}

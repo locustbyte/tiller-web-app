@@ -1,0 +1,27 @@
+﻿<div onboarding-step  step-scope="stepScope"
+     class="has-checkbox-row"
+     title="Investing for Income"
+     strapline="How much do you want to invest right now? The minimum is £5,000."
+     show-next-back="true"
+     next-disabled="stepScope.portfolio.initialAmount < 5000"
+     back="onboarding-portfolio.investment-goal"
+     next="onboarding-portfolio.income-investment-monthly"
+     show-save-exit="true"
+     on-load="initialiseSliderData()"
+     on-next="updatePortfolio()">
+
+    <div class="row col-sm-4 col-sm-offset-4">
+        <div class="portfolio-sliders">
+            <tiller-discovery-slider 
+                slider-change="updatePortfolio" 
+                class="slider slider-lump-sum show-slider-controls" 
+                slider-data="sliders.portfolioLumpSum.data" 
+                slider-model="sliders.portfolioLumpSum.model" 
+                slider-key="portfolioLumpSum" 
+                value-formatter="currency" 
+                label="Lump sum">
+            </tiller-discovery-slider>
+
+        </div>
+    </div>
+</div>

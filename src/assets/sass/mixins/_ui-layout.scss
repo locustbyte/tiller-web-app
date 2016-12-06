@@ -1,0 +1,235 @@
+
+/**
+* Simple chart layout mixin to get the rules for charts in ui-components
+**/
+
+@mixin ui-layout($component)
+{
+
+  box-sizing: border-box;
+
+  @if $component == 'porthole' {
+    @include border-radius(100%);
+    position: absolute;
+    top: 120px;
+    left: 50%;
+    margin-left: -370px;
+    width: 740px;
+    height: 740px;
+
+    @media (max-width: $screen-mdlg-max) {
+
+      left: 60%;
+      margin-left: -282px;
+      width: 564px;
+      height: 564px;
+
+    }
+
+    @media (max-width: $screen-sm-max) {
+
+      left: 50%;
+      margin-left: -255px;
+      width: 510px;
+      height: 510px;
+
+    }
+
+  }
+  @elseif $component == 'porthole-inner'{
+    position: absolute;
+    top: $padding-lg;
+    left: $padding-lg;
+    width: 500px;
+
+    @media (max-width: $screen-mdlg-max) {
+
+      top: $padding-md;
+      left: 82px;
+      width: 400px;
+
+    }
+    @media (max-width: $screen-sm-max) {
+
+      top: $padding-sm;
+      left: 75px;
+      width: 350px;
+
+    }
+  }
+  @elseif $component == 'chart' {
+    position: absolute;
+    top: 180px;
+    left: 50%;
+    margin-left: -250px;
+    width: 500px;
+    height: auto;
+
+    @media (max-width: $screen-mdlg-max) {
+
+      left: 60%;
+      margin-left: -200px;
+      width: 400px;
+      height: auto;
+
+    }
+
+    @media (max-width: $screen-sm-max) {
+
+      left: 50%;
+      margin-left: -175px;
+      width: 350px;
+      height: auto;
+
+    }
+
+  }
+  @elseif $component == 'chart-inner'{
+    position: absolute;
+    top: 50px;
+    left: 0;
+    width: 100%;
+
+    @media (max-width: $screen-mdlg-max) {
+      top: 35px;
+    }
+
+    @media (max-width: $screen-sm-max) {
+      top: 25px;
+    }
+
+  }
+  @elseif $component == 'chart-expanded' {
+    @include border-radius(0);
+    position: relative;
+    top: 70px;
+    left: initial;
+    margin: 0 100px 0 250px;
+    width: auto;
+    height: 740px;
+
+    @media (max-width: $screen-mdlg-max) {
+
+      left: initial;
+      margin: 0 100px 0 250px;
+      width: auto;
+      height: 564px;
+
+    }
+
+    @media (max-width: $screen-sm-max) {
+      left: 0;
+      margin: 0 auto;
+      width: 90%;
+      height: 564px;
+    }
+
+  }
+  @elseif $component == 'chart-expanded-full' {
+    position: relative;
+    top: 70px;
+    left: initial;
+    margin: 0 100px;
+    width: auto;
+
+    @media (max-width: $screen-mdlg-max) {
+
+      left: initial;
+      margin: 0 100px;
+      width: auto;
+
+    }
+
+  }
+  @elseif $component == 'chart-titles' {
+
+    position: absolute;
+    top: 0px;
+    left: 50%;
+    margin-left: -370px;
+    width: 740px;
+
+    @media (max-width: $screen-mdlg-max) {
+
+      left: 60%;
+      margin-left: -282px;
+      width: 564px;
+
+    }
+
+    @media (max-width: $screen-sm-max) {
+
+      left: 50%;
+      margin-left: -250px;
+      width: 500px;
+
+    }
+
+  }
+  @elseif $component == 'discovery-titles' {
+
+
+
+  }
+  @elseif $component == 'chart-pie-circumference' {
+    border: 0;
+    position: absolute;
+    top: 80px;
+    left: 50%;
+    margin-left: -410px;
+    width: 820px;
+    height: 820px;
+
+    @media (max-width: $screen-mdlg-max) {
+
+      top: 90px;
+      left: 60%;
+      margin-left: -313px;
+      width: 626px;
+      height: 626px;
+
+    }
+
+    @media (max-width: $screen-sm-max) {
+
+      top: 100px;
+      left: 50%;
+      margin-left: -290px;
+      width: 580px;
+      height: 580px;
+
+    }
+
+  }
+  @elseif $component == 'chart-modals'{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 736px;
+    height: 736px;
+
+    @media (max-width: $screen-mdlg-max) {
+
+      width: 560px;
+      height: 560px;
+
+    }
+  }
+  @elseif $component == 'chart-expanded-inner'{
+    position: relative;
+    top: $padding-sm;
+    left: initial;
+    margin: 0;
+    width: auto;
+
+    @media (max-width: $screen-mdlg-max) {
+
+      top: $padding-xs;
+      left: initial;
+      margin: 0;
+      width: auto;
+
+    }
+  }
+
+}

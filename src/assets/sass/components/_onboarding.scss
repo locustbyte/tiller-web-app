@@ -1,0 +1,154 @@
+.get-started {
+    .btn-primary {
+        margin-top: 180px;
+    }
+}
+
+@media(max-width: $screen-sm-max) {
+    .get-started {
+        .btn-primary {
+            margin: 0 auto;
+            margin-top: 40px;
+            margin-bottom: 40px; /*todo: page padding instead?*/
+        }
+    }
+}
+
+.onboarding {
+    h2.title,
+    .start-again {
+        color: $orange;
+    }
+
+    .info {
+        position: relative;
+
+        button {
+            position: absolute;
+            top: -130px;
+            right: -5px;
+            cursor: pointer;
+        }
+    }
+}
+
+.password-checklist {
+    font-size: $h6-sm-size;
+    display: inline-block;
+    margin-right: 1px;
+
+    &.valid {
+        color: $green;
+    }
+
+    .icon {
+        display: inline-block;
+        margin-top: -2px;
+        color: transparent;
+
+        &.valid {
+            color: $green;
+        }
+    }
+}
+
+.portfolio-navigation {
+    width: 200px;
+    position: relative;
+    margin: 0 auto;
+}
+
+.onboarding-content {
+    position: relative;
+    height: 450px;
+}
+
+.portfolio-sliders {
+    position: relative;
+}
+
+.has-checkbox-row {
+    .strapline {
+        margin-bottom: 40px;
+    }
+
+    .check-box-row {
+        top: 50px;
+        left: 6px;
+    }
+}
+
+.step-explanations {
+    &.onboarding-allocations {
+        .step {
+            .confirmation-modal {
+                background-color: $brown-darkest;
+
+                .conf-btn {
+                    padding: 10px;
+                }
+            }
+
+            .step-text {
+                p {
+                    display: inline-block;
+                    word-break: break-word;
+                }
+            }
+        }
+
+        .screen-cover {
+            background-color: $brown-darkest;
+            opacity: 0.5;
+            left: 0px;
+            height: 100%;
+        }
+    }
+}
+
+.address-look-up {
+    input.form-control {
+        padding-right: 0;
+    }
+}
+
+.outer-container {
+    height: 300px;
+    width: 140%;
+    padding: 20px;
+    padding-right: 10px;
+    border-radius: 10px;
+    top: 55px;
+    left: -25px;
+    background-color: $brown-darkest;
+
+    .address-look-up-results {
+        height: 270px;
+
+        &.scrollbar-inner > .scroll-element .scroll-element_track {
+            background-color: transparent;
+        }
+
+        &.scrollbar-inner > .scroll-element .scroll-bar,
+        &.scrollbar-inner > .scroll-element:hover .scroll-bar {
+            background-color: $grey-dark;
+        }
+
+        ul {
+            margin: 0;
+            text-align: left;
+            padding: 0;
+            padding-right: 20px;
+
+            li {
+                list-style: none;
+                cursor: pointer;
+                margin-bottom: 10px;
+
+                &:hover {
+                    color: $orange;
+                }
+            }
+        }
+    }
+}
